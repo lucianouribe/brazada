@@ -3,7 +3,7 @@
   border: 2px solid #18214c;
   letter-spacing: 2px;
   font-weight: 200;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .btn-main {
@@ -19,4 +19,14 @@
 .btn:hover {
   background-color: #18214c;
   color: #fdfffd;
+}
+
+.btn-portada {
+  width: 50%;
+  height: 6rem;
+  border-radius: 3rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  color: #18214c;
 }

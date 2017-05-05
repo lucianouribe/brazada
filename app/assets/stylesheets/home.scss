@@ -1,0 +1,178 @@
+// Portada
+
+.portada {
+  background-color: #18214c;
+  text-align: center;
+  background-image: url(asset_path("fondo_menu_01.png"));
+  background-repeat: no-repeat;
+  background-position: 30% 70%;
+  background-size: cover;
+  height: 90vh;
+  padding-top: 15vh;
+}
+
+#main-phrase {
+  width: 100%;
+  color: #fdfffd;
+  font-weight: 100;
+  line-height: 220%;
+}
+
+.logo {
+  margin: 3rem auto;
+}
+
+.btn-portada {
+  margin-top: 2rem;
+  padding: 1.6rem !important;
+}
+
+footer {
+  // background-color: #fcbf00;
+  background-image: url(asset_path("footer.svg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 20vh;
+  margin-top: -20vh;
+  display: flex;
+  padding-left: 1rem;
+  padding-top: 10vh;
+}
+
+.foot-text {
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  font-weight: 100;
+}
+
+// Portada Segunda Parte
+
+.portada-dos {
+  height: 350px;
+  background-color: #fdfffd;
+  padding: 6rem;
+}
+
+.portada-dos blockquote {
+  text-align: center;
+  color: #161616;
+  font-size: 2rem;
+  line-height: 180%;
+  padding-left: none !important;
+  border-left: none !important;
+  border-bottom: 4px solid #16959e;
+  padding-bottom: 6rem;
+}
+
+// Portada Tercera Parte
+
+.portada-tres {
+  height: 350px;
+  background-color: #fdfffd;
+  padding: 4rem;
+}
+.programas {
+  padding: 0 3rem !important;
+}
+.portada-tres p {
+  font-size: 1.8rem;
+  font-weight: 100;
+  text-align: justify;
+}
+.portada-tres h4 {
+  font-weight: 400;
+  text-align: center;
+}
+.portada-tres .btn-portada {
+  margin: 4rem 0;
+}
+
+// Portada Cuarta Parte
+.portada-cuatro {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+// Portada Quinta Parte
+.portada-cinco {
+  height: 350px;
+  background-image: url(asset_path("fondo_menu_01.png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+// =================================
+// CellPhone Styling
+// =================================
+
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .portada {
+    height: 95vh;
+  }
+  .btn-portada {
+    padding: 1.5rem !important;
+    width: 70% !important;
+  }
+  .logo {
+    margin: 4rem auto;
+  }
+  footer {
+    height: 15vh;
+    margin-top: -15vh;
+    padding-top: 7.5vh;
+  }
+  .foot-text {
+    font-weight: 200;
+  }
+  //portada dos
+  .portada-dos {
+    height: 300px;
+    padding: 4rem;
+  }
+  //portada tres
+  .programas {
+    margin: 3rem 0;
+  }
+  .portada-tres p {
+    font-size: 1.5rem;
+  }
+}
+// materialize small
+@media only screen and (max-width: 600px) {
+  .portada {
+    height: 95vh;
+  }
+  .btn-portada {
+    padding: 1rem !important;
+    width: 80% !important;
+  }
+  .logo {
+    margin: 6rem auto;
+  }
+  footer {
+    height: 10vh;
+    margin-top: -10vh;
+    padding-top: 5vh;
+  }
+  .foot-text {
+    font-weight: 400;
+  }
+  //portada dos
+  .portada-dos {
+    height: 250px;
+    padding: 3rem;
+  }
+  //portada tres
+  .programas {
+    margin: 3rem 0;
+  }
+  .portada-tres p {
+    font-size: 16px;
+  }
+}

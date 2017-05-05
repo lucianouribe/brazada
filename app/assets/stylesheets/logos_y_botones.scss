@@ -7,6 +7,24 @@
    height: 5rem !important;
  }
 
+ .icon-portada {
+   background-repeat: no-repeat;
+   background-size: 12rem;
+   background-position: center;
+   width: 100% !important;
+   height: 12rem !important;
+ }
+
+// Logo Psicina
+.logo {
+  background-image: url(asset_path("brazada_logo.png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25vh;
+  width: 60% !important;
+  height: 25vh !important;
+}
+
 // Hamburger
 .hamburger {
   background-image: url(asset_path("hamburger.svg"));
@@ -21,9 +39,34 @@
   background-image: url(asset_path("hamburger_h.svg"));
 }
 
+// redSocial
+.redSocial {
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: center;
+  width: 3rem !important;
+  height: 3rem !important;
+  margin-right: 1.5rem;
+}
+.redSocial1 {
+  background-image: url(asset_path("redSocial1.svg"));
+}
+.redSocial2 {
+  background-image: url(asset_path("redSocial2.svg"));
+}
+.redSocial1:hover {
+  background-image: url(asset_path("redSocial1_h.svg"));
+}
+.redSocial2:hover {
+  background-image: url(asset_path("redSocial2_h.svg"));
+}
+
 // Natacion
 .natacion {
   background-image: url(asset_path("natacion.svg"));
+}
+.natacion-p {
+  background-image: url(asset_path("natacion_b.svg"));
 }
 
 li:hover .natacion {
@@ -32,6 +75,9 @@ li:hover .natacion {
 // Gimnacio
 .gimnacio {
   background-image: url(asset_path("gimnacio.svg"));
+}
+.gimnacio-p {
+  background-image: url(asset_path("gimnacio_b.svg"));
 }
 
 li:hover .gimnacio {
@@ -42,6 +88,9 @@ li:hover .gimnacio {
 .hidro {
   background-image: url(asset_path("hidro.svg"));
 }
+.hidro-p {
+  background-image: url(asset_path("hidro_b.svg"));
+}
 
 li:hover .hidro {
   background-image: url(asset_path("hidro_h.svg"));
@@ -50,6 +99,9 @@ li:hover .hidro {
 // Mente y Cuerpo
 .mente {
   background-image: url(asset_path("mente.svg"));
+}
+.mente-p {
+  background-image: url(asset_path("mente_b.svg"));
 }
 
 li:hover .mente {

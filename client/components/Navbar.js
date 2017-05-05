@@ -28,10 +28,16 @@ class Navbar extends Component {
     $('.button-collapse').on('click', function(){
       $('.nav-wrapper').toggleClass('clicked');
     });
+    $('.side-but').on('click', function() {
+     $('.button-collapse').sideNav('hide');
+    });
   }
 
   componentDidUpdate() {
     $('.collapsible-body').on('click', function() {
+     $('.button-collapse').sideNav('hide');
+    });
+    $('.side-but').on('click', function() {
      $('.button-collapse').sideNav('hide');
     });
   }
@@ -84,11 +90,11 @@ class Navbar extends Component {
   theDoubt(){
     if(this.props.user.role === "admin" || this.props.user.role === "visitor"){
       return(
-        <li className="col s6 m6 color-01"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
+        <li className="side-but col s6 m6 color-01"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
       )
     } else {
       return (
-        <li className="col s6 m6 color-01"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
+        <li className="side-but col s6 m6 color-01"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
       )
     }
   }
@@ -96,15 +102,15 @@ class Navbar extends Component {
   sideNav(){
     return(
       <div className='row'>
-        <li className="col s6 m6 color-01"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
-        <li className="col s6 m6 color-04"><Link to='/'><i className="gimnacio icon"></i>Gimnacio</Link></li>
-        <li className="col s6 m6 color-05"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
-        <li className="col s6 m6 color-03"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
-        <li className="col s6 m6 color-02"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
-        <li className="col s6 m6 color-04"><Link to='/'><i className="contacto icon"></i>Contacto</Link></li>
-        <li className="col s6 m6 color-04"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
-        <li className="col s6 m6 color-03"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
-        <li className="col s6 m6 color-05"><Link to='/'><i className="ubicacion icon"></i>Ubicación</Link></li>
+        <li className="side-but col s6 m6 color-01"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
+        <li className="side-but col s6 m6 color-04"><Link to='/'><i className="gimnacio icon"></i>Gimnacio</Link></li>
+        <li className="side-but col s6 m6 color-05"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
+        <li className="side-but col s6 m6 color-03"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
+        <li className="side-but col s6 m6 color-02"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
+        <li className="side-but col s6 m6 color-04"><Link to='/'><i className="contacto icon"></i>Contacto</Link></li>
+        <li className="side-but col s6 m6 color-04"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
+        <li className="side-but col s6 m6 color-03"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
+        <li className="side-but col s6 m6 color-05"><Link to='/'><i className="ubicacion icon"></i>Ubicación</Link></li>
         {this.theDoubt()}
       </div>
     )
