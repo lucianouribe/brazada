@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FCBF00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:#FCBF00;}
+	.st2{fill:none;stroke:#FCBF00;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<image style="display:none;overflow:visible;" width="200" height="200" id="XMLID_4_" xlink:href="../../../../design/icon references/75699-200.png"  transform="matrix(1.5 0 0 1.5 -0.1742 0)">
+</image>
+<image style="display:none;overflow:visible;" width="200" height="200" id="XMLID_10_" xlink:href="../../../../design/icon references/75699-200.png"  transform="matrix(1.5 0 0 1.5 0 -0.7717)">
+</image>
+<image style="display:none;overflow:visible;" width="200" height="200" id="XMLID_2_" xlink:href="../../../../design/icon references/tarifa.png"  transform="matrix(1.5017 0 0 1.5017 0 0)">
+</image>
+<polygon id="XMLID_1_" class="st0" points="19.7,175 126.3,69 166.3,69 205,109.7 206.3,148.3 99,254.3 "/>
+<g id="XMLID_7_">
+	<path id="XMLID_8_" class="st1" d="M82.4,212l4.7-11.4c-7.9-3.6-14.8-9-18.3-13.5l9.3-12.6c3.9,4.8,10,10.2,17.7,13.4
+		c6.8,2.8,12.6,2.1,14.5-2.7c1.9-4.6-0.8-9-8.4-15.6c-11.1-9.6-17.4-19.1-12.6-30.8c4.3-10.6,15.1-15.8,29-13.1l4.7-11.4l11.8,4.8
+		l-4.3,10.6c7.9,3.6,12.6,7.5,15.8,11.1l-9,12.1c-2.6-2.6-7-7.6-15.6-11.1c-7.8-3.2-11.7-0.9-13.1,2.5c-1.6,4,1.6,8.2,10.2,16.2
+		c12.2,10.9,15.3,19.8,10.9,30.6c-4.4,10.7-15.6,16.7-30.4,13.5l-5,12.2L82.4,212z"/>
+</g>
+<circle id="XMLID_6_" class="st2" cx="165.3" cy="109.7" r="17.3"/>
+<path id="XMLID_12_" class="st2" d="M277.7,45c0,0-7.9,26.8-42,27.3c-9.9-0.3-33.3-4-50.7,9.3s-19.7,28-19.7,28"/>
+<circle id="XMLID_11_" class="st1" cx="165.3" cy="109.7" r="6.7"/>
+</svg>

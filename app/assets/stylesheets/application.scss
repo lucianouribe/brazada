@@ -1,1 +1,24 @@
 @import 'materialize';
+@import 'signupin';
+@import 'home';
+@import 'navbar';
+@import 'logos_y_botones';
+@import 'fonts';
+@import 'botones';
+
+html {
+  // equivalencia 1rem
+  font-size: 14px;
+}
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+}
+// materialize small
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}

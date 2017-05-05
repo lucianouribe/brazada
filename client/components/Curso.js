@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Admin extends React.Component {
+class Curso extends React.Component {
   render(){
     return (
       <div>
-      I'm Admin
+      I'm Curso
       </div>
     )
   }
 }
 
-export default Admin;
+export default Curso;

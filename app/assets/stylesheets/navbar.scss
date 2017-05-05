@@ -1,0 +1,101 @@
+// large
+nav {
+  background-color: #16959e;
+  height: 8rem;
+}
+nav ul a {
+  height: 8rem;
+  font-weight: 200;
+}
+nav ul a:hover {
+  color: #fcbf00;
+}
+.nav-icon {
+  width: 8rem;
+}
+#nav-mobile {
+  width: 88rem;
+  position: relative;
+}
+
+// side nav
+.side-nav {
+  margin-top: 4rem;
+  width: 100%;
+  text-align: center;
+  background-image: url(asset_path("fondo_menu_01.png"));
+  background-repeat: no-repeat;
+  background-position: 30% 70%;
+  background-size: cover;
+}
+.side-nav a {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+.side-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #fcbf00;
+}
+
+//side nav options
+.row .col {
+  padding: 0 !important;
+}
+
+.color-01 {
+  background-color: rgba(50, 100, 132, 0.4);
+}
+.color-02 {
+  background-color: rgba(11, 116, 166, 0.4);
+}
+.color-03 {
+  background-color: rgba(15, 95, 156, 0.4);
+}
+.color-04 {
+  background-color: rgba(30, 85, 128, 0.4);
+}
+.color-05 {
+  background-color: rgba(8, 76, 140, 0.4);
+}
+
+#sidenav-overlay {
+  z-index: -10;
+}
+
+.clicked {
+  background-color: #fcbf00;
+}
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  nav {
+    height: 4rem;
+  }
+  nav ul a {
+    height: 4rem;
+  }
+  .side-nav {
+    margin-top: 4rem;
+  }
+  .side-nav a {
+    height: 19vh !important;
+  }
+}
+
+// materialize small
+@media only screen and (max-width: 600px) {
+  nav {
+    height: 4rem;
+  }
+  nav ul a {
+    height: 4rem;
+  }
+  .side-nav {
+    margin-top: 4rem;
+  }
+  .side-nav a {
+    height: 19vh !important;
+  }
+}

@@ -61,7 +61,7 @@ class SignUp extends React.Component {
 
   showPassInput() {
     if(this.state.open === true) {
-      return(<input placeholder="type code" ref="code"/>)
+      return(<input className="secret-code" placeholder="type code" ref="code"/>)
     } else {
       return(<input ref="code" placeholder="type code" disabled hidden/>)
     }
@@ -71,17 +71,16 @@ class SignUp extends React.Component {
   render() {
     return(
       <div className="container">
-        <h2 className='center'>Sign Up</h2>
+        <h2 className='center titulo'>Registro</h2>
         <form onSubmit={this.handleSubmit}>
           <input placeholder="first_name" ref="first_name" required={true} />
           <input placeholder="last_name" ref="last_name" required={true} />
           <input type='email' placeholder="email" ref="email" required={true} />
-          <div className='btn-code' onClick={this.roleDefinition}>code</div>
+          <div className='btn btn-sec' onClick={this.roleDefinition}>codigo acceso</div>
           {this.showPassInput()}
           <input type='password' placeholder="password" ref="password" required={true} />
           <input type='password' placeholder="password_confirmation" ref="password_confirmation" required={true} />
-          <button className='btn'>Sign Up</button>
-          <div className='btn'><Link className="link" to='/'>Home</Link></div>
+          <button className='btn btn-main'>Registrarse</button>
         </form>
       </div>
     );

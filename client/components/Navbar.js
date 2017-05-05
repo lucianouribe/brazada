@@ -13,16 +13,21 @@ class Navbar extends Component {
     this.navs = this.navs.bind(this);
     this.sideNav = this.sideNav.bind(this);
     this.theDoubt = this.theDoubt.bind(this);
+    this.navDefaultOptions = this.navDefaultOptions.bind(this);
   }
+
 
   logout(e) {
     e.preventDefault();
-    console.log('logout dispatcher');
+    // console.log('logout dispatcher');
     this.props.dispatch(logout(this.props.history));
   }
 
   componentDidMount() {
     $('.button-collapse').sideNav();
+    $('.button-collapse').on('click', function(){
+      $('.nav-wrapper').toggleClass('clicked');
+    });
   }
 
   componentDidUpdate() {
@@ -31,31 +36,46 @@ class Navbar extends Component {
     });
   }
 
+  navDefaultOptions(){
+    return(
+      <div>
+        <li className="nav-icon center"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="gimnacio icon"></i>Gimancia</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="contacto icon"></i>Contacto</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>Ubicacion</Link></li>
+      </div>
+    )
+  }
 
   navs() {
     switch(this.props.user.role) {
       case'visitor':
         return(
           <div>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/'>Contact</Link></li>
-            <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
+            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>Home</Link></li>
+            {this.navDefaultOptions()}
+            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
           </div>
         );
       case'admin':
         return(
           <div>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/admin'>Admin</Link></li>
-            <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
+            <li className="nav-icon center"><Link to='/admin'><i className="admin icon"></i>Admin</Link></li>
+            {this.navDefaultOptions()}
+            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
           </div>
         );
       default:
         return(
           <div>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='/admin'>Admin</Link></li>
-            <li><Link to='/signin'>Login</Link></li>
+            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>Home</Link></li>
+            {this.navDefaultOptions()}
+            <li className="nav-icon center"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
           </div>
         );
     }
@@ -64,20 +84,27 @@ class Navbar extends Component {
   theDoubt(){
     if(this.props.user.role === "admin" || this.props.user.role === "visitor"){
       return(
-        <li><a style={{ cursor: 'pointer' }} onClick={this.logout}>Logout</a></li>
+        <li className="col s6 m6 color-01"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
       )
     } else {
       return (
-        <li><Link className="collapsible-header" to='/signin'>Login</Link></li>
+        <li className="col s6 m6 color-01"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
       )
     }
   }
 
   sideNav(){
     return(
-      <div>
-        <li><Link className="collapsible-header" to='/'>Home</Link></li>
-        <li><Link className="collapsible-header" to='/'>Contact</Link></li>
+      <div className='row'>
+        <li className="col s6 m6 color-01"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
+        <li className="col s6 m6 color-04"><Link to='/'><i className="gimnacio icon"></i>Gimnacio</Link></li>
+        <li className="col s6 m6 color-05"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
+        <li className="col s6 m6 color-03"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
+        <li className="col s6 m6 color-02"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
+        <li className="col s6 m6 color-04"><Link to='/'><i className="contacto icon"></i>Contacto</Link></li>
+        <li className="col s6 m6 color-04"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
+        <li className="col s6 m6 color-03"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
+        <li className="col s6 m6 color-05"><Link to='/'><i className="ubicacion icon"></i>Ubicación</Link></li>
         {this.theDoubt()}
       </div>
     )
@@ -88,7 +115,7 @@ class Navbar extends Component {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <a href='#' data-activates='mobile' className='button-collapse'>
+            <a href='#' data-activates='mobile' className='button-collapse' >
               <i className="hamburger"></i>
             </a>
             <ul id="nav-mobile" className="right hide-on-med-and-down">

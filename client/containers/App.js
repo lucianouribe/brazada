@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { logout } from '../actions/auth.js';
+import { logout, refreshLogin } from '../actions/auth.js';
 import Navbar from '../components/Navbar.js';
+import Flash from '../components/Flash.js';
 
 class App extends React.Component {
 
@@ -15,9 +16,12 @@ class App extends React.Component {
       type: 'GET',
       dataType: 'JSON'
     }).done( user => {
+      // console.log('hit done in componentDidMount')
+      // console.log(user)
       this.props.dispatch(refreshLogin(user));
     }).fail( err => {
-      console.log(err)
+      // console.log('hit fail in componentDidMount')
+      // console.log(err)
     });
   }
 
@@ -25,6 +29,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+        <Flash />
         { this.props.children }
       </div>
     );

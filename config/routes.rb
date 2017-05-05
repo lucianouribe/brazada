@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     get 'users/info'
+    resources :cursos
   end
 
   get '*unmatched_route', to: 'home#index'

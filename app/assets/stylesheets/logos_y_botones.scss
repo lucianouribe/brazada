@@ -1,0 +1,153 @@
+// The general icon rule
+ .icon {
+   background-repeat: no-repeat;
+   background-size: 5rem;
+   background-position: center;
+   width: 100% !important;
+   height: 5rem !important;
+ }
+
+// Hamburger
+.hamburger {
+  background-image: url(asset_path("hamburger.svg"));
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: center;
+  width: 4rem !important;
+  height: 4rem !important;
+}
+
+.hamburger:hover {
+  background-image: url(asset_path("hamburger_h.svg"));
+}
+
+// Natacion
+.natacion {
+  background-image: url(asset_path("natacion.svg"));
+}
+
+li:hover .natacion {
+  background-image: url(asset_path("natacion_h.svg"));
+}
+// Gimnacio
+.gimnacio {
+  background-image: url(asset_path("gimnacio.svg"));
+}
+
+li:hover .gimnacio {
+  background-image: url(asset_path("gimnacio_h.svg"));
+}
+
+// Hidro Gimnacia
+.hidro {
+  background-image: url(asset_path("hidro.svg"));
+}
+
+li:hover .hidro {
+  background-image: url(asset_path("hidro_h.svg"));
+}
+
+// Mente y Cuerpo
+.mente {
+  background-image: url(asset_path("mente.svg"));
+}
+
+li:hover .mente {
+  background-image: url(asset_path("mente_h.svg"));
+}
+
+// Nosotros
+.nosotros {
+  background-image: url(asset_path("nosotros.svg"));
+}
+
+li:hover .nosotros {
+  background-image: url(asset_path("nosotros_h.svg"));
+}
+
+// Contacto
+.contacto {
+  background-image: url(asset_path("contacto.svg"));
+}
+
+li:hover .contacto {
+  background-image: url(asset_path("contacto_h.svg"));
+}
+
+// Horarios
+.horarios {
+  background-image: url(asset_path("horarios.svg"));
+}
+
+li:hover .horarios {
+  background-image: url(asset_path("horarios_h.svg"));
+}
+
+// Tarifas
+.tarifas {
+  background-image: url(asset_path("tarifas.svg"));
+}
+
+li:hover .tarifas {
+  background-image: url(asset_path("tarifas_h.svg"));
+}
+
+// Ubicacion
+.ubicacion {
+  background-image: url(asset_path("ubicacion.svg"));
+}
+
+li:hover .ubicacion {
+  background-image: url(asset_path("ubicacion_h.svg"));
+}
+
+// Login
+.login {
+  background-image: url(asset_path("login.svg"));
+}
+
+li:hover .login {
+  background-image: url(asset_path("login_h.svg"));
+}
+
+// Logout
+.logout {
+  background-image: url(asset_path("logout.svg"));
+}
+
+li:hover .logout {
+  background-image: url(asset_path("logout_h.svg"));
+}
+
+// Home
+.home {
+  background-image: url(asset_path("home.svg"));
+}
+
+li:hover .home {
+  background-image: url(asset_path("home_h.svg"));
+}
+
+// Admin
+.admin {
+  background-image: url(asset_path("admin.svg"));
+}
+
+li:hover .admin {
+  background-image: url(asset_path("admin_h.svg"));
+}
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .icon {
+    background-size: 9rem;
+    height: 9rem !important;
+  }
+}
+// materialize small
+@media only screen and (max-width: 600px) {
+  .icon {
+    background-size: 9rem;
+    height: 9rem !important;
+  }
+}

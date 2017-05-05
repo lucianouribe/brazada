@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BrazadaSite</title>
+    <title>Academia Brazada</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="academia, natacion, gimnacio, san lucas, poblado, medellin, pilates, core, yoga, piscina, hidro gimnacia, pablo restrepo"/>
+    <meta name="description" content="Academia Brazada. Es una institución donde trabajamos con entusiasmo por enseñar y propiciar la práctica de actividades deportivas y de acondicionamiento físico. Nacimos en 1990, como Academia de Natación de Pablo Restrepo, y a partir de nuestra convicción de que enseñar a nadar es regalar a otros la oportunidad de gozar de bienestar, salud física y mental, incluimos con el tiempo más actividades que aportaran iguales beneficios."/>
+    <meta name="author" content="Luciano Uribe"/>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-  <% if Rails.env.development? %>
-  <script src="http://localhost:3808/webpack-dev-server.js"></script>
-<% end %>
-</head>
+    <% if Rails.env.development? %>
+      <script src="http://localhost:3808/webpack-dev-server.js"></script>
+    <% end %>
+  </head>
 
   <body>
     <%= yield %>
-  <%= javascript_include_tag *webpack_asset_paths('application') %>
-</body>
+    <%= javascript_include_tag *webpack_asset_paths('application') %>
+  </body>
+
 </html>

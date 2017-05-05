@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Admin extends React.Component {
+class Main extends React.Component {
   render(){
     return (
       <div>
-      I'm Admin
+      I'm Main
       </div>
     )
   }
 }
 
-export default Admin;
+export default Main;
