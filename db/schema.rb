@@ -10,21 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170503000545) do
+ActiveRecord::Schema.define(version: 20170513140246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cursos", force: :cascade do |t|
-    t.string   "nombre",        null: false
-    t.string   "tipo_curso",    null: false
-    t.text     "descripcion"
-    t.string   "horarios"
+    t.string   "nombre"
+    t.string   "tipo_curso"
     t.string   "lugar"
-    t.string   "profesores"
-    t.string   "instalaciones"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.text     "descripcion"
+    t.float    "duracion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "horarios", force: :cascade do |t|
+    t.string   "dia"
+    t.time     "hora"
+    t.integer  "curso_id"
+    t.integer  "profesor_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["curso_id"], name: "index_horarios_on_curso_id", using: :btree
+    t.index ["profesor_id"], name: "index_horarios_on_profesor_id", using: :btree
+  end
+
+  create_table "profesors", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "apellido"
+    t.string   "especialidad"
+    t.integer  "no_clases"
+    t.integer  "salario"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "tarifas", force: :cascade do |t|
+    t.string   "plan"
+    t.string   "nombre"
+    t.integer  "valor"
+    t.string   "descripcion"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +75,6 @@ ActiveRecord::Schema.define(version: 20170503000545) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "horarios", "cursos"
+  add_foreign_key "horarios", "profesors"
 end

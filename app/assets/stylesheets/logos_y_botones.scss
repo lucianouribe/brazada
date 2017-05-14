@@ -1,10 +1,10 @@
 // The general icon rule
  .icon {
    background-repeat: no-repeat;
-   background-size: 5rem;
+   background-size: 4.5rem;
    background-position: center;
    width: 100% !important;
-   height: 5rem !important;
+   height: 4.5rem !important;
  }
 
  .icon-portada {
@@ -192,14 +192,14 @@ li:hover .admin {
 // materialize medium
 @media all and (min-width: 600px) and (max-width: 992px) {
   .icon {
-    background-size: 9rem;
-    height: 9rem !important;
+    background-size: 7rem;
+    height: 7rem !important;
   }
 }
 // materialize small
 @media only screen and (max-width: 600px) {
   .icon {
-    background-size: 9rem;
-    height: 9rem !important;
+    background-size: 7rem;
+    height: 7rem !important;
   }
 }

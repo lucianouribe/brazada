@@ -28,11 +28,11 @@ class SignIn extends React.Component {
       console.log('loged in or sign in')
       this.props.dispatch(refreshLogin(user));
       this.props.history.push("/home")
-      this.props.dispatch(setFlash(message, 'success'))
+      // this.props.dispatch(setFlash(message, 'success'))
     }).fail( err => {
       console.log('something failed with the log in')
       console.log(err);
-      this.props.dispatch(setFlash(message, 'error'))
+      // this.props.dispatch(setFlash(message, 'error'))
     });
   }
 
@@ -54,7 +54,7 @@ class SignIn extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    flash: state.flash
+    // flash: state.flash
  }
 }
 

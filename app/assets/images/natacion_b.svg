@@ -3,20 +3,20 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="100 -100 300 300" style="enable-background:new 100 -100 300 300;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <g id="XMLID_1_">
-	<path id="XMLID_19_" class="st0" d="M110.9,98.5c23.2,0,23.2,12,46.4,12s23.2-12,46.4-12s23.2,12,46.4,12s23.2-12,46.4-12
+	<path id="XMLID_19_" class="st0" d="M210.9-1.5c23.2,0,23.2,12,46.4,12c23.2,0,23.2-12,46.4-12s23.2,12,46.4,12s23.2-12,46.4-12
 		s23.2,12,46.4,12s23.2-12,46.4-12"/>
 </g>
-<path id="XMLID_17_" class="st0" d="M171.2,108.1"/>
-<path id="XMLID_16_" class="st0" d="M171.2,108.1c-8.1-7.2-13.1-17.7-13.1-29.3c0-21.7,17.6-39.2,39.2-39.2s39.3,17.6,39.3,39.2
+<path id="XMLID_17_" class="st0" d="M271.2,8.1"/>
+<path id="XMLID_16_" class="st0" d="M271.2,8.1c-8.1-7.2-13.1-17.7-13.1-29.3c0-21.7,17.6-39.2,39.2-39.2s39.3,17.6,39.3,39.2
 	c0,2.5-0.2,4.9-0.7,7.3c-1.3,7-4.5,13.4-9,18.5"/>
-<path id="XMLID_3_" class="st0" d="M243.4,82c0.3-5,63.9-37.9,71-38.2c7.2-0.3,64.5,31.8,69.7,35.5c9.5,8.7-0.1,17-5.2,17.2
-	c-5.2,0.2-56.4-21.6-61.7-21.6c-5.3,0-43.2,26.3-52.9,26.8S243.1,86.9,243.4,82z"/>
-<ellipse id="XMLID_7_" transform="matrix(0.493 -0.87 0.87 0.493 45.8123 199.6628)" class="st0" cx="194.2" cy="60.5" rx="11.5" ry="6.8"/>
-<ellipse id="XMLID_12_" transform="matrix(0.493 -0.87 0.87 0.493 11.9629 199.0883)" class="st0" cx="176.8" cy="89.3" rx="11.5" ry="6.8"/>
-<line id="XMLID_13_" class="st0" x1="199.8" y1="50.5" x2="215" y2="43.7"/>
-<path id="XMLID_14_" class="st0" d="M182.5,79.3c0,0-0.8-5.7,6-8.7"/>
-<line id="XMLID_15_" class="st0" x1="171.2" y1="99.3" x2="170" y2="107"/>
+<path id="XMLID_3_" class="st0" d="M343.4-18c0.3-5,63.9-37.9,71-38.2c7.2-0.3,64.5,31.8,69.7,35.5c9.5,8.7-0.1,17-5.2,17.2
+	c-5.2,0.2-56.4-21.6-61.7-21.6c-5.3,0-43.2,26.3-52.9,26.8S343.1-13.1,343.4-18z"/>
+<ellipse id="XMLID_7_" transform="matrix(-0.87 -0.493 0.493 -0.87 569.5945 71.2385)" class="st0" cx="294.2" cy="-39.5" rx="6.8" ry="11.5"/>
+<ellipse id="XMLID_12_" transform="matrix(-0.87 -0.493 0.493 -0.87 522.9293 116.4594)" class="st0" cx="276.8" cy="-10.7" rx="6.8" ry="11.5"/>
+<line id="XMLID_13_" class="st0" x1="299.8" y1="-49.5" x2="315" y2="-56.3"/>
+<path id="XMLID_14_" class="st0" d="M282.5-20.7c0,0-0.8-5.7,6-8.7"/>
+<line id="XMLID_15_" class="st0" x1="271.2" y1="-0.7" x2="270" y2="7"/>
 </svg>

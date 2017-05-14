@@ -12,6 +12,7 @@ import NoMatch from './components/NoMatch';
 import Home from './components/Home';
 import Main from './components/Main';
 import Curso from './components/Curso';
+import Contacto from './components/Contacto';
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -29,6 +30,7 @@ export default (
       <Route path="/home" component={Home} />
       <Route path="/main" component={Main} />
       <Route path="/curso" component={Curso} />
+      <Route path="/contacto" component={Contacto} />
       <Route path="/signup" component={SignUp} />
       <Route path="/signin" component={SignIn} />
       <Route component={AuthenticatedRoutes} >
