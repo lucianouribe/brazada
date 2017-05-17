@@ -6,7 +6,7 @@ class DashButtons extends React.Component {
     let user = this.props.user
     return (
       <div>
-        <div className="admin-content right col s12 m8 l8">
+        <div className="dash-buttons right col s12 m8 l8">
           {`Hello , ${user.first_name} Welcome. This is DashButtons`}
         </div>
       </div>

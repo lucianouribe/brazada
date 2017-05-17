@@ -10,14 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170513140246) do
+ActiveRecord::Schema.define(version: 20170517143115) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cursos", force: :cascade do |t|
+  create_table "contactos", force: :cascade do |t|
     t.string   "nombre"
-    t.string   "tipo_curso"
+    t.string   "correo"
+    t.text     "mensaje"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cursos", force: :cascade do |t|
+    t.string   "nombre",      null: false
+    t.string   "tipo_curso",  null: false
     t.string   "lugar"
     t.text     "descripcion"
     t.float    "duracion"
@@ -26,8 +34,8 @@ ActiveRecord::Schema.define(version: 20170513140246) do
   end
 
   create_table "horarios", force: :cascade do |t|
-    t.string   "dia"
-    t.time     "hora"
+    t.string   "dia",         null: false
+    t.time     "hora",        null: false
     t.integer  "curso_id"
     t.integer  "profesor_id"
     t.datetime "created_at",  null: false
@@ -37,8 +45,8 @@ ActiveRecord::Schema.define(version: 20170513140246) do
   end
 
   create_table "profesors", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "apellido"
+    t.string   "nombre",       null: false
+    t.string   "apellido",     null: false
     t.string   "especialidad"
     t.integer  "no_clases"
     t.integer  "salario"
@@ -47,9 +55,9 @@ ActiveRecord::Schema.define(version: 20170513140246) do
   end
 
   create_table "tarifas", force: :cascade do |t|
-    t.string   "plan"
-    t.string   "nombre"
-    t.integer  "valor"
+    t.string   "plan",        null: false
+    t.string   "nombre",      null: false
+    t.integer  "valor",       null: false
     t.string   "descripcion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

@@ -21,6 +21,7 @@ gem 'materialize-sass'
 
 group :development, :test do
   gem 'pry'
+  gem 'letter_opener'
 end
 
 group :development do

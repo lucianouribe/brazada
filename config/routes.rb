@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :cursos
     resources :profesors
     resources :horarios
+    post 'contacto', to: 'contactos#create'
+
     # resources :horarios, only: [:new, :create, :destroy]
   end
 

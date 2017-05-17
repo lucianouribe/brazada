@@ -107,7 +107,7 @@ class Navbar extends Component {
         <li className="side-but col s12 m12 color-04"><Link to='/main'><i className="hidro icon"></i>Hidro</Link></li>
         <li className="side-but col s12 m12 color-03"><Link to='/main'><i className="mente icon"></i>Mente</Link></li>
         <li className="side-but col s12 m12 color-05"><Link to='/main'><i className="nosotros icon"></i>Nosotros</Link></li>
-        <li className="side-but col s12 m12 color-04"><Link to='/contacto'><i className="contacto icon"></i>Contacto</Link></li>
+        <li className="side-but col s12 m12 color-04"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
         <li className="side-but col s12 m12 color-03"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
         <li className="side-but col s12 m12 color-01"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
         <li className="side-but col s12 m12 color-05"><Link to='/'><i className="ubicacion icon"></i>Ubicación</Link></li>

@@ -1,5 +1,5 @@
 const flash = ( state = {}, action ) => {
-  console.log('flash reducer');
+  // console.log('flash reducer');
   switch (action.type) {
     case 'SET_FLASH':
       let { message, msgType } = action;

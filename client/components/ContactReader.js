@@ -1,15 +1,12 @@
 import React from 'react';
-import Dashboard from './Dashboard';
 import { connect } from 'react-redux';
-import ContactReader from './ContactReader';
 
 class Admin extends React.Component {
   render(){
     return (
-      <div>
-        <Dashboard clasName="row"/>
-        <div className="admin-content right col s12 m8 l8">
-          <ContactReader />
+      <div className='row'>
+        <div className='admin-title'>
+          <h1>Hola {this.props.user.first_name}. Todos los Mensajes</h1>
         </div>
       </div>
     )
@@ -18,6 +15,7 @@ class Admin extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
+    user: state.user,
     tiposCurso: state.tiposCurso
  }
 }

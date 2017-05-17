@@ -5,7 +5,7 @@
 #               descripcion: 'bla ble bli blo blu'
 #               )
 # end
-#
+# 
 # puts "tarifas seeded"
 #
 # 20.times do

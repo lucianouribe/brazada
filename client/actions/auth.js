@@ -1,5 +1,5 @@
 export const refreshLogin = (user = null) => {
-  console.log('refreshLogin dispatcher arrived');
+  // console.log('refreshLogin dispatcher arrived');
   return (dispatch) => {
     if (user) {
       dispatch(setUser(user))
@@ -9,8 +9,8 @@ export const refreshLogin = (user = null) => {
         type: 'GET',
         dataType: 'JSON'
       }).done( user => {
-        console.log('you have hitted setUser');
-        console.log(user);
+        // console.log('you have hitted setUser');
+        // console.log(user);
         dispatch(setUser(user));
       }).fail( err => {
         console.log(err)

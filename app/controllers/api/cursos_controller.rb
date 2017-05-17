@@ -1,9 +1,10 @@
+require 'pry'
 class Api::CursosController < ApplicationController
   before_action :set_api_curso, only: [:show, :edit, :update, :destroy]
 
   # GET /api/cursos.json
   def index
-    @api_cursos = Api::Curso.all
+    @api_cursos = Curso.all
   end
 
   # GET /api/cursos/1.json
@@ -12,7 +13,7 @@ class Api::CursosController < ApplicationController
 
   # GET /api/cursos/new
   def new
-    @api_curso = Api::Curso.new
+    @api_curso = Curso.new
   end
 
   # GET /api/cursos/1/edit
@@ -21,11 +22,11 @@ class Api::CursosController < ApplicationController
 
   # POST /api/cursos.json
   def create
-    @api_curso = Api::Curso.new(api_curso_params)
+    @api_curso = Curso.new(api_curso_params)
 
     respond_to do |format|
       if @api_curso.save
-        format.json { render :show, status: :created, location: @api_curso }
+        format.json { render :show, status: :created }
       else
         format.json { render json: @api_curso.errors, status: :unprocessable_entity }
       end
@@ -36,7 +37,8 @@ class Api::CursosController < ApplicationController
   def update
     respond_to do |format|
       if @api_curso.update(api_curso_params)
-        format.json { render :show, status: :ok, location: @api_curso }
+        # binding.pry
+        format.json { render :show, status: :ok }
       else
         format.json { render json: @api_curso.errors, status: :unprocessable_entity }
       end
@@ -54,7 +56,7 @@ class Api::CursosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_api_curso
-      @api_curso = Api::Curso.find(params[:id])
+      @api_curso = Curso.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

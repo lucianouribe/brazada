@@ -47,6 +47,13 @@ textarea:focus {
   float: right;
 }
 
+.select-dropdown {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  padding-left: 0 !important;
+  padding-bottom: 2rem !important;
+}
+
 @media all and (min-width: 600px) and (max-width: 992px) {
   textarea {
     height: 35vh;
