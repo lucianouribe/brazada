@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 20170517143115) do
   enable_extension "plpgsql"
 
   create_table "contactos", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "correo"
-    t.text     "mensaje"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "nombre",                      null: false
+    t.string   "correo",                      null: false
+    t.text     "mensaje",                     null: false
+    t.boolean  "leido",       default: false
+    t.boolean  "importancia", default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "cursos", force: :cascade do |t|

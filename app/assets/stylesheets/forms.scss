@@ -54,6 +54,21 @@ textarea:focus {
   padding-bottom: 2rem !important;
 }
 
+// input lever
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #7D5F00;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #fcbf00;
+}
+// checkbox
+.importante-checkbox input[type="checkbox"]:checked {
+  border-right: 2px solid #fcbf00 !important;
+  border-bottom: 2px solid #fcbf00 !important;
+}
+
+
 @media all and (min-width: 600px) and (max-width: 992px) {
   textarea {
     height: 35vh;

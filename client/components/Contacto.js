@@ -18,7 +18,7 @@ class Contacto extends React.Component {
       correo: this.refs.correo.value,
       mensaje: this.refs.mensaje.value,
     }}
-    console.log(contacto);
+    // console.log(contacto);
     $.ajax({
       url: '/api/contacto',
       type: 'POST',
