@@ -8,8 +8,14 @@
   margin-right: 5rem;
   color: #16959e;
 }
+
 .admin-title span {
   margin: 1.8rem 0 1.68rem 0;
   color: #fcbf00;
   cursor: pointer;
+}
+
+.card-content {
+  height: 15rem;
+  overflow-y: scroll;
 }

@@ -60,12 +60,13 @@ textarea:focus {
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-  background-color: #fcbf00;
+  background-color: #5E0A0E;
 }
 // checkbox
-.importante-checkbox input[type="checkbox"]:checked {
-  border-right: 2px solid #fcbf00 !important;
-  border-bottom: 2px solid #fcbf00 !important;
+
+[type="checkbox"]:checked + label:before {
+    border-right: 2px solid #18214c;
+    border-bottom: 2px solid #18214c;
 }
 
 

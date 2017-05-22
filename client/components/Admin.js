@@ -1,15 +1,43 @@
 import React from 'react';
 import Dashboard from './Dashboard';
 import { connect } from 'react-redux';
-import ContactReader from './ContactReader';
+import ContactMain from './ContactMain';
+import Cursos from './Cursos';
 
 class Admin extends React.Component {
+  constructor(){
+    super();
+
+    this.state = {
+      renderOption: ''
+    }
+
+    this.setRenderOption = this.setRenderOption.bind(this);
+  }
+
+  setRenderOption(iAmTheOption){
+    this.setState({ renderOption: iAmTheOption })
+  }
+
+  mainRenderer(){
+    switch (this.state.renderOption) {
+      case 'cursos':
+          return(<Cursos />)
+        break;
+      case 'mensajes':
+          return(<ContactMain />)
+        break;
+      default:
+        return(<ContactMain />)
+    }
+  }
+
   render(){
     return (
-      <div>
-        <Dashboard clasName="row"/>
-        <div className="admin-content right col s12 m8 l8">
-          <ContactReader />
+      <div className='admin-main'>
+        <Dashboard setRenderOption={this.setRenderOption}/>
+        <div className="admin-content">
+          {this.mainRenderer()}
         </div>
       </div>
     )

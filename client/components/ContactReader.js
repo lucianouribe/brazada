@@ -18,7 +18,7 @@ class ContactReader extends React.Component {
     let contactos = this.props.contactos
     if(contactos.length) {
       return contactos.map( mensaje => {
-        return(<Mensaje key={mensaje.id} mensaje={mensaje} />);
+        return(<Mensaje key={mensaje.id} mensaje={mensaje} toggleMailer={this.props.toggleMailer} setReceiver={this.props.setReceiver}/>);
       })
     } else {
       return(<h4>Sin Mensajes</h4>);

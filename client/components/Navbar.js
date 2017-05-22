@@ -50,7 +50,7 @@ class Navbar extends Component {
         <li className="nav-icon center"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
-        <li className="nav-icon center"><Link to='/contacto'><i className="contacto icon"></i>Contacto</Link></li>
+        <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>Ubicacion</Link></li>

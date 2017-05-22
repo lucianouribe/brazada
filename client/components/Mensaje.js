@@ -14,6 +14,7 @@ class Mensaje extends React.Component {
     this.handleImportante = this.handleImportante.bind(this);
     this.showMessage = this.showMessage.bind(this);
     this.discoverMessage = this.discoverMessage.bind(this);
+    this.doSomeThings = this.doSomeThings.bind(this);
   }
 
   componentDidMount() {
@@ -52,6 +53,11 @@ class Mensaje extends React.Component {
     }
   }
 
+  doSomeThings(){
+    this.props.toggleMailer();
+    this.props.setReceiver(this.props.mensaje);
+  }
+
 
   render(){
     let mensaje = this.props.mensaje;
@@ -68,8 +74,8 @@ class Mensaje extends React.Component {
           </div>
           <span><h4 onClick={this.showMessage}>{mensaje.nombre}</h4></span>
           <span className='botones'>
-          <i className="material-icons btn-delete" onClick={() => this.props.dispatch(deleteMensaje(mensaje.id))}>delete</i>
-          <i className="material-icons" >email</i>
+          <i className="material-icons btn-icon btn-delete" onClick={() => this.props.dispatch(deleteMensaje(mensaje.id))}>delete</i>
+          <i className="material-icons btn-icon btn-mail" onClick={this.doSomeThings}>email</i>
           <div className="switch right">
             <label>
               <input ref="user_type" type="checkbox" onClick={this.handleLeido} checked={mensaje.leido} />

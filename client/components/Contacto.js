@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router';
 
 
 class Contacto extends React.Component {
@@ -18,7 +17,7 @@ class Contacto extends React.Component {
       correo: this.refs.correo.value,
       mensaje: this.refs.mensaje.value,
     }}
-    // console.log(contacto);
+    console.log(contacto);
     $.ajax({
       url: '/api/contacto',
       type: 'POST',

@@ -31,6 +31,13 @@
   color: #18214c;
 }
 
-.btn-delete {
+.btn-icon {
   cursor: pointer;
+  color: #161616;
+}
+.btn-delete:hover {
+  color: red;
+}
+.btn-mail:hover {
+  color: #16959e;
 }

@@ -1,3 +1,4 @@
+require 'pry'
 Rails.application.routes.draw do
   root 'home#index'
 
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
     resources :profesors
     resources :horarios
     post 'contacto', to: 'contactos#create_mail'
+    post 'responder', to: 'responders#create_response_mail'
     resources :contactos
 
     # resources :horarios, only: [:new, :create, :destroy]

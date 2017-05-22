@@ -1,5 +1,7 @@
 require 'pry'
 class Api::ContactosController < ApplicationController
+  skip_before_action :verify_authenticity_token
+  skip_before_action :authenticate_user!
   before_action :set_api_contacto, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -16,17 +18,18 @@ class Api::ContactosController < ApplicationController
   def edit
   end
 
-  def create
-    @api_contacto = Contacto.new(api_contacto_params)
-
-    respond_to do |format|
-      if @api_contacto.save
-        format.json { render :show, status: :created }
-      else
-        format.json { render json: @api_contacto.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # def create
+  #   binding.pry
+  #   @api_contacto = Contacto.new(api_contacto_params)
+  #
+  #   respond_to do |format|
+  #     if @api_contacto.save
+  #       format.json { render :show, status: :created }
+  #     else
+  #       format.json { render json: @api_contacto.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   def update
     respond_to do |format|
@@ -46,7 +49,6 @@ class Api::ContactosController < ApplicationController
   end
 
   def create_mail
-    # binding.pry
     contacto = Contacto.create(api_contacto_params)
     ContactoMailer.nuevo_mensaje(contacto).deliver
   end
@@ -58,7 +60,6 @@ class Api::ContactosController < ApplicationController
     end
 
     def api_contacto_params
-      # binding.pry
       params.require(:contacto).permit(:nombre, :correo, :mensaje, :leido, :importancia)
     end
 
