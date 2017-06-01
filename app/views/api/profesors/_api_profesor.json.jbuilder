@@ -1,2 +1,2 @@
-json.extract! api_profesor, :id, :created_at, :updated_at
+json.extract! api_profesor, :id, :nombre, :apellido, :especialidad, :no_clases, :salario
 json.url api_profesor_url(api_profesor, format: :json)

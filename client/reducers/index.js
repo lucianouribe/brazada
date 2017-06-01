@@ -4,6 +4,11 @@ import user from './user';
 import flash from './flash';
 import cursos from './cursos';
 import contactos from './contactos';
+import alumnos from './alumnos';
+import tarifas from './tarifas';
+import profesors from './profesors';
+import menus from './menus';
+import submenus from './submenus';
 
 
 const rootReducer = combineReducers({
@@ -11,7 +16,12 @@ const rootReducer = combineReducers({
   user,
   flash,
   cursos,
-  contactos
+  contactos,
+  alumnos,
+  tarifas,
+  profesors,
+  menus,
+  submenus
 });
 
 

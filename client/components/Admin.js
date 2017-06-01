@@ -3,6 +3,9 @@ import Dashboard from './Dashboard';
 import { connect } from 'react-redux';
 import ContactMain from './ContactMain';
 import Cursos from './Cursos';
+import Alumnos from './Alumnos';
+import Tarifas from './Tarifas';
+import Profesors from './Profesors';
 
 class Admin extends React.Component {
   constructor(){
@@ -27,8 +30,17 @@ class Admin extends React.Component {
       case 'mensajes':
           return(<ContactMain />)
         break;
+      case 'alumnos':
+          return(<Alumnos />)
+        break;
+      case 'tarifas':
+          return(<Tarifas />)
+        break;
+      case 'profesors':
+          return(<Profesors />)
+        break;
       default:
-        return(<ContactMain />)
+        return(<Profesors />)
     }
   }
 

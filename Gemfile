@@ -17,9 +17,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'repack'
 gem 'devise'
 gem 'materialize-sass'
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem 'whenever', :require => false
 
 
 group :development, :test do
+  gem 'faker'
   gem 'pry'
   gem 'letter_opener'
 end

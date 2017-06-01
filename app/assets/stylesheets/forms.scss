@@ -7,11 +7,7 @@ input {
   color: #161616 !important;
 }
 
-input[type=email] {
-  height: 4rem;
-}
-
-input[type=password] {
+[type=email], [type=password] {
   height: 4rem;
 }
 

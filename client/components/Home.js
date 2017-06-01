@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-import Navbar from './Navbar.js';
-
 class Home extends React.Component {
   render(){
     return (
-      <div className="">
+      <div>
         <div className="portada">
           <h4 id="main-phrase" className="center-align">Esta es una frase muy, pero muy, pero muy inspiradora! En serio. Me derretí!!!</h4>
           <div className="logo"></div>

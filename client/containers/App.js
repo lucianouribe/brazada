@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { logout, refreshLogin } from '../actions/auth.js';
+import { setStater } from '../actions/menus.js';
 import Navbar from '../components/Navbar.js';
 import Flash from '../components/Flash.js';
 
@@ -25,6 +26,7 @@ class App extends React.Component {
     });
   }
 
+
   render(){
     return (
       <div>
@@ -38,7 +40,10 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return { user: state.user }
+  return {
+    user: state.user,
+    menus: state.menus
+  }
 }
 
 export default connect(mapStateToProps)(App);

@@ -19,3 +19,11 @@
   height: 15rem;
   overflow-y: scroll;
 }
+.card-action i {
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.card-action i:hover {
+  color: #fcbf00;
+}

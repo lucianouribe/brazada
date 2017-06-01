@@ -1,6 +1,7 @@
 class Api::HorariosController < ApplicationController
   before_action :set_api_horario, only: [:show, :edit, :update, :destroy]
-
+  skip_before_action :authenticate_user!, only: [:index]
+  
   # GET /api/horarios.json
   def index
     @api_horarios = Api::Horario.all

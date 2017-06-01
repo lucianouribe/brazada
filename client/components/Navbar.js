@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
+import { fetchCursos } from '../actions/cursos';
+import { setTipoCurso } from '../actions/menus';
 
 
 class Navbar extends Component {
@@ -14,6 +16,7 @@ class Navbar extends Component {
     this.sideNav = this.sideNav.bind(this);
     this.theDoubt = this.theDoubt.bind(this);
     this.navDefaultOptions = this.navDefaultOptions.bind(this);
+    this.goToActions = this.goToActions.bind(this);
   }
 
 
@@ -31,6 +34,7 @@ class Navbar extends Component {
     $('.side-but').on('click', function() {
      $('.button-collapse').sideNav('hide');
     });
+    this.props.dispatch(fetchCursos());
   }
 
   componentDidUpdate() {
@@ -42,13 +46,20 @@ class Navbar extends Component {
     });
   }
 
+  goToActions(takeThis){
+    this.props.dispatch(setTipoCurso(takeThis))
+  }
+  // <li className="nav-icon center" onClick={() => this.goToActions(mente)}><Link to='/main'><i className="mente icon"></i>Test</Link></li>
+
   navDefaultOptions(){
+    let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
+    let natacion = 'natacion';
+    let gimnacio = 'gimnacio';
+    let hidro = 'hidro';
+    let mente = 'mente';
     return(
       <div>
-        <li className="nav-icon center"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="gimnacio icon"></i>Gimancia</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="hidro icon"></i>Hidro</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="mente icon"></i>Mente</Link></li>
+        {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`${navItem[key].tipo_curso} icon`}></i>{navItem[key].tipo_curso}</Link></li>)}
         <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
         <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
@@ -102,11 +113,11 @@ class Navbar extends Component {
   sideNav(){
     return(
       <div className='row'>
-        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="natacion icon"></i>Natación</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/main'><i className="natacion icon"></i>Natación</Link></li>
         <li className="side-but col s12 m12 color-01"><Link to='/main'><i className="gimnacio icon"></i>Gimnacio</Link></li>
         <li className="side-but col s12 m12 color-04"><Link to='/main'><i className="hidro icon"></i>Hidro</Link></li>
         <li className="side-but col s12 m12 color-03"><Link to='/main'><i className="mente icon"></i>Mente</Link></li>
-        <li className="side-but col s12 m12 color-05"><Link to='/main'><i className="nosotros icon"></i>Nosotros</Link></li>
+        <li className="side-but col s12 m12 color-05"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
         <li className="side-but col s12 m12 color-04"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
         <li className="side-but col s12 m12 color-03"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
         <li className="side-but col s12 m12 color-01"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
@@ -139,7 +150,17 @@ class Navbar extends Component {
 
 
 const mapStateToProps = (state) => {
-  return { user: state.user }
+  return {
+    user: state.user,
+    cursos: state.cursos,
+  }
 }
 
 export default connect(mapStateToProps)(Navbar);
+
+
+
+// <li className="nav-icon center"><Link to='/main'><i className="natacion icon"></i>Natación</Link></li>
+// <li className="nav-icon center"><Link to='/main'><i className="gimnacio icon"></i>Gimancia</Link></li>
+// <li className="nav-icon center"><Link to='/main'><i className="hidro icon"></i>Hidro</Link></li>
+// <li className="nav-icon center"><Link to='/main'><i className="mente icon"></i>Mente</Link></li>

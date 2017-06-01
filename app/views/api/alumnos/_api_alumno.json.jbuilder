@@ -1,0 +1,16 @@
+json.extract! api_alumno, :id,
+      :primer_nombre,
+      :segundo_nombre,
+      :primer_apellido,
+      :segundo_apellido,
+      :cedula,
+      :correo,
+      :fecha_nacimiento,
+      :direccion,
+      :telefono,
+      :fecha_matriculacion,
+      :programa,
+      :nivel,
+      :estado,
+      :genero
+json.url api_alumno_url(api_alumno, format: :json)

@@ -140,6 +140,7 @@ class Cursos extends React.Component {
       </div>
     )
   }
+
 }
 
 const mapStateToProps = (state) => {

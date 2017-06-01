@@ -1,5 +1,5 @@
+// parent
 .mensaje {
-  height: 4rem ;
   padding: 1rem;
   background-color: #fff;
   margin: 0 2rem 1rem 2rem;
@@ -7,29 +7,47 @@
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   display: flex;
+  // align-content: space-between;
 }
+.arriba {
+  cursor: pointer;
+}
+// children
 .mensaje h4 {
   font-size: 2rem;
   margin: 0 !important;
 }
+
+.mensaje .importante-checkbox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.mensaje .titulo-mensaje {
+  flex: 8 6 10rem;
+}
+.botones {
+  flex: 2 4 4rem;
+  display: flex;
+  align-content: center;
+}
+.botones i {
+  flex: 1;
+}
+
+// cambio color cuando se dice que es importante
+.importante {
+  background-color: #fcbf00;
+}
+
+// mensaje de abajo
 .abajo {
-  min-height: 10rem !important;
+  min-height: 10rem;
+  overflow-y: scroll;
   display: block;
 }
 .abajo p {
   font-size: 1rem;
   font-weight: 200;
-}
-.mensaje .importante-checkbox {
-  height: 2rem;
-  margin: 0 !important;
-  margin-right: 3rem !important;
-}
-.botones {
-  position: relative;
-  left: 70%;
-}
-
-.importante {
-  background-color: #fcbf00;
 }

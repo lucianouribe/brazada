@@ -23,7 +23,6 @@ class Mensaje extends React.Component {
 
   componentDidUpdate() {
     $('select').material_select();
-
   }
 
   handleLeido(){
@@ -39,7 +38,6 @@ class Mensaje extends React.Component {
   showMessage(){
     this.setState({ show: !this.state.show })
   }
-
 
   discoverMessage(){
     if(this.state.show){
@@ -58,7 +56,6 @@ class Mensaje extends React.Component {
     this.props.setReceiver(this.props.mensaje);
   }
 
-
   render(){
     let mensaje = this.props.mensaje;
     let gooo;
@@ -72,17 +69,17 @@ class Mensaje extends React.Component {
             <input type="checkbox" id={mensaje.id} onClick={this.handleImportante} checked={mensaje.importancia}/>
             <label htmlFor={mensaje.id}></label>
           </div>
-          <span><h4 onClick={this.showMessage}>{mensaje.nombre}</h4></span>
+          <span className='titulo-mensaje'><h4 onClick={this.showMessage}>{mensaje.nombre}</h4></span>
           <span className='botones'>
-          <i className="material-icons btn-icon btn-delete" onClick={() => this.props.dispatch(deleteMensaje(mensaje.id))}>delete</i>
-          <i className="material-icons btn-icon btn-mail" onClick={this.doSomeThings}>email</i>
-          <div className="switch right">
-            <label>
-              <input ref="user_type" type="checkbox" onClick={this.handleLeido} checked={mensaje.leido} />
-              <span className="lever"></span>
-              Leido
-            </label>
-          </div>
+            <i className="material-icons btn-icon btn-delete" onClick={() => this.props.dispatch(deleteMensaje(mensaje.id))}>delete</i>
+            <i className="material-icons btn-icon btn-mail" onClick={this.doSomeThings}>email</i>
+            <div className="switch">
+              <label>
+                <input ref="user_type" type="checkbox" onClick={this.handleLeido} checked={mensaje.leido} />
+                <span className="lever"></span>
+                Leido
+              </label>
+            </div>
           </span>
         </div>
         <div >

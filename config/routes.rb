@@ -12,9 +12,14 @@ Rails.application.routes.draw do
     resources :cursos
     resources :profesors
     resources :horarios
+    resources :tarifas
     post 'contacto', to: 'contactos#create_mail'
     post 'responder', to: 'responders#create_response_mail'
+    # post 'happy_newsmessage', to: 'happy_newsmessages#send_happy_birthday_mail'
+    post 'alumno', to: 'alumno#felicitaciones_mail'
+    post 'alumno', to: 'alumno#promocion_mail'
     resources :contactos
+    resources :alumnos
 
     # resources :horarios, only: [:new, :create, :destroy]
   end

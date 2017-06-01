@@ -1,6 +1,28 @@
+5.times do
+  Alumno.create(
+              primer_nombre: ['juan', 'jose', 'maria', 'camila'].sample,
+              segundo_nombre: ['juan', 'jose', 'maria', 'camila'].sample,
+              primer_apellido: ['restrepo', 'acosta', 'uribe', 'jaramillo'].sample,
+              segundo_apellido: ['restrepo', 'acosta', 'uribe', 'jaramillo'].sample,
+              cedula: rand(1233200..45623078),
+              correo: Faker::Internet.email,
+              fecha_nacimiento: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+              direccion: Faker::Address.street_address,
+              telefono: rand(1233200..45623078),
+              fecha_matriculacion: Faker::Date.between_except(1.year.ago, 1.year.from_now, Date.today),
+              programa: ['plan integral', 'semanal', 'mensual', 'dia'].sample,
+              nivel: ['caballito de mar', 'medusa', 'caracol', 'pinguino', 'tortuga', 'pulpo', 'tiburon', 'delfin', 'estrellita', 'semillero', 'ninguno', 'adultos', 'bebes'].sample,
+              estado: ['activo', 'inactivo', 'retirado'].sample,
+              genero: ['masculino', 'femenino'].sample
+              )
+end
+
+puts "alumnos seeded"
+
 20.times do
-  Tarifa.create(plan: ['integral', 'ninos', 'madres', 'convenio'].sample,
-              nombre: ['1 Dia', '1 Semana', 'Mensualidad'].sample,
+  Tarifa.create(
+              plan: ['Dia', 'Semana', 'Integral'].sample,
+              nombre: ['bebes', 'ninos', 'madres', 'convenio'].sample,
               valor: rand(12300..456078),
               descripcion: 'bla ble bli blo blu'
               )

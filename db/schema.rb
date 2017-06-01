@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170522150003) do
+ActiveRecord::Schema.define(version: 20170526020227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alumnos", force: :cascade do |t|
+    t.string   "primer_nombre"
+    t.string   "segundo_nombre"
+    t.string   "primer_apellido"
+    t.string   "segundo_apellido"
+    t.string   "cedula"
+    t.string   "correo"
+    t.date     "fecha_nacimiento"
+    t.string   "direccion"
+    t.string   "telefono"
+    t.date     "fecha_matriculacion"
+    t.string   "programa"
+    t.string   "nivel"
+    t.string   "estado"
+    t.string   "genero"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "contactos", force: :cascade do |t|
     t.string   "nombre",                      null: false
@@ -33,6 +52,29 @@ ActiveRecord::Schema.define(version: 20170522150003) do
     t.float    "duracion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  end
+
+  create_table "happy_newsmessages", force: :cascade do |t|
+    t.string   "nombre"
+    t.string   "email"
+    t.string   "fecha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "horarios", force: :cascade do |t|
