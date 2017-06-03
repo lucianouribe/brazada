@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import { fetchCursos } from '../actions/cursos';
 import { setTipoCurso } from '../actions/menus';
-
+import { ortografica } from '../helpers';
 
 class Navbar extends Component {
 
@@ -53,18 +53,14 @@ class Navbar extends Component {
 
   navDefaultOptions(){
     let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
-    let natacion = 'natacion';
-    let gimnacio = 'gimnacio';
-    let hidro = 'hidro';
-    let mente = 'mente';
     return(
       <div>
-        {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`${navItem[key].tipo_curso} icon`}></i>{navItem[key].tipo_curso}</Link></li>)}
-        <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
-        <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>Ubicacion</Link></li>
+        {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
+        <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
+        <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="tarifas icon"></i>tarifas</Link></li>
+        <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
       </div>
     )
   }
@@ -74,25 +70,25 @@ class Navbar extends Component {
       case'visitor':
         return(
           <div>
-            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>Home</Link></li>
+            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>home</Link></li>
             {this.navDefaultOptions()}
-            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
+            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>logout</a></li>
           </div>
         );
       case'admin':
         return(
           <div>
-            <li className="nav-icon center"><Link to='/admin'><i className="admin icon"></i>Admin</Link></li>
+            <li className="nav-icon center"><Link to='/admin'><i className="admin icon"></i>admin</Link></li>
             {this.navDefaultOptions()}
-            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
+            <li className="nav-icon center"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>logout</a></li>
           </div>
         );
       default:
         return(
           <div>
-            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>Home</Link></li>
+            <li className="nav-icon center"><Link to='/'><i className="home icon"></i>home</Link></li>
             {this.navDefaultOptions()}
-            <li className="nav-icon center"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
+            <li className="nav-icon center"><Link to='/signin'><i className="login icon"></i>login</Link></li>
           </div>
         );
     }
@@ -101,27 +97,25 @@ class Navbar extends Component {
   theDoubt(){
     if(this.props.user.role === "admin" || this.props.user.role === "visitor"){
       return(
-        <li className="side-but col s12 m12 color-01"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>Logout</a></li>
+        <li className="side-but col s12 m12 color-02"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>logout</a></li>
       )
     } else {
       return (
-        <li className="side-but col s12 m12 color-01"><Link to='/signin'><i className="login icon"></i>Login</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/signin'><i className="login icon"></i>login</Link></li>
       )
     }
   }
 
   sideNav(){
+    let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
     return(
       <div className='row'>
-        <li className="side-but col s12 m12 color-02"><Link to='/main'><i className="natacion icon"></i>Natación</Link></li>
-        <li className="side-but col s12 m12 color-01"><Link to='/main'><i className="gimnacio icon"></i>Gimnacio</Link></li>
-        <li className="side-but col s12 m12 color-04"><Link to='/main'><i className="hidro icon"></i>Hidro</Link></li>
-        <li className="side-but col s12 m12 color-03"><Link to='/main'><i className="mente icon"></i>Mente</Link></li>
-        <li className="side-but col s12 m12 color-05"><Link to='/'><i className="nosotros icon"></i>Nosotros</Link></li>
-        <li className="side-but col s12 m12 color-04"><Link to='/contacto'><i className="icon-contacto icon"></i>Contacto</Link></li>
-        <li className="side-but col s12 m12 color-03"><Link to='/'><i className="horarios icon"></i>Horarios</Link></li>
-        <li className="side-but col s12 m12 color-01"><Link to='/'><i className="tarifas icon"></i>Tarifas</Link></li>
-        <li className="side-but col s12 m12 color-05"><Link to='/'><i className="ubicacion icon"></i>Ubicación</Link></li>
+        {Object.keys(navItem).map(key => <li key={key} className="side-but col s12 m12 color-02" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
+        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="tarifas icon"></i>tarifas</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
         {this.theDoubt()}
       </div>
     )

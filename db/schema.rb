@@ -69,14 +69,6 @@ ActiveRecord::Schema.define(version: 20170526020227) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
   end
 
-  create_table "happy_newsmessages", force: :cascade do |t|
-    t.string   "nombre"
-    t.string   "email"
-    t.string   "fecha"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "horarios", force: :cascade do |t|
     t.string   "dia",         null: false
     t.time     "hora",        null: false

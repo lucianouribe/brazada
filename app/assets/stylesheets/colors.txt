@@ -15,6 +15,7 @@ Colores del logo
 
 Verde Cuna:         #16959e;
 Azul Oscuro:        #18214c;
+Gris Titulos:       #767A85;
 
 ====================================
 Gamas Azules Menu

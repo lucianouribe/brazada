@@ -29,10 +29,10 @@
 .hamburger {
   background-image: url(asset_path("hamburger.svg"));
   background-repeat: no-repeat;
-  background-size: 4rem;
+  background-size: 5rem;
   background-position: center;
-  width: 4rem !important;
-  height: 4rem !important;
+  width: 5rem !important;
+  height: 5rem !important;
 }
 
 .hamburger:hover {
@@ -62,49 +62,49 @@
 }
 
 // Natacion
-.natacion {
+.icon-natacion {
   background-image: url(asset_path("natacion.svg"));
 }
-.natacion-p {
+.icon-natacion-p {
   background-image: url(asset_path("natacion_b.svg"));
 }
 
-li:hover .natacion {
+li:hover .icon-natacion {
   background-image: url(asset_path("natacion_h.svg"));
 }
 // Gimnacio
-.gimnacio {
+.icon-gimnacio {
   background-image: url(asset_path("gimnacio.svg"));
 }
-.gimnacio-p {
+.icon-gimnacio-p {
   background-image: url(asset_path("gimnacio_b.svg"));
 }
 
-li:hover .gimnacio {
+li:hover .icon-gimnacio {
   background-image: url(asset_path("gimnacio_h.svg"));
 }
 
 // Hidro Gimnacia
-.hidro {
+.icon-hidro {
   background-image: url(asset_path("hidro.svg"));
 }
-.hidro-p {
+.icon-hidro-p {
   background-image: url(asset_path("hidro_b.svg"));
 }
 
-li:hover .hidro {
+li:hover .icon-hidro {
   background-image: url(asset_path("hidro_h.svg"));
 }
 
 // Mente y Cuerpo
-.mente {
+.icon-mente {
   background-image: url(asset_path("mente.svg"));
 }
-.mente-p {
+.icon-mente-p {
   background-image: url(asset_path("mente_b.svg"));
 }
 
-li:hover .mente {
+li:hover .icon-mente {
   background-image: url(asset_path("mente_h.svg"));
 }
 

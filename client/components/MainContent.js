@@ -6,14 +6,37 @@ import MainPic from './MainPic';
 
 
 class MainContent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.mainOderFrame = this.mainOderFrame.bind(this);
+  }
+
+  mainOderFrame(){
+    // just change this.props.infoToContent.lugar
+    let whichRoom = 'brazada';
+    if(this.props.order === 'instalaciones') {
+      return (
+        <div className="iframe">
+          <i className="material-icons right" onClick={() => this.props.infoGatherer(null)}>close</i>
+          <iframe src={`http://imagenes360.net/${whichRoom}`} seamless></iframe>
+        </div>
+      )
+    } else {
+      return (
+        <div className="main-content">
+          <MainInfo descripcion={this.props.infoToContent}/>
+          <MainPic />
+          <MainButtons infoGatherer={this.props.infoGatherer}/>
+        </div>
+      )
+    }
+  }
 
   render(){
-    let descripcion = this.props.infoToContent;
     return (
-      <div>
-        <MainInfo descripcion={descripcion}/>
-        <MainPic />
-        <MainButtons />
+      <div >
+        {this.mainOderFrame()}
       </div>
     )
   }

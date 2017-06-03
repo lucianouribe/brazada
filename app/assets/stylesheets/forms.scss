@@ -22,6 +22,13 @@ input:focus {
   box-shadow: none !important;
 }
 
+[type=range] {
+  border-bottom: none !important;
+}
+[type=range]:focus {
+  border-bottom: none !important;
+}
+
 textarea {
   height: 20vh;
   width: 100%;

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import MainNav from './MainNav';
 import MainContent from './MainContent';
+import {ortografica} from '../helpers';
 
 // import { getStater } from '../actions/menus';
 
@@ -15,11 +16,11 @@ class Main extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.state ={
-    //   info: null
-    // }
+    this.state ={
+      order: null
+    }
 
-    // this.infoGatherer = this.infoGatherer.bind(this);
+    this.infoGatherer = this.infoGatherer.bind(this);
   }
 
   componentDidMount(){
@@ -29,16 +30,17 @@ class Main extends React.Component {
   }
 
 
-  // infoGatherer(info){
-  //   this.setState({info})
-  // }
+  infoGatherer(order){
+    this.setState({order})
+  }
+
 
   render(){
-    // filtra los cursos y los reduce a los mismos nombres (unique)
+    // filtra los cursos y los reduce a los mismos nombres (unique) TODOS LOS CURSOS
     let infoCursos = this.props.cursos.filter( item => {
       return item.tipo_curso === this.props.menus
     })
-    // filtra los cursos y los reduce al que coincida con los states escogidos en main nav
+    // filtra los cursos y los reduce al que coincida con los states escogidos en main nav EL CURSO EN ESPECIFICO (METER EN infoToContent EL PROFE, TARIFA, ETC)
     let infoToContent;
     if(this.props.submenus){
       infoToContent = this.props.cursos.filter( item => {
@@ -46,13 +48,17 @@ class Main extends React.Component {
       })
     }
 
+    let titulo = this.props.menus;
+    if(titulo === 'mente'){
+      titulo = 'mente y cuerpo'
+    }
+
+
     return (
       <div className='main-container'>
-        <div>
-          <h1 className='main-titulo'>{this.props.menus}</h1>
-        </div>
+        <h1 className='main-titulo'>{ortografica(titulo)}</h1>
         <MainNav infoCursos={infoCursos} />
-        <MainContent infoToContent={infoToContent}/>
+        <MainContent infoToContent={infoToContent} infoGatherer={this.infoGatherer} order={this.state.order}/>
       </div>
     )
   }
