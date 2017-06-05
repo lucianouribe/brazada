@@ -6,7 +6,7 @@
   margin: 0 !important;
   width: 100%;
 }
-// main titulo
+// MAIN TITULO
 .main-titulo {
   // margin: 0 !important;
   height: 4rem;
@@ -16,7 +16,7 @@
   align-self: center;
 }
 
-// main nav
+// MAIN NAV
 // main nav container
 .main-nav {
   margin: 2rem auto;
@@ -34,7 +34,8 @@
 
   overflow-x: scroll;
   overflow-y: hidden;
-  cursor: pointer;
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
   transition: all 0.2s;
   transform: scale(0.98);
   will-change: transform;
@@ -102,7 +103,7 @@
   margin: 0 auto;
 }
 
-// iframe
+// IFRAME INSTALACIONES
 
 .main-container .iframe {
   width: 60%;
@@ -119,7 +120,7 @@
 }
 
 
-// main content
+// MAIN CONTENT
 .main-content {
   // background-color: gold;
   // padding: 1rem;
@@ -127,12 +128,12 @@
   flex-wrap: wrap;
 }
 
-// main description
+// MAIN INFO (DESCRIPTION)
 div .main-info {
   flex: 1 1 calc(33.3333% - 2rem);
 }
 .main-info {
-  height: 55  vh;
+  height: 55vh;
   // background-color: green;
   border-top: 2px solid #16959e;
   border-bottom: 2px solid #16959e;
@@ -144,20 +145,65 @@ div .main-info {
   font-size: 1.6rem;
   font-weight: 200;
 }
+// main info tarifas
+.main-info .tarifa-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+}
+.tarifa-info h4 {
+  color: #16959e;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.tarifa-info p {
+  font-size: 1rem;
+}
+.tarifa-info-encabezado {
+  flex: 2 2 40%;
+  padding-right: 10px;
+}
+.tarifa-info-nombres, .tarifa-info-valores {
+  flex: 1 1 25%;
+}
+.tarifa-info-valores {
+  margin-left: 1rem;
+}
+// main info profesors
+.main-info .profes-info {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #16959e;
+}
+.main-info .profes-info:last-child {
+  border-bottom: none;
+}
+.profes-info p:first-child {
+  margin-left: 3rem;
+  margin-right: 5px;
+}
 
-// main pic
+.profes-info p:last-child {
+  // margin-right: 4rem;
+}
+
+
+// MAIN PIC
 div .main-picture {
   flex: 1 1 calc(33.3333% - 2rem);
 }
 .main-picture {
   // background-color: purple;
-  height: 55vh;
+  height: 52vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   // background-image: url(asset_path("nino.jpg"));
 }
 // picture for all
+.libre-pic {
+  background-image: url(asset_path("nino.jpg"));
+}
 .bebes-pic {
   background-image: url(asset_path("nino.jpg"));
 }
@@ -254,6 +300,10 @@ div .main-buttons {
 }
 // cellphones and tablets
 @media all and (max-width: 992px) {
+  // main info tarifa
+  .tarifa-info p {
+    font-size: 1.3rem;
+  }
   // iframe instalaciones
   .main-container .iframe {
     width: 100%;

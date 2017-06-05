@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20170526020227) do
     t.string   "nombre",       null: false
     t.string   "apellido",     null: false
     t.string   "especialidad"
+    t.string   "cual_curso",   null: false
     t.integer  "no_clases"
     t.integer  "salario"
     t.datetime "created_at",   null: false
@@ -101,7 +102,7 @@ ActiveRecord::Schema.define(version: 20170526020227) do
   create_table "tarifas", force: :cascade do |t|
     t.string   "plan",        null: false
     t.string   "nombre",      null: false
-    t.integer  "valor",       null: false
+    t.string   "valor",       null: false
     t.string   "descripcion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

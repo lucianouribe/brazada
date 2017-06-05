@@ -4,6 +4,7 @@ class CreateProfesors < ActiveRecord::Migration[5.0]
       t.string :nombre, null: false
       t.string :apellido, null: false
       t.string :especialidad
+      t.string :cual_curso, null: false
       t.integer :no_clases
       t.integer :salario
 

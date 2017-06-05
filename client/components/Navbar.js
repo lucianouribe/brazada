@@ -59,7 +59,7 @@ class Navbar extends Component {
         <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="tarifas icon"></i>tarifas</Link></li>
+        <li className="nav-icon center"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
         <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
       </div>
     )
@@ -114,7 +114,7 @@ class Navbar extends Component {
         <li className="side-but col s12 m12 color-02"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="tarifas icon"></i>tarifas</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
         {this.theDoubt()}
       </div>

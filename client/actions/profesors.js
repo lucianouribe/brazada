@@ -1,11 +1,11 @@
-export const addProfesor = (nombre, apellido, especialidad, no_clases, salario) => {
+export const addProfesor = (nombre, apellido, especialidad, cual_curso, no_clases, salario) => {
   // console.log('this is add profesors action');
   return(dispatch) => {
     $.ajax({
       url: `/api/profesors`,
       type: 'POST',
       dataType: 'JSON',
-      data: { profesor: { nombre, apellido, especialidad, no_clases, salario } }
+      data: { profesor: { nombre, apellido, especialidad, cual_curso, no_clases, salario } }
     }).done( profesor => {
       // console.log('add profesor done data');
       // console.table(profesor);
@@ -37,14 +37,14 @@ export const fetchProfesors = () => {
 
 }
 
-export const editProfesor = (id, nombre, apellido, especialidad, no_clases, salario) => {
+export const editProfesor = (id, nombre, apellido, especialidad, cual_curso, no_clases, salario) => {
   // console.log(`this is edit profesor con id: ${id}`)
   return(dispatch) => {
     $.ajax({
       url: `/api/profesors/${id}`,
       type: 'PUT',
       dataType: 'JSON',
-      data: { profesor: { nombre, apellido, especialidad, no_clases, salario } }
+      data: { profesor: { nombre, apellido, especialidad, cual_curso, no_clases, salario } }
     }).done( profesor => {
       // console.log('edit profesor done data');
       // console.table(profesor);

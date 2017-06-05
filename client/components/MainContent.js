@@ -25,7 +25,7 @@ class MainContent extends React.Component {
     } else {
       return (
         <div className="main-content">
-          <MainInfo descripcion={this.props.infoToContent}/>
+          <MainInfo descripcion={this.props.infoToContent} order={this.props.order}/>
           <MainPic />
           <MainButtons infoGatherer={this.props.infoGatherer}/>
         </div>

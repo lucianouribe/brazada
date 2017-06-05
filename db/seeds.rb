@@ -19,21 +19,23 @@ end
 
 puts "alumnos seeded"
 
-20.times do
-  Tarifa.create(
-              plan: ['Dia', 'Semana', 'Integral'].sample,
-              nombre: ['bebes', 'ninos', 'madres', 'convenio'].sample,
-              valor: rand(12300..456078),
-              descripcion: 'bla ble bli blo blu'
-              )
-end
-
-puts "tarifas seeded"
+# 20.times do
+#   Tarifa.create(
+#               plan: ['convenio', 'integral'].sample,
+#               nombre: ['dia', 'mensualidad', 'matricula'].sample,
+#               cual_curso: ['bebes', 'ninos', 'madres', 'convenio'].sample,
+#               valor: rand(12300..456078),
+#               descripcion: 'bla ble bli blo blu'
+#               )
+# end
+#
+# puts "tarifas seeded"
 
 20.times do
   Profesor.create(nombre: ['pepe', 'pepa', 'pepo', 'pepi'].sample,
               apellido: ['jaramillo', 'restrepo', 'garcia', 'uribe'].sample,
               especialidad: ['natacion', 'hidro', 'gimnacio', 'mente'].sample,
+              cual_curso: ['natacion libre', 'bebes', 'ninos', 'adultos', 'buceo'].sample,
               no_clases: [1, 2, 3, 4].sample,
               salario: 12000
               )
@@ -58,6 +60,11 @@ User.create({:first_name => "test", :last_name => "test", :email => "test@gmail.
 
 puts "user seeded"
 
+Curso.create(nombre: 'natacion libre',
+            tipo_curso: 'natacion',
+            descripcion: """Natacion libre para que entrenes como quieras""",
+            lugar: 'piscina',
+            duracion: 1)
 Curso.create(nombre: 'bebes',
             tipo_curso: 'natacion',
             descripcion: """Clases desde los seis meses de edad, para que los bebés se familiaricen con el medio acuático, disfruten de él y se recreen, ejerciten su cuerpo y desarrollen habilidades motrices.""",
@@ -161,3 +168,73 @@ Curso.create(nombre: 'stretching',
 
 
 puts "cursos seeded"
+
+
+Tarifa.create(
+            plan: 'Plan Integral',
+            nombre: 'Día, Mensualidad, Matrícula',
+            valor: '28000, 180000, 70000',
+            descripcion: 'Natación libre, hidro, pilates, yoga, spinning, circuito, tono, resortes y stretching'
+            )
+Tarifa.create(
+            plan: 'Plan Jóvenes',
+            nombre: 'Mensualidad',
+            valor: '112000',
+            descripcion: 'Estudiantes con carnet'
+            )
+Tarifa.create(
+            plan: 'Natación bebés, niños y equipo jóvenes',
+            nombre: 'Matrícula, 1 vez x semana, 2 veces x semana, 3 veces x semana, 1 día familiar cliente, 1 clase de natación',
+            valor: '70000, 165000, 245000, 260000, 16000, 45000',
+            descripcion: ''
+            )
+Tarifa.create(
+            plan: 'Intensivos',
+            nombre: '1 día, 10 días',
+            valor: '38000, 320000',
+            descripcion: 'Julio y Diciembre'
+            )
+Tarifa.create(
+            plan: 'Clases Personalizadas de Natación',
+            nombre: '1 clase, 1 clase x 2 personas',
+            valor: '58000, 45000 cu',
+            descripcion: ''
+            )
+Tarifa.create(
+            plan: 'Natación Adulto',
+            nombre: '1 vez x semana, 2 veces x semana',
+            valor: '165000, 245000',
+            descripcion: 'Enseñanza'
+            )
+Tarifa.create(
+            plan: 'Natación Adulto',
+            nombre: '2 veces x semana, 3 veces x semana, 4 veces x semana',
+            valor: '180000, 200000, 220000',
+            descripcion: 'Senior Master'
+            )
+Tarifa.create(
+            plan: 'Hidrogimnacia Especial',
+            nombre: '1 sesión (grupo), 10 sesiones (grupo), Personalizada',
+            valor: '33000, 270000, 58000',
+            descripcion: ''
+            )
+Tarifa.create(
+            plan: 'Masajes Relajantes',
+            nombre: '30 minutos',
+            valor: '35000',
+            descripcion: ''
+            )
+Tarifa.create(
+            plan: 'Masajes Reductores',
+            nombre: '60 minutos, Paquete 10 sesiones',
+            valor: '50000, 300000',
+            descripcion: ''
+            )
+Tarifa.create(
+            plan: 'Pilates Reformer y Entrenamiento',
+            nombre: '1 vez x semana, 2 veces x semana, 3 veces x semana, 4 veces x semana, 5 veces x semana, Bono 5 sesiones, Bono 10 sesiones',
+            valor: '205000, 370000, 513000, 625000, 666000, 250000, 470000',
+            descripcion: ''
+            )
+
+puts "tarifas seeded"

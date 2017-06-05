@@ -56,10 +56,11 @@ class Profesors extends React.Component {
     let nombre = this.refs.nombre.value;
     let apellido = this.refs.apellido.value;
     let especialidad = this.refs.especialidad.value;
+    let cual_curso = this.refs.cual_curso.value;
     let no_clases = this.refs.no_clases.value;
     let salario = this.refs.salario.value;
 
-    this.props.dispatch(addProfesor(nombre, apellido, especialidad, no_clases, salario))
+    this.props.dispatch(addProfesor(nombre, apellido, especialidad, cual_curso, no_clases, salario))
     this.toggleDisplay();
   }
 
@@ -82,6 +83,10 @@ class Profesors extends React.Component {
               <p>
                 <strong>Especialidad:</strong>
                 <input type="text" ref="especialidad" required/>
+              </p>
+              <p>
+                <strong>Curso:</strong>
+                <input type="text" ref="cual_curso" required/>
               </p>
               <p>
                 <strong>No Clases:</strong>

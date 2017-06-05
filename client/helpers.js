@@ -21,3 +21,8 @@ export function ortografica(word){
       return word
   }
 }
+
+export function formatPrice(pay) {
+  pay = parseInt(pay)
+  return `$${pay.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+}

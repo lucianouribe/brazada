@@ -1,5 +1,5 @@
 class Profesor < ApplicationRecord
-  validates_presence_of :nombre, :apellido
+  validates_presence_of :nombre, :apellido, :cual_curso
 
   # has_many horarios, dependent: :destroy
   # has_many cursos, through: :horarios

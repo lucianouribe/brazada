@@ -28,10 +28,11 @@ class Profesor extends React.Component {
     let nombre = this.refs.nombre.value;
     let apellido = this.refs.apellido.value;
     let especialidad = this.refs.especialidad.value;
+    let cual_curso = this.refs.cual_curso.value;
     let no_clases = this.refs.no_clases.value;
     let salario = this.refs.salario.value;
 
-    this.props.dispatch(editProfesor(this.props.profesor.id, nombre, apellido, especialidad, no_clases, salario))
+    this.props.dispatch(editProfesor(this.props.profesor.id, nombre, apellido, especialidad, cual_curso, no_clases, salario))
     this.toggleEdit();
   }
 
@@ -53,6 +54,10 @@ class Profesor extends React.Component {
               <p>
                 <strong>Especialidad:</strong>
                 <input type="text" ref="especialidad" defaultValue={profesor.especialidad} />
+              </p>
+              <p>
+                <strong>Cual:</strong>
+                <input type="text" ref="cual_curso" defaultValue={profesor.cual_curso} />
               </p>
               <p>
                 <strong>No Clases:</strong>
@@ -81,6 +86,7 @@ class Profesor extends React.Component {
           <div className="card-content">
             <span className="card-title">{ profesor.nombre } {profesor.apellido}</span>
             <p>Especialidad: {profesor.especialidad}</p>
+            <p>Cual: {profesor.cual_curso}</p>
             <p>No Clases: {profesor.no_clases}</p>
             <p>Salario: {profesor.salario}</p>
           </div>

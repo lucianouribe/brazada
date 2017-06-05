@@ -76,11 +76,11 @@ class Tarifas extends React.Component {
               </p>
               <p>
                 <strong>Nombre:</strong>
-                <input type="text" ref='nombre' required/>
+                <input type="text" ref='nombre' required placeholder="separados por comas"/>
               </p>
               <p>
                 <strong>Valor:</strong>
-                <input type="text" ref="valor" required/>
+                <input type="text" ref="valor" required placeholder="separados por comas"/>
               </p>
               <p>
                 <strong>Descripcion:</strong>

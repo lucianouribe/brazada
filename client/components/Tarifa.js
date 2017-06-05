@@ -46,11 +46,11 @@ class Tarifa extends React.Component {
                 <input type="text" ref='plan' defaultValue={tarifa.plan} />
               </p>
               <p>
-                <strong>Nombre:</strong>
+                <strong>Tipos (separados por comas):</strong>
                 <input type="text" ref="nombre" defaultValue={tarifa.nombre} />
               </p>
               <p>
-                <strong>Valor:</strong>
+                <strong>Valores (separados por comas):</strong>
                 <input type="text" ref="valor" defaultValue={tarifa.valor} />
               </p>
               <p>

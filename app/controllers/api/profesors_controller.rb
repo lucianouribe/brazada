@@ -1,7 +1,7 @@
 class Api::ProfesorsController < ApplicationController
   before_action :set_api_profesor, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index]
-  
+
   def index
     @api_profesors = Profesor.all
   end
@@ -51,6 +51,6 @@ class Api::ProfesorsController < ApplicationController
     end
 
     def api_profesor_params
-      params.require(:profesor).permit(:nombre, :apellido, :especialidad, :no_clases, :salario)
+      params.require(:profesor).permit(:nombre, :apellido, :especialidad, :cual_curso, :no_clases, :salario)
     end
 end
