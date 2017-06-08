@@ -1,7 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 class MainButtons extends React.Component {
+
   render(){
     let horarios = 'horarios';
     let tarifas = 'tarifas';
@@ -18,13 +18,4 @@ class MainButtons extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    cursos: state.cursos,
-    profesors: state.profesors,
-    tarifas: state.tarifas,
-    horarios: state.horarios
-  }
-}
-
-export default connect(mapStateToProps)(MainButtons);
+export default MainButtons;

@@ -1,0 +1,17 @@
+<%= form_for(api_misvi) do |f| %>
+  <% if api_misvi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(api_misvi.errors.count, "error") %> prohibited this api_misvi from being saved:</h2>
+
+      <ul>
+      <% api_misvi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

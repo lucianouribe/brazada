@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { formatPrice, mapArray } from '../helpers';
+import { formatPrice, mapArray, timeFixer } from '../helpers';
 
 class MainInfo extends React.Component {
   constructor(props){
@@ -10,19 +10,28 @@ class MainInfo extends React.Component {
 
   viewRenderer(){
     let curso = this.props.descripcion
+    // tomar el id del curso
+    let cursoId = Object.keys(curso).map(key => curso[key].id)
     // tomar todas las tarifas
     let tarifas = this.props.tarifas
-
     // tomar todas las profesores
     let profes = this.props.profesors
     let losProfes;
-    // loop todas los profesores para que coincidan con el submenu
-    // asignarlos a un array
+    // loop de todos los profesores para que coincidan con el submenu
     if(profes){
       losProfes = profes.filter( docente => {
         return docente.cual_curso === this.props.submenus
       })
     }
+    // filtro de horarios
+    let horarios = this.props.horarios;
+    let losHorarios;
+    if(horarios){
+      losHorarios = horarios.filter( evento => {
+        return evento.curso_id === cursoId[0]
+      })
+    }
+
 // <p> {formatPrice(tarifas[key].valor)}</p>
 // {Object.keys(tarifas[key]).map(bli => <p key={bli}>{tarifas[key].nombre.split(" ")}</p>)}
     let largo;
@@ -49,6 +58,9 @@ class MainInfo extends React.Component {
       case 'profesors':
         return(Object.keys(losProfes).map(key => <span key={key} className="profes-info"> <p>{losProfes[key].nombre}</p><p>{losProfes[key].apellido}</p></span>))
         break;
+      case 'horarios':
+        return(Object.keys(losHorarios).map(key => <span key={key} className="horarios-info"> <p>{losHorarios[key].dia}</p><p>{timeFixer(losHorarios[key].hora)}:{timeFixer(losHorarios[key].minutos)}</p></span>))
+        break;
       default:
         return (Object.keys(curso).map(key => <p key={key}>{curso[key].descripcion}</p>))
     }
@@ -58,6 +70,7 @@ class MainInfo extends React.Component {
     return(
       <div className="main-info">
         {this.viewRenderer()}
+        <span>* Sujeto a modificaciones</span>
       </div>
     )
   }
@@ -67,6 +80,7 @@ const mapStateToProps = (state) => {
   return {
     tarifas: state.tarifas,
     profesors: state.profesors,
+    horarios: state.horarios,
     menus: state.menus,
     submenus: state.submenus
   }

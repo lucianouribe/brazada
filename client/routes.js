@@ -13,7 +13,9 @@ import Home from './components/Home';
 import Main from './components/Main';
 import Curso from './components/Curso';
 import Contacto from './components/Contacto';
+import Ubicacion from './components/Ubicacion';
 import MainTarifas from './components/MainTarifas';
+import MainHorario from './components/MainHorario';
 
 const AdminAccess = UserAuthWrapper({
   authSelector: state => state.user,
@@ -32,7 +34,9 @@ export default (
       <Route path="/main" component={Main} />
       <Route path="/curso" component={Curso} />
       <Route path="/tarifas" component={MainTarifas} />
+      <Route path="/horarios" component={MainHorario} />
       <Route path="/contacto" component={Contacto} />
+      <Route path="/ubicacion" component={Ubicacion} />
       <Route path="/signup" component={SignUp} />
       <Route path="/signin" component={SignIn} />
       <Route component={AuthenticatedRoutes} >

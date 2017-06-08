@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170526020227) do
+ActiveRecord::Schema.define(version: 20170608222238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,13 +71,25 @@ ActiveRecord::Schema.define(version: 20170526020227) do
 
   create_table "horarios", force: :cascade do |t|
     t.string   "dia",         null: false
-    t.time     "hora",        null: false
+    t.integer  "hora",        null: false
+    t.integer  "minutos",     null: false
+    t.string   "posicion",    null: false
+    t.string   "calendario",  null: false
     t.integer  "curso_id"
     t.integer  "profesor_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["curso_id"], name: "index_horarios_on_curso_id", using: :btree
     t.index ["profesor_id"], name: "index_horarios_on_profesor_id", using: :btree
+  end
+
+  create_table "misvis", force: :cascade do |t|
+    t.string   "mision"
+    t.string   "vision"
+    t.string   "nosotros"
+    t.string   "reglamento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "profesors", force: :cascade do |t|

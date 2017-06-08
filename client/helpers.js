@@ -14,9 +14,9 @@ export function ortografica(word){
     case 'mamas':
       return 'mamás'
       break;
-    // case 'mente':
-    //   return 'mte y cpo'
-    //   break;
+    case 'natacion libre':
+      return 'natación libre'
+      break;
     default:
       return word
   }
@@ -25,4 +25,24 @@ export function ortografica(word){
 export function formatPrice(pay) {
   pay = parseInt(pay)
   return `$${pay.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+}
+
+export function timeFixer(time) {
+  if(time > 0 && time < 10){
+    return '0' + time
+  } else if (time === 0 ){
+    return time + '0'
+  } else {
+    return time
+  }
+}
+
+export function aemer(time) {
+  if(time == 12) {
+    return time
+  } else if (time < 12) {
+    return time + 'am'
+  } else {
+    return time + 'pm'
+  }
 }

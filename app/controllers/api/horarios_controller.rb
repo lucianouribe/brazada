@@ -1,10 +1,11 @@
+require 'pry'
 class Api::HorariosController < ApplicationController
   before_action :set_api_horario, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index]
-  
+
   # GET /api/horarios.json
   def index
-    @api_horarios = Api::Horario.all
+    @api_horarios = Horario.all
   end
 
   # GET /api/horarios/1.json
@@ -13,20 +14,16 @@ class Api::HorariosController < ApplicationController
 
   # GET /api/horarios/new
   # def new
-  #   @api_horario = Api::Horario.new
+  #   @api_horario = Horario.new
   # end
 
   def new
-    @api_cursos = Api::Curso.all.map { |r| [r.nombre, r.tipo_curso, r.id] }
-    @api_profesors = Api::Profesor.all.map { |i| [i.nombre, i.apellido, i.id] }
+    @api_cursos = Curso.all.map { |c| [c.nombre, c.tipo_curso, c.lugar, c.duracion, c.id] }
+    @api_profesors = Profesor.all.map { |pr| [pr.nombre, pr.apellido, pr.id] }
     if @api_cursos.any?
       if @api_profesors.any?
-        @api_horario = Api::Horario.new
-      else
-        # flash[:error] = 'No patients, you have to find sick people somewhere'
+        @api_horario = Horario.new
       end
-    else
-      # redirect_to new_doctor_path, error: "No doctors, you have to find at least one of them somewhere"
     end
   end
 
@@ -46,14 +43,11 @@ class Api::HorariosController < ApplicationController
 
   # POST /api/horarios.json
   def create
-    @api_horario = Api::Horario.new(api_horario_params)
-
-    respond_to do |format|
-      if @api_horario.save
-        format.json { render :show, status: :created, location: @api_horario }
-      else
-        format.json { render json: @api_horario.errors, status: :unprocessable_entity }
-      end
+    @api_horario = Horario.new(api_horario_params)
+    if @api_horario.save
+      render :show, status: :created
+    else
+      render json: @api_horario.errors, status: :unprocessable_entity
     end
   end
 
@@ -61,7 +55,7 @@ class Api::HorariosController < ApplicationController
   def update
     respond_to do |format|
       if @api_horario.update(api_horario_params)
-        format.json { render :show, status: :ok, location: @api_horario }
+        format.json { render :show, status: :ok }
       else
         format.json { render json: @api_horario.errors, status: :unprocessable_entity }
       end
@@ -85,11 +79,12 @@ class Api::HorariosController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_api_horario
-      @api_horario = Api::Horario.find(params[:id])
+      # binding.pry
+      @api_horario = Horario.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_horario_params
-      params.require(:horario).permit(:curso_id, :profesor_id, :dia, :hora)
+      params.require(:horario).permit(:curso_id, :profesor_id, :dia, :hora, :minutos, :posicion, :calendario)
     end
 end

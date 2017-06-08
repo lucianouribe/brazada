@@ -1,6 +1,7 @@
 .main-container {
   padding: 2rem !important;
   height: calc(100vh - 8rem);
+  // background-color: red;
   display: flex;
   flex-direction: column;
   margin: 0 !important;
@@ -169,6 +170,9 @@ div .main-info {
 .tarifa-info-valores {
   margin-left: 1rem;
 }
+.main-tarifa {
+  height: 60vh !important;
+}
 // main info profesors
 .main-info .profes-info {
   display: flex;
@@ -182,10 +186,19 @@ div .main-info {
   margin-left: 3rem;
   margin-right: 5px;
 }
-
 .profes-info p:last-child {
   // margin-right: 4rem;
 }
+
+// main info horarios
+.main-info .horarios-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+  padding: 0 1rem;
+}
+
+
 
 
 // MAIN PIC
@@ -298,7 +311,11 @@ div .main-buttons {
   background-color: #18214c;
   color: #fff;
 }
-// cellphones and tablets
+
+//===========================
+// CELLPHONES AND TABLETS!!!
+//===========================
+
 @media all and (max-width: 992px) {
   // main info tarifa
   .tarifa-info p {
@@ -311,10 +328,10 @@ div .main-buttons {
   }
   // altura en modo tablet/cel
   .main-buttons {
-    height: 32vh;
+    height: 30vh;
   }
   .main-picture {
-    height: 32vh;
+    height: 30vh;
     margin: 0;
   }
   //distribution
@@ -331,6 +348,10 @@ div .main-buttons {
   .main-info {
     height: 25vh;
     margin: 2rem 0;
+  }
+  //main tarifa
+  .main-tarifa {
+    height: 70vh !important;
   }
   // main buttons (item)
   .btn-nav-main {
@@ -367,7 +388,9 @@ div .main-buttons {
 
 // materialize medium
 @media all and (min-width: 600px) and (max-width: 992px) {
-
+  // .main-tarifa {
+  //   height: 60vh !important;
+  // }
 }
 
 // materialize small

@@ -146,8 +146,7 @@ class Cursos extends React.Component {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
-    cursos: state.cursos,
-    tiposCurso: state.tiposCurso
+    cursos: state.cursos
  }
 }
 

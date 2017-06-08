@@ -6,6 +6,7 @@ import Cursos from './Cursos';
 import Alumnos from './Alumnos';
 import Tarifas from './Tarifas';
 import Profesors from './Profesors';
+import Horarios from './Horarios';
 
 class Admin extends React.Component {
   constructor(){
@@ -39,8 +40,11 @@ class Admin extends React.Component {
       case 'profesors':
           return(<Profesors />)
         break;
+      case 'horarios':
+          return(<Horarios />)
+        break;
       default:
-        return(<Profesors />)
+        return(<Horarios />)
     }
   }
 

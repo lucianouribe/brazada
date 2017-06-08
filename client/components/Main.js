@@ -47,7 +47,7 @@ class Main extends React.Component {
         return item.nombre === this.props.submenus && item.tipo_curso === this.props.menus
       })
     }
-
+    // excepcion
     let titulo = this.props.menus;
     if(titulo === 'mente'){
       titulo = 'mente y cuerpo'

@@ -14,6 +14,7 @@ class DashButtons extends React.Component {
     const alumnos = 'alumnos';
     const tarifas = 'tarifas';
     const profesors = 'profesors';
+    const horarios = 'horarios';
     return (
       <div>
         <div className="dash-buttons">
@@ -22,7 +23,7 @@ class DashButtons extends React.Component {
           <div className='btn' onClick={() => this.props.setRenderOption(alumnos)}><span>Alumnos</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(profesors)}><span>Profesores</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(tarifas)}><span>Tarifas</span></div>
-          <div className='btn'><span>Horarios</span></div>
+          <div className='btn' onClick={() => this.props.setRenderOption(horarios)}><span>Horarios</span></div>
         </div>
       </div>
     )

@@ -3,6 +3,8 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import { fetchCursos } from '../actions/cursos';
+import { fetchProfesors } from '../actions/profesors';
+import { fetchHorarios } from '../actions/horarios';
 import { setTipoCurso } from '../actions/menus';
 import { ortografica } from '../helpers';
 
@@ -34,7 +36,11 @@ class Navbar extends Component {
     $('.side-but').on('click', function() {
      $('.button-collapse').sideNav('hide');
     });
+
+    // this is done to be able to have all the props available to all the components!
     this.props.dispatch(fetchCursos());
+    this.props.dispatch(fetchProfesors());
+    this.props.dispatch(fetchHorarios());
   }
 
   componentDidUpdate() {
@@ -58,9 +64,9 @@ class Navbar extends Component {
         {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
         <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
+        <li className="nav-icon center"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
         <li className="nav-icon center"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
-        <li className="nav-icon center"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
+        <li className="nav-icon center"><Link to='/ubicacion'><i className="ubicacion icon"></i>ubicación</Link></li>
       </div>
     )
   }
@@ -105,7 +111,7 @@ class Navbar extends Component {
       )
     }
   }
-
+// {this.theDoubt()}
   sideNav(){
     let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
     return(
@@ -113,10 +119,10 @@ class Navbar extends Component {
         {Object.keys(navItem).map(key => <li key={key} className="side-but col s12 m12 color-02" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
         <li className="side-but col s12 m12 color-02"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="horarios icon"></i>horarios</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="ubicacion icon"></i>ubicación</Link></li>
-        {this.theDoubt()}
+        <li className="side-but col s12 m12 color-02"><Link to='/ubicacion'><i className="ubicacion icon"></i>ubicación</Link></li>
+
       </div>
     )
   }
@@ -147,6 +153,7 @@ const mapStateToProps = (state) => {
   return {
     user: state.user,
     cursos: state.cursos,
+    profesors: state.profesors
   }
 }
 

@@ -1,0 +1,74 @@
+// contenedor principal
+.ubicacion-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ubicacion-titulo{
+  text-align: center;
+  flex: 1 1 100%;
+}
+// segundo contenedor
+.ubicacion-info {
+  flex: 1 1 100%;
+  display: flex;
+
+}
+// iframe
+.ubicacion-iframe {
+  flex: 1 1 50%;
+  margin: 1rem;
+}
+.ubicacion-iframe iframe {
+  border: 2px solid #16959e;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 50vh;
+}
+// texto
+.ubicacion-escrita {
+  flex: 1 1 30%;
+  margin: 3rem;
+}
+.ubicacion-escrita h5 {
+  color: #16959e;
+  font-weight: 300;
+}
+.ubicacion-buses {
+  border-bottom: 1px solid #16959e;
+  padding-bottom: 1rem;
+}
+.ubicacion-datos {
+  padding-top: 1rem;
+}
+//===================
+//CELULARES Y TABLETS
+//===================
+
+@media all and (max-width: 992px) {
+  .ubicacion-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ubicacion-iframe {
+    flex: 1 1 100%;
+  }
+  .ubicacion-escrita {
+    flex: 1 1 100%;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .ubicacion-escrita {
+    display: flex;
+    justify-content: space-around;
+  }
+  .ubicacion-buses {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .ubicacion-datos {
+    padding-top: 0;
+  }
+}

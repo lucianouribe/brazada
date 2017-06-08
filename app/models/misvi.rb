@@ -1,0 +1,2 @@
+class Misvi < ApplicationRecord
+end
