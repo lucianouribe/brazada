@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import { fetchCursos } from '../actions/cursos';
+import { fetchMisvis} from '../actions/misvis';
 import { fetchProfesors } from '../actions/profesors';
 import { fetchHorarios } from '../actions/horarios';
 import { setTipoCurso } from '../actions/menus';
@@ -41,6 +42,7 @@ class Navbar extends Component {
     this.props.dispatch(fetchCursos());
     this.props.dispatch(fetchProfesors());
     this.props.dispatch(fetchHorarios());
+    this.props.dispatch(fetchMisvis());
   }
 
   componentDidUpdate() {
@@ -62,7 +64,7 @@ class Navbar extends Component {
     return(
       <div>
         {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
-        <li className="nav-icon center"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
+        <li className="nav-icon center"><Link to='/nosotros'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
         <li className="nav-icon center"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
         <li className="nav-icon center"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
@@ -117,7 +119,7 @@ class Navbar extends Component {
     return(
       <div className='row'>
         {Object.keys(navItem).map(key => <li key={key} className="side-but col s12 m12 color-02" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
-        <li className="side-but col s12 m12 color-02"><Link to='/'><i className="nosotros icon"></i>nosotros</Link></li>
+        <li className="side-but col s12 m12 color-02"><Link to='/nosotros'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
@@ -153,7 +155,8 @@ const mapStateToProps = (state) => {
   return {
     user: state.user,
     cursos: state.cursos,
-    profesors: state.profesors
+    profesors: state.profesors,
+    misvis: state.misvis
   }
 }
 

@@ -40,7 +40,7 @@ class Profesor extends React.Component {
     let profesor = this.props.profesor;
     return(
       <div className="col s12 m4">
-        <div className="card">
+        <div className="card edit-card">
           <form>
             <div className="card-content">
               <p>

@@ -84,10 +84,8 @@ ActiveRecord::Schema.define(version: 20170608222238) do
   end
 
   create_table "misvis", force: :cascade do |t|
-    t.string   "mision"
-    t.string   "vision"
-    t.string   "nosotros"
-    t.string   "reglamento"
+    t.string   "titulo"
+    t.text     "articulo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

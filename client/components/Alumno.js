@@ -46,7 +46,7 @@ class Alumno extends React.Component {
   editAlumno() {
     let alumno = this.props.alumno;
     return(
-        <div className="alumno alumno-edit">
+        <div className="alumno form-edit card">
           <form>
             <div className="card-content">
               <p>
@@ -113,7 +113,7 @@ class Alumno extends React.Component {
   displayAlumno(){
     let alumno = this.props.alumno;
     return (
-      <div className='alumno'>
+      <div className='alumno card'>
         <div className='alumno-line first'>
           <span>{alumno.id}</span>
           <span>{alumno.estado}</span>
@@ -141,7 +141,7 @@ class Alumno extends React.Component {
           <strong>Nivel: </strong>
           <span>{alumno.nivel}</span>
         </div>
-        <div className='botones'>
+        <div className='botones-footer'>
           <span onClick={this.toggleEdit}><i className="material-icons">mode_edit</i></span>
           <span onClick={() => this.props.dispatch(deleteAlumno(alumno.id))}><i className="material-icons">delete</i></span>
         </div>

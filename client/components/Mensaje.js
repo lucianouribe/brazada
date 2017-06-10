@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteMensaje, leidoSetup, importanciaSetup } from '../actions/contactos';
+import { createMarkup } from '../helpers';
 
 class Mensaje extends React.Component {
 
@@ -45,7 +46,7 @@ class Mensaje extends React.Component {
         <div className='mensaje abajo'>
           <i className="material-icons right" onClick={this.showMessage}>close</i>
           <p>De:{this.props.mensaje.correo}</p>
-          <p>{this.props.mensaje.mensaje}</p>
+          <p><div dangerouslySetInnerHTML={createMarkup(this.props.mensaje.mensaje)} /></p>
         </div>
       )
     }

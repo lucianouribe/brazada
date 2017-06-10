@@ -1,1 +1,1 @@
-json.array! @api_misvis, partial: 'api_misvis/api_misvi', as: :api_misvi
+json.array! @api_misvis, partial: 'api/misvis/api_misvi', as: :api_misvi

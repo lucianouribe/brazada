@@ -46,3 +46,8 @@ export function aemer(time) {
     return time + 'pm'
   }
 }
+
+export function createMarkup(text) {
+  text = text.replace(/(?:\r\n|\r|\n)/g, '<br />');
+  return {__html: `${text}`};
+}

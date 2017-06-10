@@ -10,7 +10,6 @@ const cursos = ( state = [], action ) => {
       return [action.curso, ...state]
       break;
     case 'EDIT_CURSO':
-    console.log(state, action)
       // action.curso = the updated curso
       // action.type = the type of the reducer action that was dispatched
       // state = all of the universities in the redux store

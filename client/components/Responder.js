@@ -37,11 +37,11 @@ class Responder extends React.Component {
   render() {
     return(
       <div>
-        <div className='btn' onClick={this.props.toggleMailer}>back</div>
         <h2 className="center titulo">Responder a: {this.props.whoTo.nombre}</h2>
         <form className="container contacto" ref="respuestaForm" onSubmit={this.handleSubmit}>
           <textarea ref="mensaje" placeholder="mensaje" ></textarea>
           <button type="submit" className='btn btn-main'>Enviar</button>
+          <div className='btn btn-main' onClick={this.props.toggleMailer}>back</div>
         </form>
       </div>
     )

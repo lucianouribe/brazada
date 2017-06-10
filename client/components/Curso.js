@@ -12,7 +12,7 @@ class Curso extends React.Component {
     }
 
     this.toggleEdit = this.toggleEdit.bind(this);
-    this.displayEdit = this.displayEdit.bind(this);
+    this.displayCurso = this.displayCurso.bind(this);
     this.editCurso = this.editCurso.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -39,7 +39,7 @@ class Curso extends React.Component {
     let curso = this.props.curso;
     return(
       <div className="col s12 m4">
-        <div className="card">
+        <div className="card form-edit">
           <form>
             <div className="card-content">
               <p>
@@ -73,7 +73,7 @@ class Curso extends React.Component {
     );
   }
 
-  displayEdit(){
+  displayCurso(){
     let curso = this.props.curso;
     return (
       <div className="col s12 m4 l4">
@@ -99,7 +99,7 @@ class Curso extends React.Component {
     if(this.state.edit) {
       return(this.editCurso());
     } else {
-      return(this.displayEdit());
+      return(this.displayCurso());
     }
   }
 

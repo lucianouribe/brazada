@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     post 'alumno', to: 'alumno#promocion_mail'
     resources :contactos
     resources :alumnos
+    resources :misvis
 
     # resources :horarios, only: [:new, :create, :destroy]
   end

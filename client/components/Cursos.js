@@ -65,19 +65,6 @@ class Cursos extends React.Component {
     this.toggleDisplay();
   }
 
-  // let lugar = ""
-  //   Object.keys(object).forEach(function (key) {
-  //     let obj = object[key];
-  //     if (obj.selected) {
-  //       lugar += `${obj.value} `
-  //     }
-  //   });
-  //
-  //   <select>
-  //     <option className="option-disable" value="" disabled selected>Escoger Lugar</option>
-  //     {cualSalon}
-  //   </select>
-
   addForm(){
     let cursoType = this.state.tiposCurso.map((tipo_curso, i) => {
       return (
@@ -131,9 +118,9 @@ class Cursos extends React.Component {
 
   render(){
     return (
-      <div className='row'>
+      <div className='row cursos-container'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}. Todos los Cursos</h1>
+          <h1>Hola {this.props.user.first_name}: Los cursos</h1>
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
         {this.displayChanger()}

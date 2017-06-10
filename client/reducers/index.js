@@ -8,6 +8,7 @@ import alumnos from './alumnos';
 import tarifas from './tarifas';
 import profesors from './profesors';
 import horarios from './horarios';
+import misvis from './misvis';
 import menus from './menus';
 import submenus from './submenus';
 
@@ -22,6 +23,7 @@ const rootReducer = combineReducers({
   tarifas,
   profesors,
   horarios,
+  misvis,
   menus,
   submenus
 });

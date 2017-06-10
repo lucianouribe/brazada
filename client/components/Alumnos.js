@@ -116,19 +116,19 @@ class Alumnos extends React.Component {
   render(){
     return (
       <div className='alumnos'>
+        <div className='admin-title'>
+          <h1>Hola {this.props.user.first_name}: Los Alumnos</h1>
+          <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
+        </div>
         <form  className="form-search" >
-
-          <input type="button" className='btn-go' value="Anadir nuevo" onClick={this.toggleDisplay}/>
+          <input type="button" className='btn-go' value="Anadir nuevo"/>
           <input type="text" placeholder="nombre"/>
           <input type="text" placeholder="cedula"/>
           <input type="date" placeholder="fecha inscripcion"/>
           <input type="date" placeholder="fecha cumpleanos"/>
-
           <input type="submit" className='btn-go' value="buscar"/>
-
         </form>
         {this.displayChanger()}
-
       </div>
     )
   }

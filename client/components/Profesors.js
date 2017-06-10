@@ -112,7 +112,7 @@ class Profesors extends React.Component {
     return (
       <div className='row'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}. Todos las Profesores</h1>
+          <h1>Hola {this.props.user.first_name}: Los Profesores</h1>
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
         {this.displayChanger()}

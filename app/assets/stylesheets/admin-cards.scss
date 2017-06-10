@@ -1,0 +1,72 @@
+// el titulo
+.admin-title {
+  width: 100%;
+  height: 8rem;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.admin-title h1 {
+  font-size: 3rem;
+  margin: 0;
+  margin-right: 5rem;
+  color: #16959e;
+}
+
+.admin-title span {
+  margin: 1.8rem 0 1.68rem 0;
+  color: #fcbf00;
+  cursor: pointer;
+}
+
+
+// cards
+.card {
+  border: 2px solid #16959e;
+  border-radius: 1rem;
+  background-color: #fff;
+  // background-color: rgba(0,0,0,0.3);
+}
+.card-content {
+  height: 15rem;
+  overflow-y: scroll;
+}
+
+.card-action {
+  background: none !important;
+  box-shadow: 0 3px 3px rbba(0,0,0,0.3);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.card-action i {
+  color: #16959e;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.card-action i:hover {
+  color: #fcbf00;
+}
+
+// especificos
+
+//cursos
+.admin-title {
+  display: inline-flex;
+}
+
+.form-edit {
+  height: 60vh;
+}
+.form-edit form {
+  height: calc(60vh - 2rem) !important;
+}
+.form-edit .card-content {
+  height: calc(60vh - 5rem) !important;
+}
+.form-edit textarea {
+  height: 38vh !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+}

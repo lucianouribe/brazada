@@ -19,17 +19,85 @@ end
 
 puts "alumnos seeded"
 
-# 20.times do
-#   Tarifa.create(
-#               plan: ['convenio', 'integral'].sample,
-#               nombre: ['dia', 'mensualidad', 'matricula'].sample,
-#               cual_curso: ['bebes', 'ninos', 'madres', 'convenio'].sample,
-#               valor: rand(12300..456078),
-#               descripcion: 'bla ble bli blo blu'
-#               )
-# end
-#
-# puts "tarifas seeded"
+Misvi.create(titulo: 'nosotros',
+              articulo: 'Brazada es una institución donde trabajamos con entusiasmo por enseñar y propiciar la práctica de actividades deportivas y de acondicionamiento físico. Nacimos en 1990, como Academia de Natación de Pablo Restrepo, y a partir de nuestra convicción de que enseñar a nadar es regalar a otros la oportunidad de gozar de bienestar, salud física y mental, incluimos con el tiempo más actividades que aportaran iguales beneficios.
+              Brazada es un espacio amable, lleno de verde y de luz, con excelentes instalaciones para cada práctica. Quienes nos visitan se sienten acogidos en un ambiente familiar y tranquilo, y reciben la atención cálida y personalizada de nuestros instructores profesionales. En Brazada sabemos que la alegría y la tranquilidad interior provienen de sentir sanos y en equilibrio nuestro cuerpo y nuestra mente. ¡Y además sabemos cómo acompañarlo para que usted lo viva!.
+
+              Un plan integral para usted
+              En Brazada reconocemos la individualidad de las personas. Por eso diseñamos un Plan Integral con el que cada usuario, de acuerdo con sus necesidades, deseos y disponibilidad, organiza su plan de entrenamiento físico. Con el pago de una mensualidad, usted puede elegir las prácticas y horarios que más le convengan. Consulte aquí información completa sobre programas, instructores, horarios y tarifas.')
+Misvi.create(titulo: 'reglamento',
+              articulo: 'Normas para la utilización de los espacios
+
+
+              Gimnasio
+              • Utilizar tenis, camiseta y toalla pequeña para el sudor.
+              • No entrar de sandalias, descalzos o mojados, ni comer en los salones de clase.
+              • Tener en cuenta las indicaciones del manejo adecuado de las máquinas.
+              • Área exclusiva para jóvenes y adultos.
+
+
+              Salón segundo piso
+              • Dejar los zapatos fuera del salón.
+              • Traer toalla para colchonetas o mat.
+              • Área exclusiva para jóvenes y adultos.
+
+
+              Piscina
+              • Utilizar pantaloneta de Licra (niños, jóvenes y adultos).
+              • Utilizar de carácter obligatorio el GORRO DE BAÑO para ambos sexos.
+              • DUCHARSE antes de ingresar.
+              • Pasar por el lavapies a la entrada y a la salida.
+              • No ingresar alimentos o bebidas al área de la piscina.
+              • No ingresar calzado de la calle al área de la piscina.
+              • No usar bronceador para ingresar a la piscina.
+
+
+              Clases de natación personalizadas
+              • Pagar por anticipado las clases que tome durante el mes.
+              • En caso de ser necesario, cancelar la clase antes de 2 horas.
+              • En caso de cancelar la clase oportunamente, ésta se podrá reemplazar durante el mismo mes o de lo contrario perderá su dinero.
+
+
+              Clases de natación niños
+              • Programar día y hora de clase y cumplir con ese horario.
+              • Sólo en caso de enfermedad se pueden reemplazar las clases a las que no asistió.
+              • Presentar la excusa médica y acordar con la coordinadora día y hora del reemplazo (nunca en día sábado).
+              • Llevar a los niños al baño antes de ingresar a la piscina.
+              • Pagar oportunamente la mensualidad para tener el derecho al descuento por hermanos y a la reposición de clases.
+              • Nunca dejar ingresar a los niños al área de la piscina solos; deben hacerlo con un adulto o con el instructor.
+              • Se cancela el mes completo. En caso de inasistencia por enfermedad, se reemplazará la clase durante el mismo mes o en el siguiente, pasado este tiempo se pierde la clase.
+
+
+              Baños
+              • Hacer uso adecuado de las toallas desechables para manos, (no utilizarlas para secarse el cabello).
+              • Tomarse el tiempo justo para la ducha.
+              • Abstenerse de dejar la llave del agua abierta para lavar el vestido de baño mientras se ducha, se enjabona o se lava el cabello.
+              • Los niños de 5 años en adelante deben utilizar el baño de acuerdo a su sexo.
+
+
+              Parqueadero
+              • Dejar el carro bien cerrado y no dejar objetos de valor.
+              • No dejar niños solos en el carro.
+              • No ocupar dos celdas en el momento de parquear.
+              • La Academia no se hace responsable de pérdidas.
+
+
+              Generales
+              • No traer objetos de valor.
+              • Hacer uso del locker. No se permitirá dejar objetos y bolsos en la recepción.
+              • No ingresar mascotas.
+              • El café es una cortesía. Solicitarlo directamente en la cafetería y agradecemos el uso moderado de él.
+              • Hacer los pagos de las mensualidades oportunamente.
+              • La mensualidad se paga los primeros cinco días del mes.
+              • Recuerde que el pago es mensual. Al tener el cupo reservado, la academia cuenta con su asistencia al momento de asignar los instructores. NO SE COBRA POR CLASE ASISTIDA, SINO POR CUPO RESERVADO.
+              • En ningún caso habrá excepciones.
+              Leído y comprendido')
+Misvi.create(titulo: 'mision',
+              articulo: 'este es un texto sobre nuestra mision')
+Misvi.create(titulo: 'vision',
+              articulo: 'este es un texto sobre nuestra vision')
+
+puts "misvis seeded"
 
 20.times do
   Profesor.create(nombre: ['pepe', 'pepa', 'pepo', 'pepi'].sample,
