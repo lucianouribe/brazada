@@ -24,12 +24,12 @@ class Home extends React.Component {
         </div>
         <div className='portada-tres row'>
           <div className="col s12 m12 l4 programas">
-            <div className='natacion-p icon-portada'></div>
+            <div className='icon-natacion-p icon-portada'></div>
             <h4>Natacion</h4>
             <p>La natacion es una bacaneria, porque si no se aprende en brazada, se ahoga en una charqueria</p>
           </div>
           <div className="col s12 m12 l4 programas">
-            <div className='gimnacio-p icon-portada'></div>
+            <div className='gimnasio-p icon-portada'></div>
             <h4>Gimnacia</h4>
             <p>La gimnacia es una maravilla, porque al que mucha hace, el gordo humilla</p>
           </div>

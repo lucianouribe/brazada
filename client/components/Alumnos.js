@@ -16,10 +16,13 @@ class Alumnos extends React.Component {
     this.toggleDisplay = this.toggleDisplay.bind(this);
     this.displayChanger = this.displayChanger.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.showSearcher = this.showSearcher.bind(this);
   }
 
   componentDidMount(){
-    this.props.dispatch(fetchAlumnos());
+    let full = 'full'
+    this.props.dispatch(fetchAlumnos(full));
   }
 
   toggleDisplay(){
@@ -113,21 +116,32 @@ class Alumnos extends React.Component {
     );
   }
 
+  handleChange(){
+    this.props.dispatch(fetchAlumnos(this.refs.searchInput.value));
+    // signals with colors the matched words
+    $(`.card span`).removeClass("matched");
+    $(`.card p`).removeClass("matched");
+    let hello = this.refs.searchInput.value
+    if(hello !== '') {
+      $(`.card span:contains(${hello})`).addClass("matched");
+      $(`.card p:contains(${hello})`).addClass("matched");
+    }
+  }
+
+  showSearcher(){
+    return(
+      <input type="text" className="search-input" placeholder="buscar alumno" ref='searchInput' onChange={this.handleChange} />
+    )
+  }
+
   render(){
     return (
       <div className='alumnos'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}: Los Alumnos</h1>
+          <h1>Hola {this.props.user.first_name}: Alumnos</h1>
+          {this.showSearcher()}
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
-        <form  className="form-search" >
-          <input type="button" className='btn-go' value="Anadir nuevo"/>
-          <input type="text" placeholder="nombre"/>
-          <input type="text" placeholder="cedula"/>
-          <input type="date" placeholder="fecha inscripcion"/>
-          <input type="date" placeholder="fecha cumpleanos"/>
-          <input type="submit" className='btn-go' value="buscar"/>
-        </form>
         {this.displayChanger()}
       </div>
     )

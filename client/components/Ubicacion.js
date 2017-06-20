@@ -7,7 +7,7 @@ class Ubicacion extends React.Component {
     return(
       <div className='ubicacion-container'>
         <div className='ubicacion-titulo'>
-          <h2>Como Llegar</h2>
+          <h1 className='main-titulo'>Como Llegar</h1>
         </div>
         <div className="ubicacion-info">
           <div className='ubicacion-iframe'>

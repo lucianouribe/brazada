@@ -5,7 +5,7 @@ class Api::HorariosController < ApplicationController
 
   # GET /api/horarios.json
   def index
-    @api_horarios = Horario.all
+    @api_horarios = Horario.all.order(:hora)
   end
 
   # GET /api/horarios/1.json
@@ -85,6 +85,6 @@ class Api::HorariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_horario_params
-      params.require(:horario).permit(:curso_id, :profesor_id, :dia, :hora, :minutos, :posicion, :calendario)
+      params.require(:horario).permit(:curso_id, :profesor_id, :dia, :hora, :minutos, :posicion, :calendario, :duracion)
     end
 end

@@ -20,8 +20,16 @@
   cursor: pointer;
 }
 
-
+// buscador
+.search-input {
+  flex: 1 1 30%;
+  border: 1px solid #6b6b6b !important;
+  border-radius: 1rem !important;
+  margin-bottom: 0 !important;
+  margin-right: 1rem !important;
+}
 // cards
+
 .card {
   border: 2px solid #16959e;
   border-radius: 1rem;
@@ -49,6 +57,10 @@
 .card-action i:hover {
   color: #fcbf00;
 }
+.matched {
+  font-weight: 400 !important;
+  color: #16959e;
+}
 
 // especificos
 
@@ -58,15 +70,55 @@
 }
 
 .form-edit {
-  height: 60vh;
+  height: 65vh;
 }
 .form-edit form {
-  height: calc(60vh - 2rem) !important;
+  height: calc(65vh - 2rem) !important;
 }
 .form-edit .card-content {
-  height: calc(60vh - 5rem) !important;
+  height: calc(65vh - 5rem) !important;
 }
 .form-edit textarea {
-  height: 38vh !important;
+  padding: 0.6rem !important;
+  height: 20vh !important;
   border: 1px solid rgba(0,0,0,0.2) !important;
+  margin: 1rem 0 !important;
+}
+.form-edit-misvi {
+  height: 65vh;
+}
+.form-edit-misvi form {
+  height: calc(65vh - 4rem) !important;
+}
+.form-edit-misvi .card-content {
+  height: calc(65vh - 4rem) !important;
+}
+.form-edit-misvi textarea {
+  height: calc(50vh - 5rem) !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.form-edit input[type="text"] {
+  width: 90% !important;
+  margin-bottom: 1rem !important;
+}
+.form-card .card-title {
+  text-align: center;
+  margin: 0 !important;
+}
+.form-card input[type="text"] {
+  margin-bottom: 1rem !important;
+}
+.form-card textarea {
+  padding: 0.6rem !important;
+  height: 15vh !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  margin: 1rem 0 !important;
+}
+// formas
+
+.form-card {
+  height: 60vh;
+}
+.form-card .card-content {
+  height: calc(60vh - 5rem);
 }

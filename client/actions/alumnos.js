@@ -1,14 +1,26 @@
-export const fetchAlumnos = () => {
+import { destildador } from '../helpers';
+
+export const fetchAlumnos = (wordToMatch) => {
   // console.log('this is fetch alumnos')
+  const regex = new RegExp(wordToMatch, 'gi');
+
   return(dispatch) => {
     $.ajax({
       url: '/api/alumnos/',
       type: 'GET',
       dataType: 'JSON'
     }).done( alumnos => {
-      // console.log('fetch cursos done data');
-      // console.table(alumnos);
-      dispatch({ type: 'ALL_ALUMNOS', alumnos});
+      if(wordToMatch === 'full') {
+        dispatch({ type: 'ALL_ALUMNOS', alumnos});
+      } else {
+        let losAlumnos = alumnos.filter( alumno => {
+          if(
+            destildador(alumno.primer_nombre).match(regex) || destildador(alumno.segundo_nombre).match(regex) || destildador(alumno.primer_apellido).match(regex)|| destildador(alumno.segundo_apellido).match(regex)|| destildador(alumno.cedula).match(regex) || destildador(alumno.correo).match(regex)
+          ) return alumno;
+        })
+        // console.table(losAlumnos)
+        dispatch({ type: 'FILTERED_ALUMNOS', losAlumnos});
+      }
     }).fail( data => {
       // console.log('fetch alumnos fail data')
       // console.log(data)

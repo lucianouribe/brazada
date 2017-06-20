@@ -16,11 +16,14 @@ class Profesors extends React.Component {
     this.displayChanger = this.displayChanger.bind(this);
     this.addForm = this.addForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.showSearcher = this.showSearcher.bind(this);
   }
 
   componentDidMount() {
     $('select').material_select();
-    this.props.dispatch(fetchProfesors());
+    let full = 'full'
+    this.props.dispatch(fetchProfesors(full));
   }
 
   componentDidUpdate() {
@@ -68,7 +71,7 @@ class Profesors extends React.Component {
   addForm(){
     return(
       <div className="col s12 m12">
-        <div className="card">
+        <div className="card form-card">
           <form className="input-field">
             <div className="card-content">
               <h3 className='card-title'>Nuevo Profesor</h3>
@@ -107,12 +110,30 @@ class Profesors extends React.Component {
     );
   }
 
+  handleChange(){
+    this.props.dispatch(fetchProfesors(this.refs.searchInput.value));
+    // signals with colors the matched words
+    $(`.card span`).removeClass("matched");
+    $(`.card p`).removeClass("matched");
+    let hello = this.refs.searchInput.value
+    if(hello !== '') {
+      $(`.card span:contains(${hello})`).addClass("matched");
+      $(`.card p:contains(${hello})`).addClass("matched");
+    }
+  }
+
+  showSearcher(){
+    return(
+      <input type="text" className="search-input" placeholder="buscar profesor" ref='searchInput' onChange={this.handleChange} />
+    )
+  }
 
   render(){
     return (
       <div className='row'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}: Los Profesores</h1>
+          <h1>Hola {this.props.user.first_name}: Profesores</h1>
+          {this.showSearcher()}
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
         {this.displayChanger()}

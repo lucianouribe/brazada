@@ -1,3 +1,5 @@
+import { destildador } from '../helpers';
+
 export const addTarifa = (plan, nombre, valor, descripcion) => {
   // console.log('this is add tarifas action');
   return(dispatch) => {
@@ -18,17 +20,28 @@ export const addTarifa = (plan, nombre, valor, descripcion) => {
 
 }
 
-export const fetchTarifas = () => {
+
+
+export const fetchTarifas = (wordToMatch) => {
   // console.log('this is fetch tarifas')
+  const regex = new RegExp(wordToMatch, 'gi');
   return(dispatch) => {
     $.ajax({
       url: '/api/tarifas/',
       type: 'GET',
       dataType: 'JSON'
     }).done( tarifas => {
-      // console.log('fetch tarifas done data');
-      // console.table(tarifas);
-      dispatch({ type: 'ALL_TARIFAS', tarifas});
+      if(wordToMatch === 'full') {
+        dispatch({ type: 'ALL_TARIFAS', tarifas});
+      } else {
+        let lasTarifas = tarifas.filter( tarifa => {
+          if(
+            destildador(tarifa.primer_nombre).match(regex) || destildador(tarifa.segundo_nombre).match(regex)
+          ) return tarifa;
+        })
+        // console.table(lasTarifas)
+        dispatch({ type: 'FILTERED_TARIFAS', lasTarifas});
+      }
     }).fail( data => {
       console.log('fetch tarifas fail data')
       console.log(data)

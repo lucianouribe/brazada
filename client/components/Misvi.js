@@ -33,7 +33,7 @@ class Misvi extends React.Component {
     let misvi = this.props.misvi;
     return(
       <div className="col s12 m12 l12">
-        <div className="card form-edit">
+        <div className="card form-edit-misvi">
           <form>
             <div className="card-content">
               <h6 className="card-title">{ misvi.titulo }</h6>

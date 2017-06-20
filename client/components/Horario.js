@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { timeFixer } from '../helpers';
+import { timeFixer, ortografica } from '../helpers';
 import { deleteHorario } from '../actions/horarios';
 
 class Horario extends React.Component {
@@ -10,10 +10,34 @@ class Horario extends React.Component {
     this.state = { open: true }
 
     this.toggleDisplay = this.toggleDisplay.bind(this);
+    this.whichToRender = this.whichToRender.bind(this);
   }
+
 
   toggleDisplay(){
     this.setState({open: !this.state.open})
+  }
+
+  // discrimina los cursos cortos para no renderizar los profes
+  whichToRender(){
+    let horario = this.props.horario;
+    let elProfe = this.props.profesors.filter( profe => { if(profe.id === horario.profesor_id) return profe;})
+    let elCurso = this.props.cursos.filter( curso => { if(curso.id === horario.curso_id) return curso; })
+
+    if(horario.duracion !== 30 && horario.duracion !== 10){
+      return(
+        <span className="event-info">
+          {Object.keys(elCurso).map( key => <p key={key}>{ortografica(elCurso[key].nombre)}</p>)}
+          {Object.keys(elProfe).map( key => <p key={key}>{`${elProfe[key].nombre} ${elProfe[key].apellido}`}</p>)}
+        </span>
+      )
+    } else {
+      return(
+        <span className="event-info">
+          {Object.keys(elCurso).map( key => <p key={key}>{ortografica(elCurso[key].nombre)}</p>)}
+        </span>
+      )
+    }
   }
 
   render(){
@@ -30,21 +54,14 @@ class Horario extends React.Component {
     } else {
       displayTimeErrase = (<i className="material-icons" onClick={() => this.props.dispatch(deleteHorario(horario.id))}>delete</i>)
     }
-    // loop unico elemento del array 
-    let duracion = Object.keys(elCurso).map( key => elCurso[key].duracion)
+
     return(
-      <div key={horario.id} className={`horario-container ${horario.dia} min${horario.minutos} duracion${duracion}`} onClick={this.toggleDisplay}>
+      <div key={horario.id} className={`horario-container ${horario.dia} min${horario.minutos} duracion${horario.duracion}`} onClick={this.toggleDisplay}>
         <span className="event-time"><p>{displayTimeErrase}</p></span>
-        <span className="event-info">
-          {Object.keys(elCurso).map( key => <p key={key}>{elCurso[key].nombre}</p>)}
-          {Object.keys(elProfe).map( key => <p key={key}>{`${elProfe[key].nombre} ${elProfe[key].apellido}`}</p>)}
-        </span>
+        {this.whichToRender()}
       </div>
     )
   }
-
-
-  // Object.keys(navItem).map(key => <p key={key}>{ortografica(navItem[key].tipo_curso)}</p>)}
 
 }
 

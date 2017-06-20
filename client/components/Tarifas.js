@@ -9,18 +9,22 @@ class Tarifas extends React.Component {
     super(props);
 
     this.state = {
-      showForm: false,
+      showForm: false
     }
 
     this.toggleDisplay = this.toggleDisplay.bind(this);
     this.displayChanger = this.displayChanger.bind(this);
     this.addForm = this.addForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.displayTarifas = this.displayTarifas.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.showSearcher = this.showSearcher.bind(this);
   }
 
   componentDidMount() {
     $('select').material_select();
-    this.props.dispatch(fetchTarifas());
+    let full = 'full'
+    this.props.dispatch(fetchTarifas(full));
   }
 
   componentDidUpdate() {
@@ -28,7 +32,7 @@ class Tarifas extends React.Component {
   }
 
   displayTarifas(){
-    let tarifas = this.props.tarifas
+    let tarifas = this.props.tarifas;
     if(tarifas.length){
       return tarifas.map( tarifa => {
         return(<Tarifa key={tarifa.id} tarifa={tarifa} tiposTarifa={this.state.tiposTarifa} />);
@@ -66,7 +70,7 @@ class Tarifas extends React.Component {
   addForm(){
     return(
       <div className="col s12 m12">
-        <div className="card">
+        <div className="card form-card">
           <form className="input-field">
             <div className="card-content">
               <h3 className='card-title'>Nueva Tarifa</h3>
@@ -97,12 +101,30 @@ class Tarifas extends React.Component {
     );
   }
 
+  handleChange(){
+    this.props.dispatch(fetchTarifas(this.refs.searchInput.value));
+    // signals with colors the matched words
+    $(`.card span`).removeClass("matched");
+    $(`.card p`).removeClass("matched");
+    let hello = this.refs.searchInput.value
+    if(hello !== '') {
+      $(`.card span:contains(${hello})`).addClass("matched");
+      $(`.card p:contains(${hello})`).addClass("matched");
+    }
+  }
+
+  showSearcher(){
+    return(
+      <input type="text" className="search-input" placeholder="buscar tarifa" ref='searchInput' onChange={this.handleChange} />
+    )
+  }
 
   render(){
     return (
       <div className='row'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}. Todas las Tarifas</h1>
+          <h1>Hola {this.props.user.first_name}: Tarifas</h1>
+          {this.showSearcher()}
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
         {this.displayChanger()}

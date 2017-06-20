@@ -107,12 +107,12 @@
   font-size: 1.8rem;
   margin: 0.3rem;
 }
+
 // LA TABLA COMPLETA
 thead {
   background-color: #18214c;
   background: linear-gradient(#49708f, #18214c);
   color: #fff;
-  // border-radius: 8px;
 }
 th {
   text-align: center;
@@ -120,7 +120,6 @@ th {
   border-radius: 0;
   border-left: 1px solid #fff;
 }
-
 th:last-child {
   border-top-right-radius: 8px;
 }
@@ -133,9 +132,10 @@ td {
   border-bottom: 1px solid #18214c;
   margin: 0;
   padding: 0;
-  // vertical-align: super;
 }
-
+.horarios-body td {
+  vertical-align: super;
+}
 
 // HORARIO (unidad)
 
@@ -147,6 +147,7 @@ td {
   border-radius: 4px;
   display: flex;
   align-items: center;
+  margin: 0 !important;
 }
 .horario-container i {
   cursor: pointer;
@@ -166,16 +167,29 @@ td {
 }
 .event-time p {
   font-size: .8rem;
+  margin: 0;
 }
 .event-info {
   flex: 3 3 70%;
-  padding: 2px 5px;;
+  padding: 0 8px;
 }
 .event-info p {
   font-size: 1rem;
   margin: 0;
 }
+.event-info-treinta {
+  display: none;
+}
+
+.horarios-client .horario-container i {
+  display: none;
+}
+
 // minutos
+.min0 {
+  position: relative;
+  top: 0 !important;
+}
 .min15 {
   position: relative;
   top: calc(4.5rem / 4);
@@ -188,54 +202,77 @@ td {
   position: relative;
   top: calc((4.5rem / 4) * 3);
 }
+
 // duracion
+.duracion10 {
+  // height: calc(4.5rem / 2);
+  // height: 4.5rem;
+  height: 50%;
+}
 .duracion30 {
   // height: calc(4.5rem / 2);
-  height: 4.5rem;
+  // height: 4.5rem;
+  height: 50%;
 }
 .duracion45 {
   // height: calc((4.5rem / 4) * 3);
-  height: 4.5rem;
+  // height: 4.5rem;
+  height: 75%;
 }
 .duracion60 {
-  height: 4.5rem;
+  // height: 4.5rem;
+  height: 100%;
 }
 
 //=================
 //  CELLPHONE & TABLETS!!!
 //=================
+.main-horario-cel {
+  display: none;
+}
+
+.horario-cel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #16959e;
+}
+.horario-cel span:first-child {
+  flex: 1 1 20%;
+}
+.horario-cel span {
+  flex: 4 4 40%;
+}
+.horario-block h3 {
+  color: #16959e;
+}
+
+@media all and (max-width: 601px) {
+  .main-horario-cel {
+    display: block;
+  }
+  .main-horario-pc {
+    display: none;
+  }
+  .horario-header {
+    // display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main-horarios {
+    height: 55vh !important;
+  }
+}
 
 @media all and (max-width: 992px) {
   a.button-collapse {
       height: 0 !important;
       line-height: 0 !important;
   }
-  td {
-    height: 6rem;
-  }
-  .horario-container {
-    height: 6rem;
-  }
-  // minutos
-  .min15 {
-    position: relative;
-    top: calc(6rem / 4);
-  }
-  .min30 {
-    position: relative;
-    top: calc(6rem / 2);
-  }
-  .min45 {
-    position: relative;
-    top: calc((6rem / 4) * 3);
-  }
-
 }
-
 @media all and (min-width: 601px) {
   a.button-collapse {
       height: 0 !important;
       line-height: 0 !important;
   }
-
 }

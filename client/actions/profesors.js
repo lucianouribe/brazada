@@ -1,3 +1,6 @@
+import { destildador } from '../helpers';
+
+
 export const addProfesor = (nombre, apellido, especialidad, cual_curso, no_clases, salario) => {
   // console.log('this is add profesors action');
   return(dispatch) => {
@@ -18,17 +21,27 @@ export const addProfesor = (nombre, apellido, especialidad, cual_curso, no_clase
 
 }
 
-export const fetchProfesors = () => {
+export const fetchProfesors = (wordToMatch) => {
   // console.log('this is fetch profesors')
+  const regex = new RegExp(wordToMatch, 'gi');
+
   return(dispatch) => {
     $.ajax({
       url: '/api/profesors/',
       type: 'GET',
       dataType: 'JSON'
     }).done( profesors => {
-      // console.log('fetch profesors done data');
-      // console.table(profesors);
-      dispatch({ type: 'ALL_PROFESORS', profesors});
+      if(wordToMatch === 'full') {
+        dispatch({ type: 'ALL_PROFESORS', profesors});
+      } else {
+        let losProfesors = profesors.filter( profesor => {
+          if(
+            destildador(profesor.nombre).match(regex) || destildador(profesor.apellido).match(regex) || destildador(profesor.cual_curso).match(regex)
+          ) return profesor;
+        })
+        // console.table(lasTarifas)
+        dispatch({ type: 'FILTERED_PROFESORS', losProfesors});
+      }
     }).fail( data => {
       console.log('fetch profesors fail data')
       console.log(data)

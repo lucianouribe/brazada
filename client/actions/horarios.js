@@ -1,11 +1,11 @@
-export const addHorario = (curso_id, profesor_id, dia, hora, minutos, posicion, calendario) => {
+export const addHorario = (curso_id, profesor_id, dia, hora, minutos, posicion, calendario, duracion) => {
   // console.log('this is add horario action');
   return(dispatch) => {
     $.ajax({
       url: `/api/horarios`,
       type: 'POST',
       dataType: 'JSON',
-      data: { horario: { curso_id, profesor_id, dia, hora, minutos, posicion, calendario } }
+      data: { horario: { curso_id, profesor_id, dia, hora, minutos, posicion, calendario, duracion } }
     }).done( horario => {
       // console.log('add horario done data actions');
       // console.table(horario);

@@ -10,7 +10,7 @@ class Cursos extends React.Component {
 
     this.state = {
       showForm: false,
-      tiposCurso: ['natacion', 'gimnacio', 'mente', 'hidro'],
+      tiposCurso: ['natacion', 'gimnasio', 'mente', 'hidro'],
       salones: ['piscina', 'salon 1', 'salon 2', 'salon 3', 'salon 4']
     }
 
@@ -18,11 +18,15 @@ class Cursos extends React.Component {
     this.displayChanger = this.displayChanger.bind(this);
     this.addForm = this.addForm.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.showSearcher = this.showSearcher.bind(this);
   }
 
   componentDidMount() {
     $('select').material_select();
-    this.props.dispatch(fetchCursos());
+
+    let full = 'full'
+    this.props.dispatch(fetchCursos(full));
   }
 
   componentDidUpdate() {
@@ -59,11 +63,11 @@ class Cursos extends React.Component {
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
-    let duracion = this.refs.duracion.value;
 
-    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, duracion))
+    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso))
     this.toggleDisplay();
   }
+
 
   addForm(){
     let cursoType = this.state.tiposCurso.map((tipo_curso, i) => {
@@ -78,7 +82,7 @@ class Cursos extends React.Component {
     });
     return(
       <div className="col s12 m12">
-        <div className="card">
+        <div className="card form-card">
           <form className="input-field">
             <div className="card-content">
               <h3 className='card-title'>Nuevo Curso</h3>
@@ -87,22 +91,27 @@ class Cursos extends React.Component {
                 <input type="text" ref='nombre' required/>
               </p>
               <p>
-                <strong>Tipo Curso:</strong>
-                <input type="text" ref='tipo_curso' required/>
-              </p>
-
-              <p>
                 <strong>Descripcion:</strong>
-                <input type="text" ref="descripcion" required/>
+                <textarea type="text" ref="descripcion" required></textarea>
+              </p>
+              <p>
+                <strong>Tipo Curso:</strong>
+                <select className="browser-default" ref="tipo_curso">
+                  <option value='natacion'>natación</option>
+                  <option>gimnasio</option>
+                  <option>hidro</option>
+                  <option>mente</option>
+                </select>
               </p>
               <p>
                 <strong>Lugar:</strong>
-                <input type="text" ref="lugar" required/>
-              </p>
-
-              <p>
-                <strong>Duracion:</strong>
-                <input type="number" ref="duracion" required/>
+                <select className="browser-default" ref="lugar">
+                  <option>piscina</option>
+                  <option>gimnasio</option>
+                  <option value='salon 0'>salón 2 P1</option>
+                  <option value='salon 1'>salón 1 P2</option>
+                  <option value='salon 2'>salón 2 P2</option>
+                </select>
               </p>
             </div>
             <div className="card-action">
@@ -115,12 +124,31 @@ class Cursos extends React.Component {
     );
   }
 
+  handleChange(){
+    this.props.dispatch(fetchCursos(this.refs.searchInput.value));
+    // signals with colors the matched words
+    $(`.card span`).removeClass("matched");
+    // $(`.card p`).removeClass("matched");
+    let hello = this.refs.searchInput.value
+    if(hello !== '') {
+      $(`.card span:contains(${hello})`).addClass("matched");
+      // $(`.card p:contains(${hello})`).addClass("matched");
+    }
+  }
+
+  showSearcher(){
+    return(
+      <input type="text" className="search-input" placeholder="buscar curso" ref='searchInput' onChange={this.handleChange} />
+    )
+  }
+
 
   render(){
     return (
       <div className='row cursos-container'>
         <div className='admin-title'>
-          <h1>Hola {this.props.user.first_name}: Los cursos</h1>
+          <h1>Hola {this.props.user.first_name}: Cursos</h1>
+          {this.showSearcher()}
           <span className='right' onClick={this.toggleDisplay}><i className="material-icons large">add</i></span>
         </div>
         {this.displayChanger()}

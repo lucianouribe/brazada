@@ -38,7 +38,7 @@ class Tarifa extends React.Component {
     let tarifa = this.props.tarifa;
     return(
       <div className="col s12 m4">
-        <div className="card">
+        <div className="card form-edit">
           <form>
             <div className="card-content">
               <p>

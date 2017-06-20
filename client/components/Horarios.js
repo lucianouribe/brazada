@@ -11,7 +11,7 @@ class Horarios extends React.Component {
     super(props)
 
     this.state = {
-      calendar: 'tierra',
+      calendar: 'gimnasio',
       modulus: false,
       tempEvent: '',
       day: '',
@@ -58,8 +58,9 @@ class Horarios extends React.Component {
     let minutos = this.refs.minutos.value;
     let posicion = this.state.tempEvent;
     let calendario = this.state.calendar;
+    let duracion = this.refs.duracion.value;
 
-    this.props.dispatch(addHorario(curso_id, profesor_id, dia, hora, minutos, posicion, calendario))
+    this.props.dispatch(addHorario(curso_id, profesor_id, dia, hora, minutos, posicion, calendario, duracion))
     this.toggleDisplay();
     this.setState({
       tempEvent: '',
@@ -100,6 +101,15 @@ class Horarios extends React.Component {
                 <option>45</option>
               </select>
             </div>
+            <div className='selecter'>
+              <select className="browser-default" ref="duracion">
+                <option value="60">duracion</option>
+                <option>10</option>
+                <option>30</option>
+                <option>45</option>
+                <option>60</option>
+              </select>
+            </div>
             <span onClick={this.toggleDisplay}><i className="material-icons">cancel</i></span>
           </div>
         </form>
@@ -129,7 +139,10 @@ class Horarios extends React.Component {
           <div className="selecter">
             <select className="browser-default" ref="cualCalendario">
               <option>escoge calendario</option>
-              <option>tierra</option>
+              <option>gimnasio</option>
+              <option>salon 2 P1</option>
+              <option>salon 1 P2</option>
+              <option>salon 2 P2</option>
               <option>hidro</option>
               <option>hidro_especial</option>
               <option>entrenamiento</option>
@@ -223,7 +236,7 @@ class Horarios extends React.Component {
             <col/>
             <col className="gricecito" />
           </colgroup>
-          <tbody>
+          <tbody className='horarios-body'>
             {this.theSchedule(seis)}
             {this.theSchedule(siete)}
             {this.theSchedule(ocho)}

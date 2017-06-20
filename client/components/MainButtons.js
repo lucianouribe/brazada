@@ -9,6 +9,7 @@ class MainButtons extends React.Component {
     let instalaciones = 'instalaciones';
     return (
       <div className="main-buttons">
+        <div className='btn-opt' onClick={() => this.props.infoGatherer(null)}>información</div>
         <div className='btn-opt' onClick={() => this.props.infoGatherer(horarios)}>horarios</div>
         <div className='btn-opt' onClick={() => this.props.infoGatherer(tarifas)}>tarifas</div>
         <div className='btn-opt'onClick={() => this.props.infoGatherer(profesors)}>profesores</div>

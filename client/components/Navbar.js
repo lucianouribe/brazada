@@ -113,7 +113,7 @@ class Navbar extends Component {
       )
     }
   }
-// {this.theDoubt()}
+
   sideNav(){
     let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
     return(
@@ -124,7 +124,7 @@ class Navbar extends Component {
         <li className="side-but col s12 m12 color-02"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
         <li className="side-but col s12 m12 color-02"><Link to='/ubicacion'><i className="ubicacion icon"></i>ubicación</Link></li>
-
+        {this.theDoubt()}
       </div>
     )
   }
@@ -165,6 +165,6 @@ export default connect(mapStateToProps)(Navbar);
 
 
 // <li className="nav-icon center"><Link to='/main'><i className="natacion icon"></i>Natación</Link></li>
-// <li className="nav-icon center"><Link to='/main'><i className="gimnacio icon"></i>Gimancia</Link></li>
+// <li className="nav-icon center"><Link to='/main'><i className="gimnasio icon"></i>Gimancia</Link></li>
 // <li className="nav-icon center"><Link to='/main'><i className="hidro icon"></i>Hidro</Link></li>
 // <li className="nav-icon center"><Link to='/main'><i className="mente icon"></i>Mente</Link></li>

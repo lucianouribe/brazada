@@ -14,15 +14,27 @@ class MainInfo extends React.Component {
     let cursoId = Object.keys(curso).map(key => curso[key].id)
     // tomar todas las tarifas
     let tarifas = this.props.tarifas
-    // tomar todas las profesores
+    // tomar todos las profesores
     let profes = this.props.profesors
-    let losProfes;
+
     // loop de todos los profesores para que coincidan con el submenu
+    let losProfes;
+    let lasclases;
+    let este;
     if(profes){
       losProfes = profes.filter( docente => {
-        return docente.cual_curso === this.props.submenus
+        // dividir las clases de este profesor en un array
+        lasclases = docente.cual_curso.split(", ");
+        // filtrar este array para ver si alguna de las clases coincide con la elegida
+        este = lasclases.filter( x => x === this.props.submenus);
+        // condicional para incluir el docente dentro del array de losProfes
+        // se pone el cero porque el filtro filtra pero da como residual un array con 1!
+        if(este[0] === this.props.submenus){
+          return docente
+        }
       })
     }
+
     // filtro de horarios
     let horarios = this.props.horarios;
     let losHorarios;
@@ -32,8 +44,6 @@ class MainInfo extends React.Component {
       })
     }
 
-// <p> {formatPrice(tarifas[key].valor)}</p>
-// {Object.keys(tarifas[key]).map(bli => <p key={bli}>{tarifas[key].nombre.split(" ")}</p>)}
     let largo;
     switch (this.props.order) {
       case null:
@@ -52,6 +62,7 @@ class MainInfo extends React.Component {
                 <span className="tarifa-info-valores">{tarifas[key].valor.split(", ").map((item, index) => <p key={index}>{formatPrice(item)}</p> )}</span>
               </span>
             )}
+            <span>* Sujeto a modificaciones</span>
           </div>
         )
         break;
@@ -66,11 +77,12 @@ class MainInfo extends React.Component {
     }
   }
 
+
+
   render(){
     return(
       <div className="main-info">
         {this.viewRenderer()}
-        <span>* Sujeto a modificaciones</span>
       </div>
     )
   }

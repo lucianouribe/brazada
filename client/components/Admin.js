@@ -48,7 +48,7 @@ class Admin extends React.Component {
           return(<Misvis />)
         break;
       default:
-        return(<Cursos />)
+        return(<Alumnos />)
     }
   }
 

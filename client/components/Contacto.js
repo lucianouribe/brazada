@@ -35,9 +35,9 @@ class Contacto extends React.Component {
 
   render() {
     return(
-      <div>
-        <h2 className="center titulo">Contacto</h2>
-        <form className="container contacto" ref="mailForm" onSubmit={this.handleSubmit}>
+      <div className='contacto-container'>
+        <h2 className="center main-titulo">Contacto</h2>
+        <form className="contacto-form" ref="mailForm" onSubmit={this.handleSubmit}>
           <input placeholder="nombre completo" ref="nombre" required={true} />
           <input type='email' placeholder="correo electrónico" ref="correo" required={true} />
           <textarea ref="mensaje" placeholder="mensaje" ></textarea>

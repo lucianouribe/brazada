@@ -49,7 +49,6 @@ ActiveRecord::Schema.define(version: 20170608222238) do
     t.string   "tipo_curso",  null: false
     t.string   "lugar"
     t.text     "descripcion"
-    t.float    "duracion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -75,6 +74,7 @@ ActiveRecord::Schema.define(version: 20170608222238) do
     t.integer  "minutos",     null: false
     t.string   "posicion",    null: false
     t.string   "calendario",  null: false
+    t.integer  "duracion",    null: false
     t.integer  "curso_id"
     t.integer  "profesor_id"
     t.datetime "created_at",  null: false

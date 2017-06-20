@@ -1,4 +1,4 @@
-export const menus = {menus: ['natacion', 'gimnacio', 'hidro', 'mente']}
+export const menus = {menus: ['natacion', 'gimnasio', 'hidro', 'mente']}
 
 export function ortografica(word){
   switch (word) {
@@ -13,6 +13,9 @@ export function ortografica(word){
       break;
     case 'mamas':
       return 'mamás'
+      break;
+    case 'jovenes':
+      return 'jóvenes'
       break;
     case 'natacion libre':
       return 'natación libre'
@@ -51,3 +54,21 @@ export function createMarkup(text) {
   text = text.replace(/(?:\r\n|\r|\n)/g, '<br />');
   return {__html: `${text}`};
 }
+
+export function sortNumber(a,b) {
+  return a - b;
+}
+
+
+export function destildador(texto) {
+  texto = texto.allReplace({'á': 'a', 'é': 'e', 'í':'i', 'ó':'o', 'ú':'u'})
+  return texto
+}
+
+String.prototype.allReplace = function(obj) {
+    var retStr = this;
+    for (var x in obj) {
+        retStr = retStr.replace(new RegExp(x, 'g'), obj[x]);
+    }
+    return retStr;
+};

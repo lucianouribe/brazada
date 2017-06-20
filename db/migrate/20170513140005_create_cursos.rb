@@ -5,7 +5,6 @@ class CreateCursos < ActiveRecord::Migration[5.0]
       t.string :tipo_curso, null: false
       t.string :lugar
       t.text :descripcion
-      t.float :duracion
 
       t.timestamps
     end

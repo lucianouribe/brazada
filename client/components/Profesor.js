@@ -40,7 +40,7 @@ class Profesor extends React.Component {
     let profesor = this.props.profesor;
     return(
       <div className="col s12 m4">
-        <div className="card edit-card">
+        <div className="card form-edit">
           <form>
             <div className="card-content">
               <p>
@@ -56,7 +56,7 @@ class Profesor extends React.Component {
                 <input type="text" ref="especialidad" defaultValue={profesor.especialidad} />
               </p>
               <p>
-                <strong>Cual:</strong>
+                <strong>Clases:</strong>
                 <input type="text" ref="cual_curso" defaultValue={profesor.cual_curso} />
               </p>
               <p>

@@ -7,6 +7,11 @@ const tarifas = ( state = [], action ) => {
       // console.log('all tarifas');
       return action.tarifas;
       break;
+    case 'FILTERED_TARIFAS':
+      // console.log('filtered tarifas');
+      let filteredTarifas = action.lasTarifas;
+      return filteredTarifas;
+      break;
     case 'ADD_TARIFA':
       return [action.tarifa, ...state]
       break;

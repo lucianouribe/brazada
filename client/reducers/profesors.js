@@ -7,6 +7,11 @@ const profesors = ( state = [], action ) => {
       // console.log('all profesors');
       return action.profesors;
       break;
+    case 'FILTERED_PROFESORS':
+      // console.log('filtered tarifas');
+      let filteredProfesors = action.losProfesors;
+      return filteredProfesors;
+      break;
     case 'ADD_PROFESOR':
       return [action.profesor, ...state]
       break;

@@ -1,8 +1,15 @@
+.contacto-container {
+  padding: 2rem;
+}
+.contacto-form {
+  margin: 1rem 3rem 1rem 3rem;
+}
+
 // parent
 .mensaje {
   padding: 1rem;
   background-color: #fff;
-  margin: 0 2rem 1rem 2rem;
+  margin: 1rem 3rem 1rem 3rem;
   border: 1px solid #ccc;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -53,6 +60,6 @@
 }
 
 // botones
-.contacto .btn-main {
+.contacto-form .btn-main {
   margin-left: 2rem;
 }

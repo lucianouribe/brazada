@@ -6,6 +6,11 @@ const cursos = ( state = [], action ) => {
     case 'ALL_CURSOS':
       return action.cursos;
       break;
+    case 'FILTERED_CURSOS':
+      // console.log('filtered tarifas');
+      let filteredCursos = action.losCursos;
+      return filteredCursos;
+      break;
     case 'ADD_CURSO':
       return [action.curso, ...state]
       break;

@@ -12,8 +12,8 @@ class MainTarifas extends React.Component {
   render(){
     let tarifas = this.props.tarifas
     return(
-      <div className="container">
-        <h2 className="center titulo">Tarifas</h2>
+      <div className="tarifa-container">
+        <h1 className="center main-titulo">Tarifas</h1>
         <div className="main-info main-tarifa">
           {Object.keys(tarifas).map(key =>
             <span key={key} className="tarifa-info">

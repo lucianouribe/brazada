@@ -1,11 +1,13 @@
-export const addCurso = (nombre, lugar, descripcion, tipo_curso, duracion) => {
+import { destildador } from '../helpers';
+
+export const addCurso = (nombre, lugar, descripcion, tipo_curso) => {
   // console.log('this is add cursos action');
   return(dispatch) => {
     $.ajax({
       url: `/api/cursos`,
       type: 'POST',
       dataType: 'JSON',
-      data: { curso: { nombre, lugar, descripcion, tipo_curso, duracion } }
+      data: { curso: { nombre, lugar, descripcion, tipo_curso } }
     }).done( curso => {
       // console.log('add curso done data');
       // console.table(curso);
@@ -18,17 +20,27 @@ export const addCurso = (nombre, lugar, descripcion, tipo_curso, duracion) => {
 
 }
 
-export const fetchCursos = () => {
+export const fetchCursos = (wordToMatch) => {
   // console.log('this is fetch cursos')
+  const regex = new RegExp(wordToMatch, 'gi');
+
   return(dispatch) => {
     $.ajax({
       url: '/api/cursos/',
       type: 'GET',
       dataType: 'JSON'
     }).done( cursos => {
-      // console.log('fetch cursos done data');
-      // console.table(cursos);
-      dispatch({ type: 'ALL_CURSOS', cursos});
+      if(wordToMatch === 'full') {
+        dispatch({ type: 'ALL_CURSOS', cursos});
+      } else {
+        let losCursos = cursos.filter( curso => {
+          if(
+            destildador(curso.nombre).match(regex)
+          ) return curso;
+        })
+        // console.table(losCursos)
+        dispatch({ type: 'FILTERED_CURSOS', losCursos});
+      }
     }).fail( data => {
       // console.log('fetch cursos fail data')
       // console.log(data)
@@ -37,14 +49,14 @@ export const fetchCursos = () => {
 
 }
 
-export const editCurso = (id, nombre, lugar, descripcion, tipo_curso, duracion) => {
+export const editCurso = (id, nombre, lugar, descripcion, tipo_curso) => {
   // console.log(`this is edit curso con id: ${id}`)
   return(dispatch) => {
     $.ajax({
       url: `/api/cursos/${id}`,
       type: 'PUT',
       dataType: 'JSON',
-      data: { curso: { nombre, lugar, descripcion, tipo_curso, duracion } }
+      data: { curso: { nombre, lugar, descripcion, tipo_curso } }
     }).done( curso => {
       // console.log('edit curso done data');
       // console.table(curso);
@@ -68,7 +80,7 @@ export const deleteCurso = (id) => {
       // console.log(data);
       dispatch({ type: 'DELETE_CURSO', id });
     }).fail( data => {
-      console.log(data);
+      // console.log(data);
     })
   }
 }

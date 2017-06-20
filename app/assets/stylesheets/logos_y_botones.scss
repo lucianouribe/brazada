@@ -72,16 +72,15 @@
 li:hover .icon-natacion {
   background-image: url(asset_path("natacion_h.svg"));
 }
-// Gimnacio
-.icon-gimnacio {
-  background-image: url(asset_path("gimnacio.svg"));
+// gimnasio
+.icon-gimnasio {
+  background-image: url(asset_path("gimnasio.svg"));
 }
-.icon-gimnacio-p {
-  background-image: url(asset_path("gimnacio_b.svg"));
+.icon-gimnasio-p {
+  background-image: url(asset_path("gimnasio_b.svg"));
 }
-
-li:hover .icon-gimnacio {
-  background-image: url(asset_path("gimnacio_h.svg"));
+li:hover .icon-gimnasio {
+  background-image: url(asset_path("gimnasio_h.svg"));
 }
 
 // Hidro Gimnacia
@@ -91,7 +90,6 @@ li:hover .icon-gimnacio {
 .icon-hidro-p {
   background-image: url(asset_path("hidro_b.svg"));
 }
-
 li:hover .icon-hidro {
   background-image: url(asset_path("hidro_h.svg"));
 }
@@ -103,7 +101,6 @@ li:hover .icon-hidro {
 .icon-mente-p {
   background-image: url(asset_path("mente_b.svg"));
 }
-
 li:hover .icon-mente {
   background-image: url(asset_path("mente_h.svg"));
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editCurso, deleteCurso } from '../actions/cursos';
+import { ortografica } from '../helpers';
 
 
 class Curso extends React.Component {
@@ -29,9 +30,8 @@ class Curso extends React.Component {
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
-    let duracion = this.refs.duracion.value;
 
-    this.props.dispatch(editCurso(this.props.curso.id, nombre, lugar, descripcion, tipoCurso, duracion))
+    this.props.dispatch(editCurso(this.props.curso.id, nombre, lugar, descripcion, tipoCurso))
     this.toggleEdit();
   }
 
@@ -47,21 +47,31 @@ class Curso extends React.Component {
                 <input type="text" required ref='nombre' defaultValue={curso.nombre} />
               </p>
               <p>
-                <strong>Lugar:</strong>
-                <input type="text" ref="lugar" required defaultValue={curso.lugar} />
+                <strong>descripcion:</strong>
+                <textarea type="text" ref="descripcion" required defaultValue={curso.descripcion} ></textarea>
               </p>
               <p>
-                <strong>descripcion:</strong>
-                <input type="text" ref="descripcion" required defaultValue={curso.descripcion} />
+                <strong>Lugar:</strong>
+                <select className="browser-default" ref="lugar" required>
+                  <option disabled selected>select</option>
+                  <option>piscina</option>
+                  <option>gimnasio</option>
+                  <option value='salon 0'>salón 2 P1</option>
+                  <option value='salon 1'>salón 1 P2</option>
+                  <option value='salon 2'>salón 2 P2</option>
+                </select>
               </p>
               <p>
                 <strong>Tipo Curso:</strong>
-                <input type="text" ref="tipo_curso" required defaultValue={curso.tipo_curso} />
+                <select className="browser-default" ref="tipo_curso" required>
+                  <option disabled selected>select</option>
+                  <option value='natacion'>natación</option>
+                  <option>gimnasio</option>
+                  <option>hidro</option>
+                  <option>mente</option>
+                </select>
               </p>
-              <p>
-                <strong>Duracion:</strong>
-                <input type="number" ref="duracion" required defaultValue={curso.duracion} />
-              </p>
+
             </div>
             <div className="card-action">
               <span onClick={this.handleSubmit}><i className="material-icons">done</i></span>
@@ -79,11 +89,10 @@ class Curso extends React.Component {
       <div className="col s12 m4 l4">
         <div className="card">
           <div className="card-content">
-            <span className="card-title">{ curso.nombre }</span>
+            <span className="card-title">{ ortografica(curso.nombre) }</span>
             <p>lugar: {curso.lugar}</p>
-            <p>tipo curso: {curso.tipo_curso}</p>
+            <p>tipo curso: {ortografica(curso.tipo_curso)}</p>
             <p>descripcion: {curso.descripcion}</p>
-            <p>duracion: {curso.duracion}</p>
           </div>
           <div className="card-action">
             <span onClick={this.toggleEdit}><i className="material-icons">mode_edit</i></span>

@@ -63,6 +63,6 @@ class Api::CursosController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_curso_params
       # params.fetch(:api_curso, {})
-      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion, :duracion)
+      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion)
     end
 end
