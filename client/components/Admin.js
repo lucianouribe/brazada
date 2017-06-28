@@ -48,17 +48,18 @@ class Admin extends React.Component {
           return(<Misvis />)
         break;
       default:
-        return(<Alumnos />)
+        return(<Cursos />)
     }
   }
 
   render(){
     return (
       <div className='admin-main'>
-        <Dashboard setRenderOption={this.setRenderOption}/>
-        <div className="admin-content">
+        <Dashboard setRenderOption={this.setRenderOption} />
+        <div className="admin-content yes-cellphone">
           {this.mainRenderer()}
         </div>
+        <h2 className="no-cellphone">Opción no apta para telefonos</h2>
       </div>
     )
   }

@@ -7,6 +7,7 @@ import { fetchMisvis} from '../actions/misvis';
 import { fetchProfesors } from '../actions/profesors';
 import { fetchHorarios } from '../actions/horarios';
 import { setTipoCurso } from '../actions/menus';
+import { setCualClase } from '../actions/submenus';
 import { ortografica } from '../helpers';
 
 class Navbar extends Component {
@@ -55,7 +56,29 @@ class Navbar extends Component {
   }
 
   goToActions(takeThis){
-    this.props.dispatch(setTipoCurso(takeThis))
+    this.props.dispatch(setTipoCurso(takeThis));
+    // set default submenus
+    switch (takeThis) {
+      case 'natacion':
+      let ninos = 'ninos'
+          this.props.dispatch(setCualClase(ninos));
+        break;
+      case 'gimnasio':
+      let spinning = 'spinning'
+          this.props.dispatch(setCualClase(spinning));
+        break;
+      case 'hidro':
+      let hidrogimnasia = 'hidrogimnasia'
+          this.props.dispatch(setCualClase(hidrogimnasia));
+        break;
+      case 'mente':
+      let pilates = 'pilates'
+          this.props.dispatch(setCualClase(pilates));
+        break;
+      default:
+
+    }
+
   }
   // <li className="nav-icon center" onClick={() => this.goToActions(mente)}><Link to='/main'><i className="mente icon"></i>Test</Link></li>
 

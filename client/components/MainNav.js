@@ -15,6 +15,13 @@ class MainNav extends React.Component {
   }
 
   componentDidMount(){
+    // jquery button clicked effect
+    $('.btn-nav-main').on('click', function(){
+      $('.btn-nav-main').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
+
+    // grab menu
     const slider = document.querySelector('.nav-bar-main');
     let isDown = false;
     let startX;
@@ -77,11 +84,18 @@ class MainNav extends React.Component {
 
   componentDidUpdate(){
     $('select').material_select();
+    // jquery button clicked effect
+    $('.btn-nav-main').on('click', function(){
+      $('.btn-nav-main').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
   }
 
 
   goToSubActions(takeThis){
-    this.props.dispatch(setCualClase(takeThis))
+    // console.log('goToSubActions')
+    this.props.dispatch(setCualClase(takeThis));
+    this.props.infoGatherer(null);
   }
 
   menuItems(){

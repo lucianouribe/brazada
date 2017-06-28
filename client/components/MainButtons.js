@@ -2,6 +2,22 @@ import React from 'react';
 
 class MainButtons extends React.Component {
 
+  componentDidMount(){
+    // jquery button clicked effect
+    $('.btn-opt').on('click', function(){
+      $('.btn-opt').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
+  }
+
+  componentDidUpdate(){
+    // jquery button clicked effect
+    $('.btn-opt').on('click', function(){
+      $('.btn-opt').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
+  }
+
   render(){
     let horarios = 'horarios';
     let tarifas = 'tarifas';

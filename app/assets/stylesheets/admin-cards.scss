@@ -122,3 +122,23 @@
 .form-card .card-content {
   height: calc(60vh - 5rem);
 }
+
+
+// options
+
+.yes-cellphone {
+  // display: block;
+}
+.no-cellphone {
+  display: none;
+  padding: 5rem;
+}
+// materialize small
+@media only screen and (max-width: 600px) {
+  .yes-cellphone {
+    display: none;
+  }
+  .no-cellphone {
+    display: block;
+  }
+}

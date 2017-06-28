@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchProfesors, addProfesor } from '../actions/profesors';
 import Profesor from './Profesor';
+import { ortografica } from '../helpers';
 
 class Profesors extends React.Component {
 
@@ -60,15 +61,22 @@ class Profesors extends React.Component {
     let apellido = this.refs.apellido.value;
     let especialidad = this.refs.especialidad.value;
     let cual_curso = this.refs.cual_curso.value;
-    let no_clases = this.refs.no_clases.value;
-    let salario = this.refs.salario.value;
 
-    this.props.dispatch(addProfesor(nombre, apellido, especialidad, cual_curso, no_clases, salario))
+    this.props.dispatch(addProfesor(nombre, apellido, especialidad, cual_curso))
     this.toggleDisplay();
   }
 
 
   addForm(){
+
+    let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
+
+    let cursoType = elCurso[0].articulo.split(", ").map((tipo_curso, i) => {
+      return (
+        <option type="text" key={i} value={tipo_curso}>{ortografica(tipo_curso)}</option>
+      );
+    });
+
     return(
       <div className="col s12 m12">
         <div className="card form-card">
@@ -85,19 +93,14 @@ class Profesors extends React.Component {
               </p>
               <p>
                 <strong>Especialidad:</strong>
-                <input type="text" ref="especialidad" required/>
+                <select className="browser-default" ref="especialidad" required>
+                  <option disabled selected>select</option>
+                  {cursoType}
+                </select>
               </p>
               <p>
                 <strong>Curso:</strong>
                 <input type="text" ref="cual_curso" required/>
-              </p>
-              <p>
-                <strong>No Clases:</strong>
-                <input type="text" ref="no_clases" required/>
-              </p>
-              <p>
-                <strong>Salario:</strong>
-                <input type="text" ref="salario" required/>
               </p>
             </div>
             <div className="card-action">
@@ -124,7 +127,7 @@ class Profesors extends React.Component {
 
   showSearcher(){
     return(
-      <input type="text" className="search-input" placeholder="buscar profesor" ref='searchInput' onChange={this.handleChange} />
+      <input type="text" className="search-input" placeholder="buscar profesor o curso" ref='searchInput' onChange={this.handleChange} />
     )
   }
 
@@ -147,6 +150,7 @@ const mapStateToProps = (state) => {
   return {
     user: state.user,
     profesors: state.profesors,
+    misvis: state.misvis
  }
 }
 

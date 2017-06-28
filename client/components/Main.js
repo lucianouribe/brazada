@@ -40,7 +40,7 @@ class Main extends React.Component {
     let infoCursos = this.props.cursos.filter( item => {
       return item.tipo_curso === this.props.menus
     })
-    // filtra los cursos y los reduce al que coincida con los states escogidos en main nav EL CURSO EN ESPECIFICO (METER EN infoToContent EL PROFE, TARIFA, ETC)
+    // filtra los cursos y los reduce al que coincida con los states escogidos en main nav
     let infoToContent;
     if(this.props.submenus){
       infoToContent = this.props.cursos.filter( item => {
@@ -51,13 +51,15 @@ class Main extends React.Component {
     let titulo = this.props.menus;
     if(titulo === 'mente'){
       titulo = 'mente y cuerpo'
+    } else if (titulo === 'hidro') {
+      titulo = 'hidrogimnasia'
     }
 
 
     return (
       <div className='main-container'>
         <h1 className='main-titulo'>{ortografica(titulo)}</h1>
-        <MainNav infoCursos={infoCursos} />
+        <MainNav infoCursos={infoCursos} infoGatherer={this.infoGatherer}/>
         <MainContent infoToContent={infoToContent} infoGatherer={this.infoGatherer} order={this.state.order}/>
       </div>
     )

@@ -7,11 +7,24 @@ class DashButtons extends React.Component {
 
   }
 
+  componentDidMount(){
+    $('.btn').on('click', function(){
+      $('.btn').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
+  }
+
+  componentDidUpdate(){
+    $('.btn').on('click', function(){
+      $('.btn').removeClass('btn-clicked');
+      $(this).addClass('btn-clicked');
+    });
+  }
+
   render(){
     let user = this.props.user
     const cursos = 'cursos';
     const mensajes = 'mensajes';
-    const alumnos = 'alumnos';
     const tarifas = 'tarifas';
     const profesors = 'profesors';
     const horarios = 'horarios';
@@ -19,9 +32,8 @@ class DashButtons extends React.Component {
     return (
       <div>
         <div className="dash-buttons">
-          <div className='btn' onClick={() => this.props.setRenderOption(mensajes)}><span>Mensajes</span></div>
+          <div className='btn btn-clicked' onClick={() => this.props.setRenderOption(mensajes)}><span>Mensajes</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(cursos)}><span>Cursos</span></div>
-          <div className='btn' onClick={() => this.props.setRenderOption(alumnos)}><span>Alumnos</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(profesors)}><span>Profesores</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(tarifas)}><span>Tarifas</span></div>
           <div className='btn' onClick={() => this.props.setRenderOption(horarios)}><span>Horarios</span></div>

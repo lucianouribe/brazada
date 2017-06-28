@@ -39,12 +39,24 @@
   color: #16959e;
   font-weight: 300;
 }
-.ubicacion-buses {
+.ubicacion-datos {
   border-bottom: 1px solid #16959e;
   padding-bottom: 1rem;
 }
-.ubicacion-datos {
+.ubicacion-datos i {
+  padding: 1rem 2rem 1rem 0.3rem;
+  background-image: url(asset_path("contacto_b.svg"));
+  background-size: 3rem !important;
+}
+.ubicacion-datos i:hover {
+  background-image: url(asset_path("contacto_h.svg"));
+}
+.ubicacion-buses {
   padding-top: 1rem;
+}
+.ubicacion-buses strong {
+  font-weight: 300;
+  color: #16959e;
 }
 
 //===================
@@ -87,6 +99,9 @@
   }
   .ubicacion-escrita {
     flex: 1 1 100%;
+  }
+  .ubicacion-datos i {
+    padding: 1rem 3rem;
   }
 }
 

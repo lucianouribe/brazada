@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editProfesor, deleteProfesor } from '../actions/profesors';
+import { ortografica } from '../helpers';
 
 
 class Profesor extends React.Component {
@@ -29,15 +30,24 @@ class Profesor extends React.Component {
     let apellido = this.refs.apellido.value;
     let especialidad = this.refs.especialidad.value;
     let cual_curso = this.refs.cual_curso.value;
-    let no_clases = this.refs.no_clases.value;
-    let salario = this.refs.salario.value;
 
-    this.props.dispatch(editProfesor(this.props.profesor.id, nombre, apellido, especialidad, cual_curso, no_clases, salario))
+    this.props.dispatch(editProfesor(this.props.profesor.id, nombre, apellido, especialidad, cual_curso))
     this.toggleEdit();
   }
 
   editProfesor() {
     let profesor = this.props.profesor;
+
+    let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
+
+    let cursoType = elCurso[0].articulo.split(", ").map((tipo_de_curso, i) => {
+      let checked = false;
+      if(tipo_de_curso === profesor.especialidad) checked={true}
+      return (
+        <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
+      );
+    });
+
     return(
       <div className="col s12 m4">
         <div className="card form-edit">
@@ -53,19 +63,14 @@ class Profesor extends React.Component {
               </p>
               <p>
                 <strong>Especialidad:</strong>
-                <input type="text" ref="especialidad" defaultValue={profesor.especialidad} />
+                <select className="browser-default" ref="especialidad" required>
+                  <option disabled selected>select</option>
+                  {cursoType}
+                </select>
               </p>
               <p>
                 <strong>Clases:</strong>
                 <input type="text" ref="cual_curso" defaultValue={profesor.cual_curso} />
-              </p>
-              <p>
-                <strong>No Clases:</strong>
-                <input type="text" ref="no_clases" defaultValue={profesor.no_clases} />
-              </p>
-              <p>
-                <strong>Salario:</strong>
-                <input type="text" ref="salario" defaultValue={profesor.salario} />
               </p>
             </div>
             <div className="card-action">
@@ -87,8 +92,6 @@ class Profesor extends React.Component {
             <span className="card-title">{ profesor.nombre } {profesor.apellido}</span>
             <p>Especialidad: {profesor.especialidad}</p>
             <p>Cual: {profesor.cual_curso}</p>
-            <p>No Clases: {profesor.no_clases}</p>
-            <p>Salario: {profesor.salario}</p>
           </div>
           <div className="card-action">
             <span onClick={this.toggleEdit}><i className="material-icons">mode_edit</i></span>
@@ -112,7 +115,8 @@ class Profesor extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    user: state.user
+    user: state.user,
+    misvis: state.misvis
  }
 }
 

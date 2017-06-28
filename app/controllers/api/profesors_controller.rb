@@ -51,6 +51,6 @@ class Api::ProfesorsController < ApplicationController
     end
 
     def api_profesor_params
-      params.require(:profesor).permit(:nombre, :apellido, :especialidad, :cual_curso, :no_clases, :salario)
+      params.require(:profesor).permit(:nombre, :apellido, :especialidad, :cual_curso)
     end
 end

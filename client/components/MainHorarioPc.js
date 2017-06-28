@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Horario from './Horario';
 import { fetchHorarios} from '../actions/horarios';
-import { aemer } from '../helpers';
+import { aemer, ortografica } from '../helpers';
 
 
 class MainHorarioPc extends React.Component {
@@ -11,7 +11,7 @@ class MainHorarioPc extends React.Component {
     super(props)
 
     this.state = {
-      calendar: 'gimnasio'
+      calendar: 's_gimnasio'
     }
 
     this.shouldGo = this.shouldGo.bind(this);
@@ -89,19 +89,20 @@ class MainHorarioPc extends React.Component {
           <div className="selecter">
             <select className="browser-default" ref="cualCalendario">
               <option>escoge calendario</option>
-              <option>gimnasio</option>
-              <option>salon 1 P2</option>
-              <option>salon 2 P2</option>
+              <option value='s_gimnasio'>gimnasio</option>
+              <option value='s_tono'>salón tono</option>
+              <option value='s_mente'>salón mente y cuerpo</option>
+              <option value='s_espera'>salón espera</option>
               <option>hidro</option>
               <option>hidro_especial</option>
-              <option>entrenamiento</option>
-              <option>clases natacion</option>
+              <option>entrenamiento natación</option>
+              <option>clases natación</option>
             </select>
           </div>
           <div onClick={this.calendarSetter} className="calendar-submit"><span>Go</span></div>
         </form>
         <div className="horario-header-titulo">
-          <h2>Calendario: <strong>{this.state.calendar}</strong></h2>
+          <h2>Calendario: <strong>{ortografica(this.state.calendar)}</strong></h2>
         </div>
       </div>
         <table>

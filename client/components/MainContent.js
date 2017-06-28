@@ -12,22 +12,24 @@ class MainContent extends React.Component {
     this.mainOderFrame = this.mainOderFrame.bind(this);
   }
 
+
   mainOderFrame(){
-    // just change this.props.infoToContent.lugar
-    let whichRoom = 'brazada';
+    // tomar el lugar donde es la clase
+    let whichRoom = Object.keys(this.props.infoToContent).map(key => this.props.infoToContent[key].lugar)
+
     if(this.props.order === 'instalaciones') {
       return (
         <div className="iframe">
           <i className="material-icons right" onClick={() => this.props.infoGatherer(null)}>close</i>
-          <iframe src={`http://imagenes360.net/${whichRoom}`} seamless></iframe>
+          <iframe src={`../panoramicos/${whichRoom[0]}/`} seamless></iframe>
         </div>
       )
     } else {
       return (
         <div className="main-content">
-          <MainInfo descripcion={this.props.infoToContent} order={this.props.order}/>
+          <MainInfo descripcion={this.props.infoToContent} order={this.props.order} />
           <MainPic />
-          <MainButtons infoGatherer={this.props.infoGatherer}/>
+          <MainButtons infoGatherer={this.props.infoGatherer} />
         </div>
       )
     }
@@ -44,7 +46,6 @@ class MainContent extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-
   }
 }
 

@@ -102,8 +102,15 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.portada-cinco h4 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
 
 // =================================
 // CellPhone Styling

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editCurso, deleteCurso } from '../actions/cursos';
-import { ortografica } from '../helpers';
+import { ortografica, createMarkup } from '../helpers';
 
 
 class Curso extends React.Component {
@@ -24,7 +24,7 @@ class Curso extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log('Curso handle submit');
+    console.log('Curso Edit handle submit');
 
     let nombre = this.refs.nombre.value;
     let lugar = this.refs.lugar.value;
@@ -37,6 +37,32 @@ class Curso extends React.Component {
 
   editCurso() {
     let curso = this.props.curso;
+
+    // filtra de misvis el salon
+    let elSalon = this.props.misvis.filter( misvi => { if(misvi.titulo === 'salones') return misvi })
+    // se separan los items del array. Se hace map de cada item
+    let cualSalon = elSalon[0].articulo.split(", ").map((donde, i) => {
+      let checked = false;
+      //si el item coincide con el lugar del curso se marca checked true
+      if(donde === curso.lugar) checked={true}
+      return (
+        <option type="text" key={i} selected={checked} value={donde}>{ortografica(donde)}</option>
+      );
+    });
+
+
+    let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
+
+    let cursoType = elCurso[0].articulo.split(", ").map((tipo_de_curso, i) => {
+      let checked = false;
+      if(tipo_de_curso === curso.tipo_curso) checked={true}
+      return (
+        <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
+      );
+    });
+
+
+
     return(
       <div className="col s12 m4">
         <div className="card form-edit">
@@ -54,21 +80,14 @@ class Curso extends React.Component {
                 <strong>Lugar:</strong>
                 <select className="browser-default" ref="lugar" required>
                   <option disabled selected>select</option>
-                  <option>piscina</option>
-                  <option>gimnasio</option>
-                  <option value='salon 0'>salón 2 P1</option>
-                  <option value='salon 1'>salón 1 P2</option>
-                  <option value='salon 2'>salón 2 P2</option>
+                  {cualSalon}
                 </select>
               </p>
               <p>
                 <strong>Tipo Curso:</strong>
                 <select className="browser-default" ref="tipo_curso" required>
                   <option disabled selected>select</option>
-                  <option value='natacion'>natación</option>
-                  <option>gimnasio</option>
-                  <option>hidro</option>
-                  <option>mente</option>
+                  {cursoType}
                 </select>
               </p>
 
@@ -90,9 +109,9 @@ class Curso extends React.Component {
         <div className="card">
           <div className="card-content">
             <span className="card-title">{ ortografica(curso.nombre) }</span>
-            <p>lugar: {curso.lugar}</p>
+            <p>lugar: {ortografica(curso.lugar)}</p>
             <p>tipo curso: {ortografica(curso.tipo_curso)}</p>
-            <p>descripcion: {curso.descripcion}</p>
+            <p><div dangerouslySetInnerHTML={createMarkup(curso.descripcion)}/></p>
           </div>
           <div className="card-action">
             <span onClick={this.toggleEdit}><i className="material-icons">mode_edit</i></span>
@@ -117,7 +136,7 @@ class Curso extends React.Component {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
-    tiposCurso: state.tiposCurso
+    misvis: state.misvis
  }
 }
 

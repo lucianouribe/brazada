@@ -5,7 +5,7 @@ import DashButtons from './DashButtons';
 class Dashboard extends React.Component {
   render(){
     return(
-      <div className="dashboard">
+      <div className="dashboard yes-cellphone">
         <DashButtons setRenderOption={this.props.setRenderOption}/>
       </div>
     )

@@ -141,6 +141,8 @@ div .main-info {
   padding: 1rem 0;
   margin: 2rem;
   overflow-y: scroll;
+  // display: flex;
+  // flex-direction: column;
 }
 .main-info p {
   font-size: 1.6rem;
@@ -198,9 +200,34 @@ div .main-info {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #16959e;
-  padding: 0 1rem;
+  // padding: 0 1rem;
+  // padding-bottom: 5rem;
 }
-
+.main-info .horarios-subinfo {
+  display: flex;
+  flex-direction: column;
+}
+.main-info .lunes {
+  order: 1;
+}
+.main-info .martes {
+  order: 2;
+}
+.main-info .miercoles {
+  order: 3;
+}
+.main-info .jueves {
+  order: 4;
+}
+.main-info .viernes {
+  order: 5;
+}
+.main-info .sabado {
+  order: 6;
+}
+.main-info .domingo {
+  order: 7;
+}
 
 // MAIN PIC
 div .main-picture {
@@ -214,74 +241,7 @@ div .main-picture {
   background-position: center;
   // background-image: url(asset_path("nino.jpg"));
 }
-// picture for all
-.libre-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.bebes-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.ninos-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.jovenes-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.adultos-pic {
-  background-color: red;
-  background-image: url(asset_path("nino.jpg"));
-}
-.master-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.spinning-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.circuito-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.resortes-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.core-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.tono-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.RTG-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.hidrogimnasia-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.especial-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.mayor-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.pilates-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.reformer-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.yoga-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.corporal-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-// .yoga .pilates {
-//   background-image: url(asset_path("nino.jpg"));
-// }
-.masajes-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
-.stretching-pic {
-  background-image: url(asset_path("nino.jpg"));
-}
+
 
 // main buttons
 div .main-buttons {
@@ -328,8 +288,12 @@ div .main-buttons {
 }
 @media all and (max-width: 992px) {
   // main info tarifa
+  .main-info p {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
   .tarifa-info p {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   // iframe instalaciones
   .main-container .iframe {

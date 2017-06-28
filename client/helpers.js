@@ -20,14 +20,33 @@ export function ortografica(word){
     case 'natacion libre':
       return 'natación libre'
       break;
+    case 'entrenamiento':
+      return 'entrenamiento natación'
+      break;
+    case 's_gimnasio':
+      return 'gimnasio'
+      break;
+    case 's_tono':
+      return 'salón tono'
+      break;
+    case 's_mente':
+      return 'salón mente y cuerpo'
+      break;
+    case 's_espera':
+      return 'salón espera'
+      break;
     default:
       return word
   }
 }
 
+
 export function formatPrice(pay) {
   pay = parseInt(pay)
-  return `$${pay.toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+  // filtro para monedas con centavos
+  // return `$${pay.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}`;
+  // filtro para monedas sin centavos
+  return `$${pay.toFixed(0).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,')}`;
 }
 
 export function timeFixer(time) {

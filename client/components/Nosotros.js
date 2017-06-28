@@ -33,12 +33,20 @@ class Nosotros extends React.Component {
   }
 
   displayNosotros(){
-    let nosotros = this.props.misvis.filter( misvi => { if(misvi.articulo.length && misvi.titulo !== 'reglamento') return misvi;})
+    // console.log(this.props.misvis)
+    let primerFiltro = this.props.misvis.filter( misvi => { if(misvi.articulo.length && misvi.titulo !== 'reglamento') return misvi })
+
+    let segundoFiltro = primerFiltro.filter( item => { if(item.titulo !== 'salones') return item })
+
+    let nosotros = segundoFiltro.filter( misvi => { if(misvi.titulo !== 'tipos_curso') return misvi })
 
     return (
       <div className='nosotros-container'>
         <h1 className="main-titulo">Quienes somos</h1>
-        <div className="nosotros-texto">{Object.keys(nosotros).map( key => <p key={key}><div dangerouslySetInnerHTML={createMarkup(nosotros[key].articulo)} /></p>)}</div>
+        <div className="nosotros-texto">{Object.keys(nosotros).map( key =>
+          <p key={key}><div dangerouslySetInnerHTML={createMarkup(nosotros[key].articulo)} /></p>
+          )}
+        </div>
         <div className="btn btn-opt" onClick={this.toggleDisplay}>Normas</div>
       </div>
     )

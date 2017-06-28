@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import HorarioCell from './HorarioCell';
 import { fetchHorarios} from '../actions/horarios';
-import { aemer, sortNumber } from '../helpers';
+import { aemer, sortNumber, ortografica } from '../helpers';
 
 
 class MainHorarioCel extends React.Component {
@@ -11,7 +11,7 @@ class MainHorarioCel extends React.Component {
     super(props)
 
     this.state = {
-      calendar: 'gimnasio'
+      calendar: 's_gimnasio'
     }
 
     this.shouldGoCell = this.shouldGoCell.bind(this);
@@ -84,8 +84,8 @@ class MainHorarioCel extends React.Component {
       return (
         <div className='horario-block'>
           <h3>{cualDia}</h3>
-          {horariosXDia.map( tested => {
-            return(<HorarioCell key={tested.id} horario={tested}/>)
+          {horariosXDia.map( evento => {
+            return(<HorarioCell key={evento.id} horario={evento}/>)
           })}
         </div>
       )
@@ -94,9 +94,10 @@ class MainHorarioCel extends React.Component {
   }
 
   horarioNavBar(){
-    let gimnasio = 'gimnasio';
-    let salon2 = 'salon 2';
-    let salon1 = 'salon 1';
+    let s_gimnasio = 's_gimnasio';
+    let s_tono = 's_tono';
+    let s_mente = 's_mente';
+    let s_espera = 's_espera';
     let hidro = 'hidro';
     let hidroEsp = 'hidro especial';
     let entrenamiento = 'entrenamiento';
@@ -106,13 +107,14 @@ class MainHorarioCel extends React.Component {
         <div className='main-nav'>
           <div className='btn-prev'></div>
           <div className='nav-bar-main'>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(gimnasio)}><span>gimnasio</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(salon1)}><span>salon 1</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(salon2)}><span>salon 2</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(s_gimnasio)}><span>gimnasio</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(s_tono)}><span>salón tono</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(s_mente)}><span>salón mente</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(s_espera)}><span>salón espera</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(hidro)}><span>hidro</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(hidroEsp)}><span>hidro especial</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(entrenamiento)}><span>entrenamiento</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(clases)}><span>clases</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(entrenamiento)}><span>entrenamiento natación</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(clases)}><span>clases natación</span></div>
           </div>
           <div className='btn-next'></div>
         </div>
@@ -142,7 +144,7 @@ class MainHorarioCel extends React.Component {
         <div className="horario-header">
           {this.horarioNavBar()}
           <div className="horario-header-titulo">
-            <h2>Calendario: <strong>{this.state.calendar}</strong></h2>
+            <h2>Calendario: <strong>{ortografica(this.state.calendar)}</strong></h2>
           </div>
           <div className='main-info main-horarios'>
             {this.shouldGoCell(lunes)}
@@ -168,7 +170,8 @@ const mapStateToProps = (state) => {
     user: state.user,
     cursos: state.cursos,
     profesors: state.profesors,
-    horarios: state.horarios
+    horarios: state.horarios,
+    misvis: state.misvis
   }
 }
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { formatPrice, mapArray, timeFixer } from '../helpers';
+import { formatPrice, mapArray, timeFixer, createMarkup } from '../helpers';
 
 class MainInfo extends React.Component {
+
   constructor(props){
     super(props);
     this.viewRenderer = this.viewRenderer.bind(this);
@@ -47,7 +48,7 @@ class MainInfo extends React.Component {
     let largo;
     switch (this.props.order) {
       case null:
-        return (Object.keys(curso).map(key => <p key={key}>{curso[key].descripcion}</p>))
+        return (Object.keys(curso).map(key => <p key={key}><div dangerouslySetInnerHTML={createMarkup(curso[key].descripcion)}/></p>))
         break;
       case 'tarifas':
         return(
@@ -70,7 +71,11 @@ class MainInfo extends React.Component {
         return(Object.keys(losProfes).map(key => <span key={key} className="profes-info"> <p>{losProfes[key].nombre}</p><p>{losProfes[key].apellido}</p></span>))
         break;
       case 'horarios':
-        return(Object.keys(losHorarios).map(key => <span key={key} className="horarios-info"> <p>{losHorarios[key].dia}</p><p>{timeFixer(losHorarios[key].hora)}:{timeFixer(losHorarios[key].minutos)}</p></span>))
+        return(
+          <div className="horarios-subinfo">
+            {Object.keys(losHorarios).map(key => <span key={key} className={`horarios-info ${losHorarios[key].dia}`}> <p>{losHorarios[key].dia}</p> <p>{timeFixer(losHorarios[key].hora)}:{timeFixer(losHorarios[key].minutos)}</p> </span>)}
+          </div>
+        )
         break;
       default:
         return (Object.keys(curso).map(key => <p key={key}>{curso[key].descripcion}</p>))

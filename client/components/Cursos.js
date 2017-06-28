@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchCursos, addCurso } from '../actions/cursos';
+import { ortografica } from '../helpers';
 import Curso from './Curso';
 
 class Cursos extends React.Component {
@@ -9,9 +10,7 @@ class Cursos extends React.Component {
     super(props);
 
     this.state = {
-      showForm: false,
-      tiposCurso: ['natacion', 'gimnasio', 'mente', 'hidro'],
-      salones: ['piscina', 'salon 1', 'salon 2', 'salon 3', 'salon 4']
+      showForm: false
     }
 
     this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -37,7 +36,7 @@ class Cursos extends React.Component {
     let cursos = this.props.cursos
     if(cursos.length){
       return cursos.map( curso => {
-        return(<Curso key={curso.id} curso={curso} tiposCurso={this.state.tiposCurso}/>);
+        return(<Curso key={curso.id} curso={curso} tiposCurso={this.state.tiposCurso} salones={this.state.salones}/>);
       })
     } else {
       return(<h4>No hay cursos</h4>);
@@ -68,16 +67,33 @@ class Cursos extends React.Component {
     this.toggleDisplay();
   }
 
+  // <option>natacion</option>
+  // <option>gimnasio</option>
+  // <option>hidro</option>
+  // <option>mente</option>
+
+  // <option>piscina</option>
+  // <option value='s_gimnasio'>gimnasio</option>
+  // <option value='s_tono'>salón tono</option>
+  // <option value='s_mente'>salón mente y cuerpo</option>
+  // <option value='s_espera'>salón espera</option>
+
+
 
   addForm(){
-    let cursoType = this.state.tiposCurso.map((tipo_curso, i) => {
+    let elSalon = this.props.misvis.filter( misvi => { if(misvi.titulo === 'salones') return misvi })
+
+    let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
+
+    let cursoType = elCurso[0].articulo.split(", ").map((tipo_curso, i) => {
       return (
-        <option type="text" ref={tipo_curso} key={i}>{tipo_curso}</option>
+        <option type="text" key={i} value={tipo_curso}>{ortografica(tipo_curso)}</option>
       );
     });
-    let cualSalon = this.state.salones.map((lugar, i) => {
+
+    let cualSalon = elSalon[0].articulo.split(", ").map((lugar, i) => {
       return (
-        <option type="text" ref={lugar} key={i}>{lugar}</option>
+        <option type="text" key={i} value={lugar}>{ortografica(lugar)}</option>
       );
     });
     return(
@@ -97,20 +113,13 @@ class Cursos extends React.Component {
               <p>
                 <strong>Tipo Curso:</strong>
                 <select className="browser-default" ref="tipo_curso">
-                  <option value='natacion'>natación</option>
-                  <option>gimnasio</option>
-                  <option>hidro</option>
-                  <option>mente</option>
+                  {cursoType}
                 </select>
               </p>
               <p>
                 <strong>Lugar:</strong>
                 <select className="browser-default" ref="lugar">
-                  <option>piscina</option>
-                  <option>gimnasio</option>
-                  <option value='salon 0'>salón 2 P1</option>
-                  <option value='salon 1'>salón 1 P2</option>
-                  <option value='salon 2'>salón 2 P2</option>
+                  {cualSalon}
                 </select>
               </p>
             </div>
@@ -161,7 +170,8 @@ class Cursos extends React.Component {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
-    cursos: state.cursos
+    cursos: state.cursos,
+    misvis: state.misvis
  }
 }
 

@@ -96,6 +96,10 @@ Misvi.create(titulo: 'mision',
               articulo: 'este es un texto sobre nuestra mision')
 Misvi.create(titulo: 'vision',
               articulo: 'este es un texto sobre nuestra vision')
+Misvi.create(titulo: 'tipos_curso',
+              articulo: 'natacion, gimnasio, mente, hidro')
+Misvi.create(titulo: 'salones',
+              articulo: 'piscina, s_gimnasio, s_tono, s_mente, s_espera')
 
 puts "misvis seeded"
 
@@ -138,73 +142,73 @@ Curso.create(nombre: 'senior master',
 Curso.create(nombre: 'spinning',
             tipo_curso: 'gimnasio',
             descripcion: """El ciclismo estático es un entrenamiento de bajo impacto para personas de cualquier edad y condición física. Mejora las capacidades aeróbicas, fortalece los músculos y contribuye a la pérdida de peso.""",
-            lugar: 'salon 1')
+            lugar: 's_gimnasio')
 Curso.create(nombre: 'rumba',
             tipo_curso: 'gimnasio',
             descripcion: """Baila y bla bla bla""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'circuito',
             tipo_curso: 'gimnasio',
             descripcion: """La resistencia aeróbica mejora considerablemente con esta modalidad dinámica y variada de entrenamiento, que se basa en la repetición sincronizada de series de ejercicios. Los músculos se definen sin aumentar su masa, al tiempo que disminuye el tejido graso.""",
-            lugar: 'salon 1')
+            lugar: 's_gimnasio')
 Curso.create(nombre: 'resortes',
             tipo_curso: 'gimnasio',
             descripcion: """(fortalecimiento???)Músculos y huesos se benefician con la práctica de resortes. Además de sus bondades fisioterapéuticas, estos ejercicios tonifican y definen los músculos. Según la orientación del trabajo, se puede optar por aumentar o no la masa muscular.""",
-            lugar: 'salon 1')
+            lugar: 's_tono')
 Curso.create(nombre: 'core',
             tipo_curso: 'gimnasio',
             descripcion: """Los ejercicios de core enfatizan en el fortalecimiento de la zona media del cuerpo. Con ellos se mejora la flexibilidad de los movimientos del tronco, se aumenta el equilibrio y la coordinación y se incrementa la firmeza postural, entre otros beneficios.""",
-            lugar: 'salon 1')
+            lugar: 's_tono')
 Curso.create(nombre: 'tono',
             tipo_curso: 'gimnasio',
             descripcion: """La práctica regular de los ejercicios de tono mejora la flexibilidad y fuerza de los músculos y aumenta su rigidez para soportar cargas, bases para conseguir una buena postura. Adicionalmente ayuda en la metabolización de grasas y calorías.""",
-            lugar: 'salon 1')
+            lugar: 's_tono')
 Curso.create(nombre: 'RTG',
             tipo_curso: 'gimnasio',
             descripcion: """Reducción Tejido Graso.
             Las prácticas de RTG combinan el trabajo cardiovascular con el muscular. Sus resultados se muestran en la reducción de los niveles de grasa, la tonificación de los grupos musculares y una mejor condición física.""",
-            lugar: 'salon 1')
+            lugar: 's_tono')
 Curso.create(nombre: 'hidrogimnasia',
             tipo_curso: 'hidro',
             descripcion: """El agua es un medio adecuado para rehabilitar y reincorporar a las actividades de su vida diaria a las personas que así lo necesiten. La fuerza hidrostática exige menos esfuerzo del corazón y a la vez potencia el trabajo de los sistemas óseo y muscular.""",
-            lugar: 'salon 1')
+            lugar: 'piscina')
 Curso.create(nombre: 'hidrogimnasia especial',
             tipo_curso: 'hidro',
             descripcion: """El agua es un medio adecuado para rehabilitar y reincorporar a las actividades de su vida diaria a las personas que así lo necesiten. La fuerza hidrostática exige menos esfuerzo del corazón y a la vez potencia el trabajo de los sistemas óseo y muscular.""",
-            lugar: 'salon 1')
+            lugar: 'piscina')
 Curso.create(nombre: 'hidro adulto mayor',
             tipo_curso: 'hidro',
             descripcion: """El sol. El aire libre y el agua tienen un efecto revitalizante. Los ejercicios que se hacen en el medio acuático son de bajo impacto y tienen resultados favorables en los músculos, sistema cardiorespiratorio y en la elasticidad, además disminuyen el estrés.""",
-            lugar: 'salon 1')
+            lugar: 'piscina')
 Curso.create(nombre: 'pilates',
             tipo_curso: 'mente',
             descripcion: """Un cuerpo elástico y armonioso, con músculos fuertes y definidos, es la promesa de la práctica de Pilates. Pero además este sistema de ejercicio, basado en la respiración y la coordinación de movimientos precisos, relaja la mente y disminuye el estrés.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'pilates reformer',
             tipo_curso: 'mente',
             descripcion: """El método Pilates es un sistema de ejercicios que se ha demostrado eficaz en la corrección postural y la rehabilitación de las lesiones. Es un pilar básico en la recuperación del movimiento con técnicas actualizadas las cuales nos muestran el potencial terapéutico de esta disciplina. Pilates para rehabilitación está dirigido a personas con dolencias del sistema músculo-esquelético y su objetivo es lograr la alineación corporal, la tonificación eficiente de la musculatura, el control del movimiento y el movimiento funcional sin dolor. Esto es debido a que Pilates integra de manera armónica el acondicionamiento físico y el control de la mente sobre el cuerpo y el movimiento.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'yoga',
             tipo_curso: 'mente',
             descripcion: """Yoga quiere decir unión: armonía de cuerpo, mente y espíritu. Sus asanas o posturas han sido practicadas durante cientos de años y nos ayudan a conseguir un cuerpo sensible y vigoroso, una mente alerta y unas emociones serenas.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'balance corporal',
             tipo_curso: 'mente',
             descripcion: """En una sola sesión se practican asanas de yoga, ejercicios de pilates y movimientos de tai-chi, en una combinación pensada para armonizar el cuerpo y la mente.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'yoga pilates',
             tipo_curso: 'mente',
             descripcion: """Una modalidad de la práctica del yoga, que se complementa con ejercicios de pilates cuidadosamente elegidos para un beneficio óptimo.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'masajes',
             tipo_curso: 'mente',
             descripcion: """Relajacion, Reductores.
             Undfln m omo wmom  ojweoj woj woj weoj eowejowjo joejoewj oj eowj oewj oej ewoj weoj a modalidad de la práctica del yoga, que se complementa con ejercicios de pilates cuidadosamente elegidos para un beneficio óptimo.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 Curso.create(nombre: 'stretching',
             tipo_curso: 'mente',
             descripcion: """Mediante determinadas posiciones corporales se logra la relajación, apertura y estiramiento de distintas zonas del cuerpo. La meta es recuperar una postura armónica y natural, alineando cabeza, hombros, columna, caderas y extremidades.""",
-            lugar: 'salon 1')
+            lugar: 's_mente')
 
 
 
@@ -558,7 +562,7 @@ Horario.create(
             hora: '6',
             minutos: '0',
             posicion: 'w-6',
-            calendario: 'gimnasio',
+            calendario: 's_gimnasio',
             curso_id: '7',
             profesor_id: '1',
             duracion: 30
@@ -568,7 +572,7 @@ Horario.create(
             hora: '7',
             minutos: '0',
             posicion: 'l-7',
-            calendario: 'gimnasio',
+            calendario: 's_gimnasio',
             curso_id: '7',
             profesor_id: '1',
             duracion: 30
@@ -578,7 +582,7 @@ Horario.create(
             hora: '8',
             minutos: '0',
             posicion: 'w-8',
-            calendario: 'gimnasio',
+            calendario: 's_gimnasio',
             curso_id: '7',
             profesor_id: '1',
             duracion: 30
@@ -588,7 +592,7 @@ Horario.create(
             hora: '18',
             minutos: '0',
             posicion: 'l-18',
-            calendario: 'gimnasio',
+            calendario: 's_gimnasio',
             curso_id: '7',
             profesor_id: '1',
             duracion: 30
@@ -598,7 +602,7 @@ Horario.create(
             hora: '18',
             minutos: '0',
             posicion: 'w-18',
-            calendario: 'gimnasio',
+            calendario: 's_gimnasio',
             curso_id: '7',
             profesor_id: '1',
             duracion: 30

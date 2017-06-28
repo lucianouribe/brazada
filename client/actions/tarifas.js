@@ -36,7 +36,7 @@ export const fetchTarifas = (wordToMatch) => {
       } else {
         let lasTarifas = tarifas.filter( tarifa => {
           if(
-            destildador(tarifa.primer_nombre).match(regex) || destildador(tarifa.segundo_nombre).match(regex)
+            destildador(tarifa.nombre).match(regex) || destildador(tarifa.plan).match(regex)
           ) return tarifa;
         })
         // console.table(lasTarifas)
