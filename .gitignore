@@ -19,4 +19,4 @@
 /public/webpack
 npm-debug.log
 .ENV
-app/assets/stylesheets/stylesheetsA
+/app/assets/stylesheets/stylesheetsA

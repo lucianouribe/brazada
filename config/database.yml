@@ -78,8 +78,19 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: brazada_site_production
+#   username: brazada_site
+#   password: <%= ENV['BRAZADA_SITE_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: brazada_site_production
-  username: brazada_site
-  password: <%= ENV['BRAZADA_SITE_DATABASE_PASSWORD'] %>
+  host: localhost
+  adapter: postgresql
+  # url: <%= ENV['DATABASE_URL'] %>
+  encoding: utf8
+  database: brazada_db
+  pool: 5
+  username: brazada_db
+  password: <%= ENV['DATABASE_PASS'] %>
