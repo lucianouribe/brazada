@@ -1,5 +1,6 @@
 .btn {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   border: 2px solid #18214c;
   letter-spacing: 2px;
   font-weight: 200;
@@ -27,7 +28,7 @@
 }
 
 .btn-portada {
-  width: 35%;
+  width: 25%;
   height: 6rem;
   border-radius: 3rem;
   padding: 1rem;

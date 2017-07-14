@@ -29,7 +29,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <div>
+      <div id="the-app">
         <Navbar />
         <Flash />
         { this.props.children }

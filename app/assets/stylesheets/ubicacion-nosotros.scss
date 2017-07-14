@@ -5,22 +5,35 @@
 // contenedor principal
 .ubicacion-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .ubicacion-titulo{
   text-align: center;
-  flex: 1 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
 }
 // segundo contenedor
 .ubicacion-info {
-  flex: 1 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
 }
 // iframe
 .ubicacion-iframe {
-  flex: 1 1 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   margin: 1rem;
 }
 .ubicacion-iframe iframe {
@@ -32,7 +45,9 @@
 }
 // texto
 .ubicacion-escrita {
-  flex: 1 1 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   margin: 3rem;
 }
 .ubicacion-escrita h5 {
@@ -63,9 +78,16 @@
 //NOSOTROS, QUIENES SOMOS
 //===================
 .nosotros-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 2rem;
 }
 
@@ -82,7 +104,8 @@
   text-align: justify;
 }
 .nosotros-container .btn-opt {
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   width: 18rem;
 }
 //===================
@@ -91,14 +114,23 @@
 
 @media all and (max-width: 992px) {
   .ubicacion-info {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .ubicacion-iframe {
-    flex: 1 1 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   .ubicacion-escrita {
-    flex: 1 1 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   .ubicacion-datos i {
     padding: 1rem 3rem;
@@ -107,8 +139,11 @@
 
 @media all and (min-width: 600px) and (max-width: 992px) {
   .ubicacion-escrita {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .ubicacion-buses {
     border-bottom: none;

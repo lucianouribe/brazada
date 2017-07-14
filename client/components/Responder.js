@@ -14,7 +14,7 @@ class Responder extends React.Component {
     e.preventDefault();
     let user = this.props.user;
     let responder = { responder: {
-      nombre: `${user.first_name} ${user.last_name} de Brazada`,
+      nombre: `Respuesta de ${user.first_name} ${user.last_name} de la Academia Brazada`,
       correo: this.props.whoTo.correo,
       mensaje: this.refs.mensaje.value,
     }}
@@ -25,7 +25,7 @@ class Responder extends React.Component {
       dataType: 'HTML',
       data: responder
     }).done( responder => {
-      console.log('answer done')
+      // console.log('answer done')
       this.refs.respuestaForm.reset();
     }).fail( err => {
       console.log('something failed with the answer')

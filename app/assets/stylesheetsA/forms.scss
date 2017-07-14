@@ -1,0 +1,87 @@
+input {
+  margin-bottom: 3rem !important;
+  border-bottom: 3px solid #16959e !important;
+  padding-left: 1rem !important;
+  font-size: 1.3rem !important;
+  font-weight: 200 !important;
+  color: #161616 !important;
+}
+
+[type=email], [type=password] {
+  height: 4rem;
+}
+
+.secret-code {
+  height: 4rem;
+  margin-top: 2rem !important;
+  border-bottom: 3px solid #fcbf00 !important;
+}
+
+input:focus {
+  border-bottom: 3px solid #fcbf00 !important;
+  box-shadow: none !important;
+}
+
+[type=range] {
+  border-bottom: none !important;
+}
+[type=range]:focus {
+  border-bottom: none !important;
+}
+label [type=range] {
+  background-color: red !important;
+}
+textarea {
+  height: 20vh;
+  width: 100%;
+  margin: 2rem 0 4rem 0;
+  padding: 2rem 1rem;
+  border: 3px solid #16959e !important;
+  border-radius: 8px;
+  font-size: 1.3rem !important;
+  font-weight: 200 !important;
+  color: #161616 !important;
+}
+
+textarea:focus {
+  border-bottom: 3px solid #fcbf00 !important;
+  box-shadow: none !important;
+}
+
+.contacto .btn {
+  float: right;
+}
+
+.select-dropdown {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  padding-left: 0 !important;
+  padding-bottom: 2rem !important;
+}
+
+// input lever
+.switch label input[type=checkbox]:checked + .lever {
+  background-color: #7D5F00;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: #5E0A0E;
+}
+// checkbox
+
+[type="checkbox"]:checked + label:before {
+    border-right: 2px solid #18214c;
+    border-bottom: 2px solid #18214c;
+}
+
+
+@media all and (min-width: 600px) and (max-width: 992px) {
+  textarea {
+    height: 35vh;
+  }
+}
+@media all and (max-width: 559px) {
+  textarea {
+    height: 40vh;
+  }
+}

@@ -4,8 +4,8 @@ class ContactoMailer < ApplicationMailer
 
   def nuevo_mensaje(contacto)
     # binding.pry
-    @contacto = contacto
-    mail(to: 'lucianouribe@gmail.com', subject: @contacto.nombre )
+    # @contacto = contacto
+    # mail(to: 'lucianouribe@gmail.com', subject: @contacto.nombre )
   end
 
 end

@@ -1,0 +1,48 @@
+.btn {
+  box-shadow: none !important;
+  border: 2px solid #18214c;
+  letter-spacing: 2px;
+  font-weight: 200;
+  border-radius: 10px;
+}
+
+.btn-main {
+  background-color: #16959e;
+  color: #fdfffd;
+}
+
+.btn-sec {
+  background-color: #fdfffd;
+  color: #18214c;
+}
+
+.btn:hover {
+  background-color: #18214c;
+  color: #fdfffd;
+}
+
+.btn-clicked {
+  background-color: #18214c !important;
+  color: #fdfffd !important;
+}
+
+.btn-portada {
+  width: 25%;
+  height: 6rem;
+  border-radius: 3rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  color: #18214c;
+}
+
+.btn-icon {
+  cursor: pointer;
+  color: #161616;
+}
+.btn-delete:hover {
+  color: red;
+}
+.btn-mail:hover {
+  color: #16959e;
+}

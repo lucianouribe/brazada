@@ -24,13 +24,11 @@ class Api::CursosController < ApplicationController
   # POST /api/cursos.json
   def create
     @api_curso = Curso.new(api_curso_params)
-
-    respond_to do |format|
-      if @api_curso.save
-        format.json { render :show, status: :created }
-      else
-        format.json { render json: @api_curso.errors, status: :unprocessable_entity }
-      end
+    # binding.pry
+    if @api_curso.save
+      render :show, status: :created
+    else
+      render json: @api_curso.errors, status: :unprocessable_entity
     end
   end
 
@@ -62,7 +60,12 @@ class Api::CursosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def api_curso_params
-      # params.fetch(:api_curso, {})
-      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion)
+      # params.require(:nombre)
+      # params.require(:lugar)
+      # params.require(:descripcion)
+      # params.require(:tipo_curso)
+      # params.require(:avatar)
+      # binding.pry
+      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion, :avatar)
     end
 end

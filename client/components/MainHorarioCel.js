@@ -70,7 +70,11 @@ class MainHorarioCel extends React.Component {
 
   calendarSetter(cual){
     // let cual = this.refs.cualCalendario.value;
-    this.setState({calendar: cual});
+    if(cual === 'descargar horarios') {
+      window.location.href = "/pdfs/brazada-horarios-y-tarifas-2017.pdf"
+    } else {
+      this.setState({calendar: cual});
+    }
   }
 
 
@@ -102,6 +106,7 @@ class MainHorarioCel extends React.Component {
     let hidroEsp = 'hidro especial';
     let entrenamiento = 'entrenamiento';
     let clases = 'clases natacion';
+    let descargar = 'descargar horarios';
     return(
       <div>
         <div className='main-nav'>
@@ -115,6 +120,7 @@ class MainHorarioCel extends React.Component {
             <div className="btn-nav-main" onClick={() => this.calendarSetter(hidroEsp)}><span>hidro especial</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(entrenamiento)}><span>entrenamiento natación</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(clases)}><span>clases natación</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(descargar)}><span>descargar horarios</span></div>
           </div>
           <div className='btn-next'></div>
         </div>

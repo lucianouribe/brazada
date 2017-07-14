@@ -1,0 +1,63 @@
+@import 'materialize';
+@import 'forms';
+@import 'home';
+@import 'navbar';
+@import 'logos-botones';
+@import 'fonts';
+@import 'botones';
+@import 'dashboard';
+@import 'pictures';
+@import 'contacto';
+@import 'alumnos';
+@import 'main';
+@import 'main-nav';
+@import 'horarios';
+@import 'ubicacion-nosotros';
+@import 'admin-cards';
+
+html {
+  // equivalencia 1rem
+  font-size: 14px;
+}
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  html {
+    font-size: 12px;
+  }
+}
+// materialize small
+@media only screen and (min-width: 351px) and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px){
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 600px) and (orientation:landscape){
+  #the-app {
+    height: 100vw;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@media only screen and (orientation:portrait){
+  #the-app {
+     -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+     transform: rotate(0deg);
+  }
+}
+hr {
+  border-bottom: 4px solid #16959e;
+}

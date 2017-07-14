@@ -17,6 +17,25 @@ export const fetchMensajes = () => {
 
 }
 
+export const createContacto = (nombre, correo, mensaje) => {
+  console.log('this is create contactos action');
+  return(dispatch) => {
+    $.ajax({
+      url: `/api/contacto`,
+      type: 'POST',
+      dataType: 'JSON',
+      data: { contacto: { nombre, correo, mensaje } }
+    }).done( contacto => {
+      console.log('create contacto done data');
+      console.log(contacto);
+      dispatch({ type: 'CREATE_CONTACTO', contacto });
+    }).fail( data => {
+      // console.log('add curso fail data')
+      // console.log(data);
+    })
+  }
+
+}
 
 export const deleteMensaje = (id) => {
   // console.log(`this is delete mensaje con id: ${id}`)

@@ -1,6 +1,7 @@
 // large
 nav {
-  background-color: #16959e;
+  // background-color: #16959e;
+  background-color: #00afdb;
   height: 8rem;
   border-bottom: 2px solid #fff;
 }
@@ -22,7 +23,9 @@ nav ul a:hover {
   width: 88rem;
   line-height: 2rem;
 }
-
+.drag-target {
+  height: 0 !important;
+}
 // excepcion rara
 @media all and (min-width: 992px) and (max-width: 1100px) {
   .nav-icon {
@@ -39,12 +42,19 @@ nav ul a:hover {
 .side-nav {
   width: 100%;
   margin-top: 5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 }
-.side-nav i {
-  width: 40% !important;
+.side-but {
+  height: calc((100vh - 8rem) / 10) !important;
 }
-.side-nav a {
+.side-but i {
+  width: 40% !important;
+  background-size: calc((100vh - 8rem) / 10) !important;
+  height: calc((100vh - 8rem) / 10) !important;
+}
+.side-but a {
   color: #fff;
   font-size: 3rem;
   font-weight: 200;
@@ -52,11 +62,12 @@ nav ul a:hover {
   line-height: 8rem;
   text-transform: lowercase;
   width: 100%;
-  height: 9.5vh !important;
+  height: calc((100vh - 8rem) / 10) !important;
+  // height: 9.5vh !important;
   text-align: left;
 }
 
-.side-nav a:hover {
+.side-but a:hover {
   background-color: #18214c;
   color: #fcbf00;
 }
@@ -97,45 +108,31 @@ nav .row .col {
     height: 5rem;
   }
   nav ul a {
-    height: 5rem;
+    // height: 5rem;
   }
-  .side-nav a {
+  .side-but a {
     font-size: 2.4rem !important;
   }
 }
 
 // materialize small
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 351px) and (max-width: 600px) {
   nav {
     height: 5rem;
   }
-  nav ul a {
-    height: 5rem;
+  .side-but a {
+    font-size: 2.5rem;
+    line-height: 6rem;
   }
 
 }
+@media only screen and (max-width: 350px) {
+  nav {
+    height: 5rem;
+  }
+  .side-but a {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
 
-
-
-
-// side nav square
-// .side-nav {
-//   margin-top: 4rem;
-//   width: 100%;
-//   text-align: center;
-//   background-image: url(asset_path("fondo_menu_01.png"));
-//   background-repeat: no-repeat;
-//   background-position: 30% 70%;
-//   background-size: cover;
-// }
-// .side-nav a {
-//   color: #fff;
-//   font-size: 1.4rem;
-//   font-weight: 200;
-//   letter-spacing: 2px;
-//   text-transform: lowercase;
-// }
-// .side-nav a:hover {
-//   background-color: rgba(255, 255, 255, 0.5);
-//   color: #fcbf00;
-// }
+}

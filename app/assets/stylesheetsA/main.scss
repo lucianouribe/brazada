@@ -1,0 +1,304 @@
+.main-container {
+  padding: 2rem !important;
+  height: calc(100vh - 8rem);
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  width: 100%;
+}
+// MAIN TITULO
+.main-titulo {
+  // margin: 0 !important;
+  // height: 3rem;
+  // background: red;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  color: #767A85;
+  align-self: center;
+}
+
+
+// IFRAME INSTALACIONES
+
+.main-container .iframe {
+  width: 60%;
+  height: 48vh;
+  border: 1px solid #16959e;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.iframe iframe {
+  width: 100%;
+  height: calc(100% - 2rem);
+}
+
+
+// MAIN CONTENT
+.main-content {
+  // background-color: gold;
+  // padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// MAIN INFO (DESCRIPTION)
+div .main-info {
+  flex: 4 4 calc(40% - 2rem);
+}
+.main-info {
+  height: 50vh;
+  // background-color: green;
+  border-top: 2px solid #16959e;
+  border-bottom: 2px solid #16959e;
+  // padding: 1rem 0;
+  margin: 0 2rem;
+  overflow-y: scroll;
+  // display: flex;
+  // flex-direction: column;
+}
+.main-info p {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0.5rem 0;
+}
+// main info tarifas
+.tarifa-container {
+  padding: 2rem;
+}
+.main-info .tarifa-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+}
+.tarifa-info h4 {
+  color: #16959e;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.tarifa-info p {
+  font-size: 1rem;
+}
+.tarifa-info-encabezado {
+  flex: 2 2 40%;
+  padding-right: 10px;
+}
+.tarifa-info-nombres, .tarifa-info-valores {
+  flex: 1 1 25%;
+}
+.tarifa-info-valores {
+  margin-left: 1rem;
+}
+.main-tarifa {
+  height: 60vh !important;
+}
+// main info profesors
+.main-info .profes-info {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #16959e;
+}
+.main-info .profes-info:last-child {
+  border-bottom: none;
+}
+.profes-info p:first-child {
+  margin-left: 3rem;
+  margin-right: 5px;
+}
+.profes-info p:last-child {
+  // margin-right: 4rem;
+}
+
+// main info horarios
+.main-info .horarios-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+  // padding: 0 1rem;
+  // padding-bottom: 5rem;
+}
+.main-info .horarios-subinfo {
+  display: flex;
+  flex-direction: column;
+}
+.main-info .lunes {
+  order: 1;
+}
+.main-info .martes {
+  order: 2;
+}
+.main-info .miercoles {
+  order: 3;
+}
+.main-info .jueves {
+  order: 4;
+}
+.main-info .viernes {
+  order: 5;
+}
+.main-info .sabado {
+  order: 6;
+}
+.main-info .domingo {
+  order: 7;
+}
+
+// MAIN PIC
+div .main-picture {
+  flex: 3 3 calc(30% - 2rem);
+}
+.main-picture {
+  // background-color: purple;
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-image: url(asset_path("nino.jpg"));
+}
+
+
+// main buttons
+div .main-buttons {
+  flex: 2.5 2.5 calc(25% - 2rem);
+}
+.main-buttons {
+  height: 50vh;
+  // background-color: #ccc;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.main-buttons div {
+  flex: 1 1 100%;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-opt {
+  font-size: 1.8rem;
+  color: #18214c;
+  letter-spacing: 2px;
+  line-height: 110%;
+  font-weight: 300;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #18214c;
+  border-radius: 2.5rem;
+  padding: .4rem 2rem;
+  // margin: 2rem;
+}
+.btn-opt:hover {
+  background-color: #18214c;
+  color: #fff;
+}
+
+//===========================
+// CELLPHONES AND TABLETS!!!
+//===========================
+@media all and (min-width: 540px) and (max-width: 892px) {
+
+
+}
+@media all and (max-width: 992px) {
+  // main info tarifa
+  .main-info p {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  .tarifa-info p {
+    font-size: 1.5rem;
+  }
+  // iframe instalaciones
+  .main-container .iframe {
+    width: 100%;
+    height: 55vh;
+  }
+  // altura en modo tablet/cel
+  .main-buttons {
+    height: 30vh;
+  }
+  .main-picture {
+    height: 30vh;
+    margin: 0;
+  }
+  //distribution
+  div .main-info {
+    flex: 1 1 100%;
+  }
+  div .main-picture {
+    flex: 1 1 50%;
+  }
+  div .main-buttons {
+    flex: 1 1 50%;
+  }
+
+  //main tarifa
+  .main-tarifa {
+    height: 70vh !important;
+  }
+  // main buttons (item)
+  .btn-nav-main {
+    font-size: 2rem;
+    color: #16959e;
+    letter-spacing: 2px;
+    font-weight: 300;
+    padding: 2px 20px;
+    margin: 3px 5px;
+
+    border: none;
+    border-radius: 0 !important;
+    line-height: 150% !important;
+  }
+  .btn-nav-main:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  // main visible bar (items)
+  .nav-bar-main {
+    justify-content: flex-start;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+  }
+  .nav-bar-main.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
+  // mostrar botones adelante atras
+  .btn-prev, .btn-next  {
+    // display: block;
+  }
+}
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  html {
+    font-size: 11px;
+  }
+  .main-info {
+    height: 22vh;
+    margin: 2rem;
+  }
+}
+
+// materialize small
+@media only screen and (max-width: 600px) {
+  // main info
+  .main-info {
+    height: 25vh;
+    margin: 2rem;
+  }
+}
+
+// iphone 3
+@media only screen and (max-width: 380px) {
+  // order of divs
+  div .main-buttons {
+    order: 4;
+  }
+  div .main-picture {
+    order: 6;
+  }
+}

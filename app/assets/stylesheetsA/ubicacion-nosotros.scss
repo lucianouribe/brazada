@@ -1,0 +1,120 @@
+//===================
+//UBICACION
+//===================
+
+// contenedor principal
+.ubicacion-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.ubicacion-titulo{
+  text-align: center;
+  flex: 1 1 100%;
+}
+// segundo contenedor
+.ubicacion-info {
+  flex: 1 1 100%;
+  display: flex;
+
+}
+// iframe
+.ubicacion-iframe {
+  flex: 1 1 50%;
+  margin: 1rem;
+}
+.ubicacion-iframe iframe {
+  border: 2px solid #16959e;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 50vh;
+}
+// texto
+.ubicacion-escrita {
+  flex: 1 1 30%;
+  margin: 3rem;
+}
+.ubicacion-escrita h5 {
+  color: #16959e;
+  font-weight: 300;
+}
+.ubicacion-datos {
+  border-bottom: 1px solid #16959e;
+  padding-bottom: 1rem;
+}
+.ubicacion-datos i {
+  padding: 1rem 2rem 1rem 0.3rem;
+  background-image: url(asset_path("contacto_b.svg"));
+  background-size: 3rem !important;
+}
+.ubicacion-datos i:hover {
+  background-image: url(asset_path("contacto_h.svg"));
+}
+.ubicacion-buses {
+  padding-top: 1rem;
+}
+.ubicacion-buses strong {
+  font-weight: 300;
+  color: #16959e;
+}
+
+//===================
+//NOSOTROS, QUIENES SOMOS
+//===================
+.nosotros-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.nosotros-container h1 {
+  text-align: center;
+}
+.nosotros-texto {
+  padding: 2rem 0;
+  border-top: 2px solid #16959e;
+  border-bottom: 2px solid #16959e;
+  max-height: 70vh;
+  overflow-y: scroll;
+  margin: 1rem 3rem 3rem 3rem;
+  text-align: justify;
+}
+.nosotros-container .btn-opt {
+  align-self: flex-end;
+  width: 18rem;
+}
+//===================
+//CELULARES Y TABLETS
+//===================
+
+@media all and (max-width: 992px) {
+  .ubicacion-info {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ubicacion-iframe {
+    flex: 1 1 100%;
+  }
+  .ubicacion-escrita {
+    flex: 1 1 100%;
+  }
+  .ubicacion-datos i {
+    padding: 1rem 3rem;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .ubicacion-escrita {
+    display: flex;
+    justify-content: space-around;
+  }
+  .ubicacion-buses {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .ubicacion-datos {
+    padding-top: 0;
+  }
+}

@@ -194,9 +194,19 @@ li:hover .admin {
   }
 }
 // materialize small
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 351px) and (max-width: 600px) {
   .icon {
     background-size: 7rem;
     height: 7rem !important;
+  }
+  .redSocial {
+    width: 4.5rem !important;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .redSocial {
+    width: 5rem !important;
+    background-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 }

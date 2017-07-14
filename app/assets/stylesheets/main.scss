@@ -2,107 +2,28 @@
   padding: 2rem !important;
   height: calc(100vh - 8rem);
   // background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 !important;
   width: 100%;
 }
 // MAIN TITULO
 .main-titulo {
   // margin: 0 !important;
-  height: 4rem;
+  // height: 3rem;
   // background: red;
-  font-size: 4rem;
+  font-size: 3.5rem;
+  margin: 1rem 0;
   color: #767A85;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
-// MAIN NAV
-// main nav container
-.main-nav {
-  margin: 2rem auto 1rem auto;
-  // background-color: blue;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  align-items: center;
-}
-// main visible bar (items)
-.nav-bar-main {
-  // flex: 8 8 80%;
-  display: flex;
-  // justify-content: center;
-
-  overflow-x: scroll;
-  overflow-y: hidden;
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
-  transition: all 0.2s;
-  transform: scale(0.98);
-  will-change: transform;
-  perspective: 500px;
-  // background-color: gold;
-  align-items: center;
-}
-
-
-// main buttons (item)
-.btn-nav-main {
-  // flex: 1 1 10%;
-  font-size: 1.5rem;
-  color: #18214c;
-  letter-spacing: 2px;
-  line-height: 110%;
-  font-weight: 300;
-  text-align: center;
-  background-color: #fff;
-  border: 1px solid #18214c;
-  border-radius: 2rem;
-  padding: .4rem 1.8rem;
-  margin: 0 1rem;
-  align-self: stretch;
-  align-items: center;
-  display: flex;
-}
-.btn-nav-main:hover {
-  background-color: #18214c;
-  color: #fff;
-}
-
-// buttons atras y adelante
-.btn-prev {
-  background-image: url(asset_path("left.svg"));
-}
-.btn-prev:hover {
-  background-image: url(asset_path("left_o.svg"));
-}
-.btn-next {
-  background-image: url(asset_path("right.svg"));
-}
-.btn-next:hover {
-  background-image: url(asset_path("right_o.svg"));
-}
-
-.btn-prev, .btn-next {
-  // flex: 1 1 10%;
-  // display: none;
-  cursor: pointer;
-  width: 3rem;
-  height: 3rem;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  // background-color: #ccc;
-  padding: 5px;
-  margin: 5px;
-  z-index: 4;
-}
-
-.palanca {
-  flex: 1 1 100%;
-  width: 80%;
-  margin: 0 auto;
-}
 
 // IFRAME INSTALACIONES
 
@@ -125,21 +46,26 @@
 .main-content {
   // background-color: gold;
   // padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 // MAIN INFO (DESCRIPTION)
 div .main-info {
-  flex: 4 4 calc(40% - 2rem);
+  -webkit-box-flex: 4;
+      -ms-flex: 4 4 calc(40% - 2rem);
+          flex: 4 4 calc(40% - 2rem);
 }
 .main-info {
   height: 50vh;
   // background-color: green;
   border-top: 2px solid #16959e;
   border-bottom: 2px solid #16959e;
-  padding: 1rem 0;
-  margin: 2rem;
+  // padding: 1rem 0;
+  margin: 0 2rem;
   overflow-y: scroll;
   // display: flex;
   // flex-direction: column;
@@ -147,14 +73,19 @@ div .main-info {
 .main-info p {
   font-size: 1.6rem;
   font-weight: 200;
+  margin: 0.5rem 0;
 }
 // main info tarifas
 .tarifa-container {
   padding: 2rem;
 }
 .main-info .tarifa-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 2px solid #16959e;
 }
 .tarifa-info h4 {
@@ -166,11 +97,15 @@ div .main-info {
   font-size: 1rem;
 }
 .tarifa-info-encabezado {
-  flex: 2 2 40%;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 2 40%;
+          flex: 2 2 40%;
   padding-right: 10px;
 }
 .tarifa-info-nombres, .tarifa-info-valores {
-  flex: 1 1 25%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
 }
 .tarifa-info-valores {
   margin-left: 1rem;
@@ -180,8 +115,12 @@ div .main-info {
 }
 // main info profesors
 .main-info .profes-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   border-bottom: 2px solid #16959e;
 }
 .main-info .profes-info:last-child {
@@ -197,41 +136,66 @@ div .main-info {
 
 // main info horarios
 .main-info .horarios-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 2px solid #16959e;
   // padding: 0 1rem;
   // padding-bottom: 5rem;
 }
 .main-info .horarios-subinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .main-info .lunes {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 .main-info .martes {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 .main-info .miercoles {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 .main-info .jueves {
-  order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 .main-info .viernes {
-  order: 5;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 .main-info .sabado {
-  order: 6;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
 }
 .main-info .domingo {
-  order: 7;
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
 }
 
 // MAIN PIC
 div .main-picture {
-  flex: 3 3 calc(30% - 2rem);
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 calc(30% - 2rem);
+          flex: 3 3 calc(30% - 2rem);
 }
 .main-picture {
   // background-color: purple;
@@ -245,21 +209,36 @@ div .main-picture {
 
 // main buttons
 div .main-buttons {
-  flex: 2.5 2.5 calc(25% - 2rem);
+  -webkit-box-flex: 2.5;
+      -ms-flex: 2.5 2.5 calc(25% - 2rem);
+          flex: 2.5 2.5 calc(25% - 2rem);
 }
 .main-buttons {
   height: 50vh;
   // background-color: #ccc;
   padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .main-buttons div {
-  flex: 1 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .btn-opt {
   font-size: 1.8rem;
@@ -310,13 +289,19 @@ div .main-buttons {
   }
   //distribution
   div .main-info {
-    flex: 1 1 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   div .main-picture {
-    flex: 1 1 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
   }
   div .main-buttons {
-    flex: 1 1 50%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
   }
 
   //main tarifa
@@ -341,14 +326,18 @@ div .main-buttons {
   }
   // main visible bar (items)
   .nav-bar-main {
-    justify-content: flex-start;
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
   }
   .nav-bar-main.active {
     cursor: grabbing;
     cursor: -webkit-grabbing;
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   // mostrar botones adelante atras
   .btn-prev, .btn-next  {
@@ -380,9 +369,13 @@ div .main-buttons {
 @media only screen and (max-width: 380px) {
   // order of divs
   div .main-buttons {
-    order: 4;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
   div .main-picture {
-    order: 6;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
   }
 }

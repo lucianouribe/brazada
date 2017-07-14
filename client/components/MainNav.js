@@ -53,12 +53,12 @@ class MainNav extends React.Component {
     });
 
     $('.btn-next').on('click', function(){
-      let number = setInterval(function() {
-          if (number < 500) {
-              clearInterval(number); // If exceeded 100, clear interval
-          }
-          slider.scrollLeft = number * 8;
-      }, 3);
+      // let number = setInterval(function() {
+      //     if (number < 500) {
+      //         clearInterval(number); // If exceeded 100, clear interval
+      //     }
+      //     slider.scrollLeft = number * 8;
+      // }, 3);
     });
 
     $('.btn-prev').on('click', function(){

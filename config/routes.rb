@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :horarios
     resources :tarifas
     post 'contacto', to: 'contactos#create_mail'
+    # poner lo de create dentro de create_mail para ver que pasa
     post 'responder', to: 'responders#create_response_mail'
     # post 'happy_newsmessage', to: 'happy_newsmessages#send_happy_birthday_mail'
     post 'alumno', to: 'alumno#felicitaciones_mail'

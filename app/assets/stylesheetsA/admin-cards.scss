@@ -1,0 +1,144 @@
+// el titulo
+.admin-title {
+  width: 100%;
+  height: 8rem;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.admin-title h1 {
+  font-size: 3rem;
+  margin: 0;
+  margin-right: 5rem;
+  color: #16959e;
+}
+
+.admin-title span {
+  margin: 1.8rem 0 1.68rem 0;
+  color: #fcbf00;
+  cursor: pointer;
+}
+
+// buscador
+.search-input {
+  flex: 1 1 30%;
+  border: 1px solid #6b6b6b !important;
+  border-radius: 1rem !important;
+  margin-bottom: 0 !important;
+  margin-right: 1rem !important;
+}
+// cards
+
+.card {
+  border: 2px solid #16959e;
+  border-radius: 1rem;
+  background-color: #fff;
+  // background-color: rgba(0,0,0,0.3);
+}
+.card-content {
+  height: 15rem;
+  overflow-y: scroll;
+}
+
+.card-action {
+  background: none !important;
+  box-shadow: 0 3px 3px rbba(0,0,0,0.3);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.card-action i {
+  color: #16959e;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.card-action i:hover {
+  color: #fcbf00;
+}
+.matched {
+  font-weight: 400 !important;
+  color: #16959e;
+}
+
+// especificos
+
+//cursos
+.admin-title {
+  display: inline-flex;
+}
+
+.form-edit {
+  height: 65vh;
+}
+.form-edit form {
+  height: calc(65vh - 2rem) !important;
+}
+.form-edit .card-content {
+  height: calc(65vh - 5rem) !important;
+}
+.form-edit textarea {
+  padding: 0.6rem !important;
+  height: 20vh !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  margin: 1rem 0 !important;
+}
+.form-edit-misvi {
+  height: 65vh;
+}
+.form-edit-misvi form {
+  height: calc(65vh - 4rem) !important;
+}
+.form-edit-misvi .card-content {
+  height: calc(65vh - 4rem) !important;
+}
+.form-edit-misvi textarea {
+  height: calc(50vh - 5rem) !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.form-edit input[type="text"] {
+  width: 90% !important;
+  margin-bottom: 1rem !important;
+}
+.form-card .card-title {
+  text-align: center;
+  margin: 0 !important;
+}
+.form-card input[type="text"] {
+  margin-bottom: 1rem !important;
+}
+.form-card textarea {
+  padding: 0.6rem !important;
+  height: 15vh !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  margin: 1rem 0 !important;
+}
+// formas
+
+.form-card {
+  height: 60vh;
+}
+.form-card .card-content {
+  height: calc(60vh - 5rem);
+}
+
+
+// options
+
+.yes-cellphone {
+  // display: block;
+}
+.no-cellphone {
+  display: none;
+  padding: 5rem;
+}
+// materialize small
+@media only screen and (max-width: 600px) {
+  .yes-cellphone {
+    display: none;
+  }
+  .no-cellphone {
+    display: block;
+  }
+}

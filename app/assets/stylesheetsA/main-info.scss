@@ -1,0 +1,133 @@
+// MAIN INFO (DESCRIPTION)
+
+// informacion
+div .main-info {
+  flex: 4 4 calc(40% - 2rem);
+}
+
+.main-info {
+  height: 50vh;
+  // background-color: green;
+  border-top: 2px solid #16959e;
+  border-bottom: 2px solid #16959e;
+  // padding: 1rem 0;
+  margin: 0 2rem;
+  overflow-y: scroll;
+  // display: flex;
+  // flex-direction: column;
+}
+.main-info p {
+  font-size: 1.6rem;
+  font-weight: 200;
+  margin: 0.5rem 0;
+}
+
+// main info tarifas
+.tarifa-container {
+  padding: 2rem;
+}
+.main-info .tarifa-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+}
+.tarifa-info h4 {
+  color: #16959e;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+.tarifa-info p {
+  font-size: 1rem;
+}
+.tarifa-info-encabezado {
+  flex: 2 2 40%;
+  padding-right: 10px;
+}
+.tarifa-info-nombres, .tarifa-info-valores {
+  flex: 1 1 25%;
+}
+.tarifa-info-valores {
+  margin-left: 1rem;
+}
+.main-tarifa {
+  height: 60vh !important;
+}
+
+// main info profesors
+.main-info .profes-info {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #16959e;
+  font-size: 1rem;
+}
+.main-info .profes-info:last-child {
+  border-bottom: none;
+}
+.profes-info p:first-child {
+  margin-left: 3rem;
+  margin-right: 5px;
+}
+.profes-info p:last-child {
+  // margin-right: 4rem;
+}
+
+// main info horarios
+.main-info .horarios-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #16959e;
+  // padding: 0 1rem;
+  // padding-bottom: 5rem;
+}
+.main-info .horarios-subinfo {
+  display: flex;
+  flex-direction: column;
+}
+.main-info .lunes {
+  order: 1;
+}
+.main-info .martes {
+  order: 2;
+}
+.main-info .miercoles {
+  order: 3;
+}
+.main-info .jueves {
+  order: 4;
+}
+.main-info .viernes {
+  order: 5;
+}
+.main-info .sabado {
+  order: 6;
+}
+.main-info .domingo {
+  order: 7;
+}
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .main-info {
+    height: 22vh;
+    margin: 2rem;
+  }
+}
+
+// all devises
+@media only screen and (max-width: 600px) {
+  // main info
+  .main-info {
+    height: 25vh;
+    margin: 2rem;
+  }
+}
+
+// materialize small
+@media only screen and (min-width: 351px) and (max-width: 600px) {
+
+}
+
+// small phones
+@media only screen and (max-width: 350px) {
+
+}

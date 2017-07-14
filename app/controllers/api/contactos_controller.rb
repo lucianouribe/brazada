@@ -9,6 +9,7 @@ class Api::ContactosController < ApplicationController
   end
 
   def show
+    # binding.pry
   end
 
   def new
@@ -21,13 +22,10 @@ class Api::ContactosController < ApplicationController
   # def create
   #   binding.pry
   #   @api_contacto = Contacto.new(api_contacto_params)
-  #
-  #   respond_to do |format|
-  #     if @api_contacto.save
-  #       format.json { render :show, status: :created }
-  #     else
-  #       format.json { render json: @api_contacto.errors, status: :unprocessable_entity }
-  #     end
+  #   if @api_contacto.save
+  #     render :show, status: :created }
+  #   else
+  #     render json: @api_contacto.errors, status: :unprocessable_entity }
   #   end
   # end
 
@@ -49,6 +47,7 @@ class Api::ContactosController < ApplicationController
   end
 
   def create_mail
+    # binding.pry
     contacto = Contacto.create(api_contacto_params)
     ContactoMailer.nuevo_mensaje(contacto).deliver
   end
@@ -56,10 +55,12 @@ class Api::ContactosController < ApplicationController
   private
 
     def set_api_contacto
+      # binding.pry
       @api_contacto = Contacto.find(params[:id])
     end
 
     def api_contacto_params
+      # binding.pry
       params.require(:contacto).permit(:nombre, :correo, :mensaje, :leido, :importancia)
     end
 

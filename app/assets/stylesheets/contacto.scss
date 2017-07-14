@@ -11,8 +11,11 @@
   background-color: #fff;
   margin: 1rem 3rem 1rem 3rem;
   border: 1px solid #ccc;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   // align-content: space-between;
 }
@@ -26,21 +29,36 @@
 }
 
 .mensaje .importante-checkbox {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mensaje .titulo-mensaje {
-  flex: 8 6 10rem;
+  -webkit-box-flex: 8;
+      -ms-flex: 8 6 10rem;
+          flex: 8 6 10rem;
 }
 .botones {
-  flex: 2 4 4rem;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 4 4rem;
+          flex: 2 4 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 .botones i {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 // cambio color cuando se dice que es importante

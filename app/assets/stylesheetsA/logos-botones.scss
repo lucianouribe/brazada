@@ -1,0 +1,212 @@
+// The general icon rule
+ .icon {
+   background-repeat: no-repeat;
+   background-size: 4.5rem;
+   background-position: center;
+   width: 100% !important;
+   height: 4.5rem !important;
+ }
+
+ .icon-portada {
+   background-repeat: no-repeat;
+   background-size: 12rem;
+   background-position: center;
+   width: 100% !important;
+   height: 12rem !important;
+ }
+
+// Logo Psicina
+.logo {
+  background-image: url(asset_path("brazada_logo.png"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25vh;
+  width: 60% !important;
+  height: 25vh !important;
+}
+
+// Hamburger
+.hamburger {
+  background-image: url(asset_path("hamburger.svg"));
+  background-repeat: no-repeat;
+  background-size: 4.5rem;
+  background-position: center;
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+}
+
+.hamburger:hover {
+  background-image: url(asset_path("hamburger_h.svg"));
+}
+
+// redSocial
+.redSocial {
+  background-repeat: no-repeat;
+  background-size: 3rem;
+  background-position: center;
+  width: 3rem !important;
+  height: 3rem !important;
+  margin-right: 1.5rem;
+}
+.redSocial1 {
+  background-image: url(asset_path("redSocial1.svg"));
+}
+.redSocial2 {
+  background-image: url(asset_path("redSocial2.svg"));
+}
+.redSocial1:hover {
+  background-image: url(asset_path("redSocial1_h.svg"));
+}
+.redSocial2:hover {
+  background-image: url(asset_path("redSocial2_h.svg"));
+}
+
+// Natacion
+.icon-natacion {
+  background-image: url(asset_path("natacion.svg"));
+}
+.icon-natacion-p {
+  background-image: url(asset_path("natacion_b.svg"));
+}
+
+li:hover .icon-natacion {
+  background-image: url(asset_path("natacion_h.svg"));
+}
+// gimnasio
+.icon-gimnasio {
+  background-image: url(asset_path("gimnasio.svg"));
+}
+.icon-gimnasio-p {
+  background-image: url(asset_path("gimnasio_b.svg"));
+}
+li:hover .icon-gimnasio {
+  background-image: url(asset_path("gimnasio_h.svg"));
+}
+
+// Hidro Gimnacia
+.icon-hidro {
+  background-image: url(asset_path("hidro.svg"));
+}
+.icon-hidro-p {
+  background-image: url(asset_path("hidro_b.svg"));
+}
+li:hover .icon-hidro {
+  background-image: url(asset_path("hidro_h.svg"));
+}
+
+// Mente y Cuerpo
+.icon-mente {
+  background-image: url(asset_path("mente.svg"));
+}
+.icon-mente-p {
+  background-image: url(asset_path("mente_b.svg"));
+}
+li:hover .icon-mente {
+  background-image: url(asset_path("mente_h.svg"));
+}
+
+// Nosotros
+.nosotros {
+  background-image: url(asset_path("nosotros.svg"));
+}
+
+li:hover .nosotros {
+  background-image: url(asset_path("nosotros_h.svg"));
+}
+
+// Contacto
+.icon-contacto {
+  background-image: url(asset_path("contacto.svg"));
+}
+
+li:hover .icon-contacto {
+  background-image: url(asset_path("contacto_h.svg"));
+}
+
+// Horarios
+.horarios {
+  background-image: url(asset_path("horarios.svg"));
+}
+
+li:hover .horarios {
+  background-image: url(asset_path("horarios_h.svg"));
+}
+
+// Tarifas
+.tarifas {
+  background-image: url(asset_path("tarifas.svg"));
+}
+
+li:hover .tarifas {
+  background-image: url(asset_path("tarifas_h.svg"));
+}
+
+// Ubicacion
+.ubicacion {
+  background-image: url(asset_path("ubicacion.svg"));
+}
+
+li:hover .ubicacion {
+  background-image: url(asset_path("ubicacion_h.svg"));
+}
+
+// Login
+.login {
+  background-image: url(asset_path("login.svg"));
+}
+
+li:hover .login {
+  background-image: url(asset_path("login_h.svg"));
+}
+
+// Logout
+.logout {
+  background-image: url(asset_path("logout.svg"));
+}
+
+li:hover .logout {
+  background-image: url(asset_path("logout_h.svg"));
+}
+
+// Home
+.home {
+  background-image: url(asset_path("home.svg"));
+}
+
+li:hover .home {
+  background-image: url(asset_path("home_h.svg"));
+}
+
+// Admin
+.admin {
+  background-image: url(asset_path("admin.svg"));
+}
+
+li:hover .admin {
+  background-image: url(asset_path("admin_h.svg"));
+}
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  .icon {
+    background-size: 7rem;
+    height: 7rem !important;
+  }
+}
+// materialize small
+@media only screen and (min-width: 351px) and (max-width: 600px) {
+  .icon {
+    background-size: 7rem;
+    height: 7rem !important;
+  }
+  .redSocial {
+    width: 4.5rem !important;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .redSocial {
+    width: 5rem !important;
+    background-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+}

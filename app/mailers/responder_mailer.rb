@@ -1,6 +1,6 @@
 require 'pry'
 class ResponderMailer < ApplicationMailer
-  default from: ENV['MAIL_FROM']
+  default from: ENV['BMAIL_FROM']
 
   def nueva_respuesta(responder)
     @responder = responder

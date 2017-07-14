@@ -1,0 +1,278 @@
+.horarios-container {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.horarios-container .gricecito {
+  background-color: rgba(0,0,0,0.1);
+}
+
+// EL ENCABEZADO
+.horario-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.horario-header .horario-header-titulo {
+  flex: 3 3 70%;
+  text-align: right;
+}
+.horario-header-titulo h2 {
+  margin: 1rem;
+}
+.horario-header-titulo strong {
+  color: #16959e;
+  font-weight: 200;
+}
+// calendar picker
+.horario-options {
+  background-color: #fff;
+  align-self: flex-start;
+  display: flex;
+  margin: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.horario-options .selecter {
+  flex: 5 5 80%;
+}
+.horario-options .calendar-submit {
+  background-color: #16959e;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: -3px 0 3px rgba(0,0,0,0.3);
+  flex: 1 1 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.calendar-submit span {
+  font-weight: 400;
+  margin: auto 0.5rem;
+}
+.calendar-submit:hover {
+  background-color: #18214c;
+  color: #fff;
+  font-weight: 300;
+}
+// event creator
+.modulus-container {
+  display: flex;
+  background-color: #fff;
+  margin: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.ingresa-curso {
+  flex: 1 1 120px;
+  background-color: #16959e;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ingresa-curso span {
+  font-weight: 400;
+  margin: auto 0.5rem;
+}
+.ingresa-curso:hover {
+  background-color: #18214c;
+  color: #fff;
+  font-weight: 300;
+}
+
+.inputer-curso {
+  display: flex;
+  align-items: center;
+}
+.selecter {
+  flex: 1 1 120px;
+  margin: auto 0.5rem;
+}
+.esta-hora {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0.3rem;
+}
+.inputer-curso i {
+  font-size: 1.8rem;
+  margin: 0.3rem;
+}
+
+// LA TABLA COMPLETA
+thead {
+  background-color: #18214c;
+  background: linear-gradient(#49708f, #18214c);
+  color: #fff;
+}
+th {
+  text-align: center;
+  font-weight: 200;
+  border-radius: 0;
+  border-left: 1px solid #fff;
+}
+th:last-child {
+  border-top-right-radius: 8px;
+}
+th:first-child {
+  border-top-left-radius: 8px;
+  border-left: none;
+}
+td {
+  height: 4.5rem;
+  border-bottom: 1px solid #18214c;
+  margin: 0;
+  padding: 0;
+}
+.horarios-body td {
+  vertical-align: super;
+}
+
+// HORARIO (unidad)
+
+.horario-container {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #16959e;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+.horario-container i {
+  cursor: pointer;
+}
+.horario-container i:hover {
+  color: red;
+}
+.event-time {
+  flex: 1 1 30%;
+  height: 100%;
+  background-color: #16959e;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
+}
+.event-time p {
+  font-size: .8rem;
+  margin: 0;
+}
+.event-info {
+  flex: 3 3 70%;
+  padding: 0 8px;
+}
+.event-info p {
+  font-size: 1rem;
+  margin: 0;
+}
+.event-info-treinta {
+  display: none;
+}
+
+.horarios-client .horario-container i {
+  display: none;
+}
+
+// minutos
+.min0 {
+  position: relative;
+  top: 0 !important;
+}
+.min15 {
+  position: relative;
+  top: calc(4.5rem / 4);
+}
+.min30 {
+  position: relative;
+  top: calc(4.5rem / 2);
+}
+.min45 {
+  position: relative;
+  top: calc((4.5rem / 4) * 3);
+}
+
+// duracion
+.duracion10 {
+  // height: calc(4.5rem / 2);
+  // height: 4.5rem;
+  height: 50%;
+}
+.duracion30 {
+  // height: calc(4.5rem / 2);
+  // height: 4.5rem;
+  height: 50%;
+}
+.duracion45 {
+  // height: calc((4.5rem / 4) * 3);
+  // height: 4.5rem;
+  height: 75%;
+}
+.duracion60 {
+  // height: 4.5rem;
+  height: 100%;
+}
+
+//=================
+//  CELLPHONE & TABLETS!!!
+//=================
+.main-horario-cel {
+  display: none;
+}
+
+.horario-cel {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #16959e;
+}
+.horario-cel span:first-child {
+  flex: 1 1 20%;
+}
+.horario-cel span {
+  flex: 4 4 40%;
+}
+.horario-block h3 {
+  color: #16959e;
+}
+
+@media all and (max-width: 601px) {
+  .main-horario-cel {
+    display: block;
+  }
+  .main-horario-pc {
+    display: none;
+  }
+  .horario-header {
+    // display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .main-horarios {
+    height: 55vh !important;
+  }
+}
+
+@media all and (max-width: 992px) {
+  a.button-collapse {
+      height: 0 !important;
+      line-height: 0 !important;
+  }
+}
+@media all and (min-width: 601px) {
+  a.button-collapse {
+      height: 0 !important;
+      line-height: 0 !important;
+  }
+}

@@ -6,6 +6,9 @@ const contactos = ( state = [], action ) => {
     case 'ALL_MENSAJES':
       return action.contactos;
       break;
+    case 'CREATE_CONTACTO':
+      return [action.contacto, ...state]
+      break;
     case 'LEIDO_SETUP':
     // console.log(state, action)
       let allMensajes = state;

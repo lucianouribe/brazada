@@ -1,9 +1,18 @@
 .horarios-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 3rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
 }
 .horarios-container .gricecito {
@@ -12,13 +21,21 @@
 
 // EL ENCABEZADO
 .horario-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .horario-header .horario-header-titulo {
-  flex: 3 3 70%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 70%;
+          flex: 3 3 70%;
   text-align: right;
 }
 .horario-header-titulo h2 {
@@ -31,25 +48,40 @@
 // calendar picker
 .horario-options {
   background-color: #fff;
-  align-self: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 1rem;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.5);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .horario-options .selecter {
-  flex: 5 5 80%;
+  -webkit-box-flex: 5;
+      -ms-flex: 5 5 80%;
+          flex: 5 5 80%;
 }
 .horario-options .calendar-submit {
   background-color: #16959e;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  box-shadow: -3px 0 3px rgba(0,0,0,0.3);
-  flex: 1 1 20%;
+  -webkit-box-shadow: -3px 0 3px rgba(0,0,0,0.3);
+          box-shadow: -3px 0 3px rgba(0,0,0,0.3);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 .calendar-submit span {
@@ -63,21 +95,32 @@
 }
 // event creator
 .modulus-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #fff;
   margin: 1rem;
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.5);
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
 }
 .ingresa-curso {
-  flex: 1 1 120px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 120px;
+          flex: 1 1 120px;
   background-color: #16959e;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
 .ingresa-curso span {
@@ -91,11 +134,17 @@
 }
 
 .inputer-curso {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .selecter {
-  flex: 1 1 120px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 120px;
+          flex: 1 1 120px;
   margin: auto 0.5rem;
 }
 .esta-hora {
@@ -111,6 +160,7 @@
 // LA TABLA COMPLETA
 thead {
   background-color: #18214c;
+  background: -webkit-gradient(linear, left top, left bottom, from(#49708f), to(#18214c));
   background: linear-gradient(#49708f, #18214c);
   color: #fff;
 }
@@ -143,10 +193,15 @@ td {
   width: 100%;
   background-color: #fff;
   border: 1px solid #16959e;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 !important;
 }
 .horario-container i {
@@ -156,21 +211,32 @@ td {
   color: red;
 }
 .event-time {
-  flex: 1 1 30%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   height: 100%;
   background-color: #16959e;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 0 3px rgba(0, 0, 0, 0.3);
 }
 .event-time p {
   font-size: .8rem;
   margin: 0;
 }
 .event-info {
-  flex: 3 3 70%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 70%;
+          flex: 3 3 70%;
   padding: 0 8px;
 }
 .event-info p {
@@ -233,15 +299,24 @@ td {
 
 .horario-cel {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-bottom: 2px solid #16959e;
 }
 .horario-cel span:first-child {
-  flex: 1 1 20%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
 }
 .horario-cel span {
-  flex: 4 4 40%;
+  -webkit-box-flex: 4;
+      -ms-flex: 4 4 40%;
+          flex: 4 4 40%;
 }
 .horario-block h3 {
   color: #16959e;
@@ -256,8 +331,13 @@ td {
   }
   .horario-header {
     // display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .main-horarios {
     height: 55vh !important;

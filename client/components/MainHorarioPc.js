@@ -26,7 +26,11 @@ class MainHorarioPc extends React.Component {
 
   calendarSetter(){
     let cual = this.refs.cualCalendario.value;
-    this.setState({calendar: cual});
+    if(cual === 'descargar horarios') {
+      window.location.href = "/pdfs/brazada-horarios-y-tarifas-2017.pdf"
+    } else {
+      this.setState({calendar: cual});
+    }
   }
 
 
@@ -97,6 +101,7 @@ class MainHorarioPc extends React.Component {
               <option>hidro_especial</option>
               <option>entrenamiento natación</option>
               <option>clases natación</option>
+              <option>descargar horarios</option>
             </select>
           </div>
           <div onClick={this.calendarSetter} className="calendar-submit"><span>Go</span></div>

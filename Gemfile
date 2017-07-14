@@ -20,6 +20,7 @@ gem 'materialize-sass'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
+gem "paperclip", "~> 5.0.0"
 
 
 group :development, :test do

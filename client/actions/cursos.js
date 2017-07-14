@@ -1,13 +1,66 @@
 import { destildador } from '../helpers';
 
-export const addCurso = (nombre, lugar, descripcion, tipo_curso) => {
-  // console.log('this is add cursos action');
+// cenderin [9:43 AM]
+// feel like your params are messed up
+//
+// [9:45]
+// data: formData,  maybe data: { curso: formData }
+//
+// [9:46]
+// because you define the params should be curso: { nombre: “blah”, tipo_curso: “blah”, lugar: “blah”} but you dont have that in your params
+//
+// dave.jungst
+// [9:47 AM]
+// My advice... use React Dropzone for uploading. Use superagent to send the file then paperclip still works the same way on the rails side
+//
+// new messages
+// [9:48]
+// Or you may have better luck using cloudinary since paperclip gem loses a lot of its value if you are not using a fully baked rails solution.
+
+
+// export const addCurso = (nombre, lugar, descripcion, tipo_curso, avatar) => {
+//   console.log('this is add cursos action');
+//   return(dispatch) => {
+//     const formData = new FormData()
+//
+//     formData.append("avatar", avatar);
+//     formData.append("nombre", nombre);
+//     formData.append("lugar", lugar);
+//     formData.append("descripcion", descripcion);
+//     formData.append("tipo_curso", tipo_curso);
+//
+//     console.log(formData)
+//     $.ajax({
+//       url: `/api/cursos`,
+//       type: 'POST',
+//       cache: false,
+//       // contentType: 'multipart/form-data',
+//       dataType: 'json',
+//       processData: false,
+//       contentType: false,
+//       // data: formData,
+//       data: { curso: formData },
+//       // data: { curso: { nombre, lugar, descripcion, tipo_curso, avatar } }
+//     }).done( curso => {
+//       // console.log('add curso done data');
+//       // console.table(curso);
+//       dispatch({ type: 'ADD_CURSO', curso });
+//     }).fail( data => {
+//       // console.log('add curso fail data')
+//       // console.log(data);
+//     })
+//   }
+//
+// }
+
+export const addCurso = (nombre, lugar, descripcion, tipo_curso, avatar) => {
+  console.log('this is add cursos action');
   return(dispatch) => {
     $.ajax({
       url: `/api/cursos`,
       type: 'POST',
-      dataType: 'JSON',
-      data: { curso: { nombre, lugar, descripcion, tipo_curso } }
+      dataType: 'json',
+      data: { curso: { nombre, lugar, descripcion, tipo_curso, avatar } }
     }).done( curso => {
       // console.log('add curso done data');
       // console.table(curso);

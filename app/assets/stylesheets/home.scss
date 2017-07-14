@@ -8,7 +8,12 @@
   background-position: 30% 70%;
   background-size: cover;
   height: 90vh;
-  padding-top: 15vh;
+  padding-top: 8vh;
+}
+
+.portada h6 {
+  font-size: 1.6rem;
+  color: #fdfffd;
 }
 
 #main-phrase {
@@ -30,15 +35,23 @@
 footer {
   // background-color: #fcbf00;
   background-image: url(asset_path("footer.svg"));
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  // background-position: center;
   width: 100%;
   height: 20vh;
   margin-top: -20vh;
+  padding: 3rem 3rem 0 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  padding-left: 1rem;
-  padding-top: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  // padding-top: 10vh;
 }
 
 .foot-text {
@@ -46,23 +59,26 @@ footer {
   margin: 1rem auto;
   font-weight: 100;
 }
+.foot-stuff {
+  margin-top: 3rem;
+}
 
-// Portada Segunda Parte
+// Cometarios y experiencias
 
-.portada-dos {
-  height: 350px;
+.experiencias {
+  // height: 350px;
   background-color: #fdfffd;
   padding: 6rem;
 }
 
-.portada-dos blockquote {
+.experiencias blockquote {
   text-align: center;
   color: #161616;
   font-size: 2rem;
   line-height: 180%;
   padding-left: none !important;
   border-left: none !important;
-  border-bottom: 4px solid #16959e;
+  border-bottom: 4px solid #00afdb;
   padding-bottom: 6rem;
 }
 
@@ -97,21 +113,49 @@ footer {
 
 // Portada Quinta Parte
 .portada-cinco {
-  height: 350px;
-  background-image: url(asset_path("fondo_menu_01.png"));
+  height: 450px;
+  background-image: url(asset_path("felices.jpg"));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .portada-cinco h4 {
   color: #fff;
-  font-weight: 500;
-  letter-spacing: 5px;
+  font-weight: 400;
+  line-height: 110%;
+  letter-spacing: 3px;
 }
-
+.portada-cinco em {
+  font-weight: 300;
+}
+// Portada Sexta Parte
+.portada-seis {
+  height: 450px;
+  background-image: url(asset_path("noche.JPG"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 2rem;
+}
+// Portada Septima Parte
+.portada-siete {
+  height: 450px;
+  background-image: url(asset_path("yoga.jpg"));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 2rem;
+}
 // =================================
 // CellPhone Styling
 // =================================
@@ -138,7 +182,7 @@ footer {
     font-weight: 200;
   }
   //portada dos
-  .portada-dos {
+  .experiencias {
     height: 300px;
     padding: 4rem;
   }
@@ -153,14 +197,16 @@ footer {
 // materialize small
 @media only screen and (max-width: 600px) {
   .portada {
-    height: 95vh;
+    height: 100vh;
+  }
+  #main-phrase {
+    font-size: 1.8rem;
+    line-height: 120%;
   }
   .btn-portada {
+    margin-top: 6rem !important;
     padding: 1rem !important;
     width: 60% !important;
-  }
-  .logo {
-    margin: 6rem auto;
   }
   footer {
     height: 10vh;
@@ -170,16 +216,56 @@ footer {
   .foot-text {
     font-weight: 400;
   }
-  //portada dos
-  .portada-dos {
-    height: 250px;
+  .foot-stuff {
+    margin-top: 0;
+  }
+  //comentarios y experiencias
+  .experiencias {
+    height: none;
     padding: 3rem;
   }
+  .experiencias blockquote {
+    padding-bottom: 0 !important;
+    border-bottom: 2px solid #00afdb;
+  }
   //portada tres
+
+  .portada-tres {
+    height: 350px;
+    background-color: #fdfffd;
+    padding: 0 4rem;
+  }
   .programas {
     margin: 3rem 0;
   }
   .portada-tres p {
     font-size: 16px;
   }
+  .portada-cinco, .portada-seis, .portada-siete {
+    background-size: contain;
+    height: 300px;
+  }
+}
+
+//iphone 3, 4 y 5
+@media only screen and (max-width: 350px) {
+  .btn-portada {
+    height: 4rem !important;
+    border-radius: 2rem !important;
+    border: 1px solid #18214c !important;
+    margin-top: 1rem !important;
+    padding: 0.2rem !important;
+    font-size: 1.4rem !important;
+  }
+  .experiencias {
+    padding: 1rem;
+    height: none !important;
+  }
+  .foot-text {
+    margin-bottom: 3rem;
+  }
+  .portada-cinco, .portada-seis, .portada-siete {
+    height: 250px;
+  }
+
 }

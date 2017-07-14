@@ -62,21 +62,13 @@ class Cursos extends React.Component {
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
+    let avatar = this.refs.avatar.files[0];
 
-    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso))
+    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, avatar))
     this.toggleDisplay();
   }
 
-  // <option>natacion</option>
-  // <option>gimnasio</option>
-  // <option>hidro</option>
-  // <option>mente</option>
 
-  // <option>piscina</option>
-  // <option value='s_gimnasio'>gimnasio</option>
-  // <option value='s_tono'>salón tono</option>
-  // <option value='s_mente'>salón mente y cuerpo</option>
-  // <option value='s_espera'>salón espera</option>
 
 
 
@@ -99,7 +91,7 @@ class Cursos extends React.Component {
     return(
       <div className="col s12 m12">
         <div className="card form-card">
-          <form className="input-field">
+          <form className="input-field" encType="multipart/form-data">
             <div className="card-content">
               <h3 className='card-title'>Nuevo Curso</h3>
               <p>
@@ -121,6 +113,10 @@ class Cursos extends React.Component {
                 <select className="browser-default" ref="lugar">
                   {cualSalon}
                 </select>
+              </p>
+              <p className="hide">
+                <strong>Picture:</strong>
+                <input type="file" ref="avatar"/>
               </p>
             </div>
             <div className="card-action">

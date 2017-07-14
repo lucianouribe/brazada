@@ -19,7 +19,8 @@ input {
 
 input:focus {
   border-bottom: 3px solid #fcbf00 !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 [type=range] {
@@ -28,7 +29,9 @@ input:focus {
 [type=range]:focus {
   border-bottom: none !important;
 }
-
+label [type=range] {
+  background-color: red !important;
+}
 textarea {
   height: 20vh;
   width: 100%;
@@ -43,7 +46,8 @@ textarea {
 
 textarea:focus {
   border-bottom: 3px solid #fcbf00 !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .contacto .btn {

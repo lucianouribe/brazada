@@ -1,0 +1,136 @@
+// large
+nav {
+  // background-color: #16959e;
+  background-color: #00afdb;
+  height: 8rem;
+  border-bottom: 2px solid #fff;
+}
+
+nav ul a {
+  padding-top: 1rem;
+  height: 8rem;
+  font-weight: 200;
+}
+nav ul a:hover {
+  color: #fcbf00;
+}
+
+.nav-icon {
+  width: 8rem;
+}
+
+#nav-mobile {
+  width: 88rem;
+  line-height: 2rem;
+}
+.drag-target {
+  height: 0 !important;
+}
+// excepcion rara
+@media all and (min-width: 992px) and (max-width: 1100px) {
+  .nav-icon {
+    width: 6rem !important;
+  }
+
+  #nav-mobile {
+    width: 66rem !important;
+    line-height: 2rem;
+  }
+}
+
+// side nav flat
+.side-nav {
+  width: 100%;
+  margin-top: 5rem;
+  display: inline-flex;
+}
+.side-but {
+  height: calc((100vh - 8rem) / 10) !important;
+}
+.side-but i {
+  width: 40% !important;
+  background-size: calc((100vh - 8rem) / 10) !important;
+  height: calc((100vh - 8rem) / 10) !important;
+}
+.side-but a {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  line-height: 8rem;
+  text-transform: lowercase;
+  width: 100%;
+  height: calc((100vh - 8rem) / 10) !important;
+  // height: 9.5vh !important;
+  text-align: left;
+}
+
+.side-but a:hover {
+  background-color: #18214c;
+  color: #fcbf00;
+}
+
+//side nav options
+nav .row .col {
+  padding: 0 !important;
+}
+
+.color-01 {
+  background-color: rgba(50, 100, 132, 1);
+}
+.color-02 {
+  background-color: rgba(11, 116, 166, 1);
+}
+.color-03 {
+  background-color: rgba(15, 95, 156, 1);
+}
+.color-04 {
+  background-color: rgba(30, 85, 128, 1);
+}
+.color-05 {
+  background-color: rgba(8, 76, 140, 1);
+}
+
+#sidenav-overlay {
+  z-index: -10;
+}
+
+.clicked {
+  background-color: #fcbf00;
+}
+
+
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
+  nav {
+    height: 5rem;
+  }
+  nav ul a {
+    // height: 5rem;
+  }
+  .side-but a {
+    font-size: 2.4rem !important;
+  }
+}
+
+// materialize small
+@media only screen and (min-width: 351px) and (max-width: 600px) {
+  nav {
+    height: 5rem;
+  }
+  .side-but a {
+    font-size: 2.5rem;
+    line-height: 6rem;
+  }
+
+}
+@media only screen and (max-width: 350px) {
+  nav {
+    height: 5rem;
+  }
+  .side-but a {
+    font-size: 2rem;
+    line-height: 4rem;
+  }
+
+}

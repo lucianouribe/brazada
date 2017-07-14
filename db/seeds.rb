@@ -25,6 +25,7 @@ Misvi.create(titulo: 'nosotros',
 
               Un plan integral para usted
               En Brazada reconocemos la individualidad de las personas. Por eso diseñamos un Plan Integral con el que cada usuario, de acuerdo con sus necesidades, deseos y disponibilidad, organiza su plan de entrenamiento físico. Con el pago de una mensualidad, usted puede elegir las prácticas y horarios que más le convengan. Consulte aquí información completa sobre programas, instructores, horarios y tarifas.')
+
 Misvi.create(titulo: 'reglamento',
               articulo: 'Normas para la utilización de los espacios
 
@@ -93,9 +94,15 @@ Misvi.create(titulo: 'reglamento',
               • En ningún caso habrá excepciones.
               Leído y comprendido')
 Misvi.create(titulo: 'mision',
-              articulo: 'este es un texto sobre nuestra mision')
+              articulo: '
+              Objetivo General:
+              Ofrecer servicios educativos en el área de actividades acuáticas, enfocados en la enseñanza de la natación, promoviendo el deporte, la recreación, y el uso conveniente del tiempo libre; y facilitando la adquisición de competencias, habilidades y destrezas en el área de formación.
+              Misión:
+              Somos una Institución Educativa, que brinda espacios para el desarrollo físico, psíquico, social y recreativo, a través de la enseñanza de la natación y cursos de recreación y deporte, enfocados en el bienestar y mejoramiento de la calidad de vida de niños, jóvenes y adultos, orientados por nuestro PEI y bajo los criterios de humanismo, perfección deportiva, profesionalismo y mejora continua.')
 Misvi.create(titulo: 'vision',
-              articulo: 'este es un texto sobre nuestra vision')
+              articulo: '
+              Visión:
+              Nos proyectamos hacia el año 2025, como la Institución Educativa, líder en la enseñanza de la natación, recreación y el deporte, por medio de instructores altamente capacitados, eficiencia administrativa, calidad, recursos e instalaciones a la vanguardia del mercado.')
 Misvi.create(titulo: 'tipos_curso',
               articulo: 'natacion, gimnasio, mente, hidro')
 Misvi.create(titulo: 'salones',
@@ -286,42 +293,42 @@ puts "tarifas seeded"
 
 
 Profesor.create(nombre: 'Juan Diego',
-            apellido: 'something',
+            apellido: 'Torres',
             especialidad: 'gimnasio',
             cual_curso: 'spinning, circuito, tono, fortalecimiento',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Alejandro',
-            apellido: 'something',
+            apellido: 'Castañeda',
             especialidad: 'gimnasio',
             cual_curso: 'spinning, pilates, stretching, yoga pilates',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Alonso',
-            apellido: 'something',
+            apellido: 'García',
             especialidad: 'mente',
             cual_curso: 'yoga',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'William',
-            apellido: 'something',
+            apellido: 'Velasquez',
             especialidad: 'gimnasio',
             cual_curso: 'pilates, rumba',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Maria Isabel',
-            apellido: 'something',
+            apellido: 'Osorno',
             especialidad: 'mente',
             cual_curso: 'yoga',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Natalia',
-            apellido: 'something',
+            apellido: 'Fernandez',
             especialidad: 'mente',
             cual_curso: 'yoga, balance corporal',
             no_clases: 0,
@@ -335,30 +342,23 @@ Profesor.create(nombre: 'Monica',
             salario: 0
             )
 Profesor.create(nombre: 'Sandra',
-            apellido: 'something',
+            apellido: 'Gaviria',
             especialidad: 'hidro',
             cual_curso: 'hidrogimnasia, hidrogimnasia especial',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Lina',
-            apellido: 'something',
+            apellido: 'Aranzalez',
             especialidad: 'hidro',
             cual_curso: 'hidrogimnasia',
             no_clases: 0,
             salario: 0
             )
 Profesor.create(nombre: 'Yakelin',
-            apellido: 'something',
+            apellido: 'Ortiz',
             especialidad: 'hidro',
             cual_curso: 'hidrogimnasia, hidrogimnasia especial',
-            no_clases: 0,
-            salario: 0
-            )
-Profesor.create(nombre: 'Gyna',
-            apellido: 'something',
-            especialidad: 'hidro',
-            cual_curso: 'hidro adulto mayor',
             no_clases: 0,
             salario: 0
             )
@@ -370,7 +370,7 @@ Profesor.create(nombre: 'Marsha',
             salario: 0
             )
 Profesor.create(nombre: 'Juan',
-            apellido: 'something',
+            apellido: 'Montoya',
             especialidad: 'natacion',
             cual_curso: 'adultos',
             no_clases: 0,
