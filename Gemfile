@@ -20,8 +20,9 @@ gem 'materialize-sass'
 # gem 'delayed_job'
 # gem 'delayed_job_active_record'
 # gem 'whenever', :require => false
-# gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.0.0"
 # gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'faker'
 
 
 group :development, :test do
@@ -35,4 +36,10 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :assets do
+  gem 'therubyracer'
+  gem 'sass-rails', '~> 5.0'
+  gem 'uglifier', '>= 1.3.0'
 end
