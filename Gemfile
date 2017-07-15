@@ -17,11 +17,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'repack'
 gem 'devise'
 gem 'materialize-sass'
-gem 'delayed_job'
-gem 'delayed_job_active_record'
-gem 'whenever', :require => false
-gem "paperclip", "~> 5.0.0"
-gem 'rmagick', '~> 2.15', '>= 2.15.4'
+# gem 'delayed_job'
+# gem 'delayed_job_active_record'
+# gem 'whenever', :require => false
+# gem "paperclip", "~> 5.0.0"
+# gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
 
 group :development, :test do
