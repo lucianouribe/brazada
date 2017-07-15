@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.1'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -26,7 +26,7 @@ gem 'faker'
 
 
 group :development, :test do
-  gem 'faker'
+  # gem 'faker'
   gem 'pry'
   gem 'letter_opener'
 end
