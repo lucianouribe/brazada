@@ -1,6 +1,6 @@
 require 'pry'
 class ContactoMailer < ApplicationMailer
-  default from: ENV['MAIL_FROM']
+  default from: ENV['BMAIL_FROM']
 
   def nuevo_mensaje(contacto)
     # binding.pry
