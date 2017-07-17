@@ -386,227 +386,227 @@ Profesor.create(nombre: 'Horacio',
 
 puts "profes seeded"
 
-Horario.create(
-            dia: 'martes',
-            hora: '17',
-            minutos: '0',
-            posicion: 'm-17',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '17',
-            minutos: '0',
-            posicion: 'w-17',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'jueves',
-            hora: '17',
-            minutos: '0',
-            posicion: 'j-17',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'martes',
-            hora: '18',
-            minutos: '0',
-            posicion: 'm-18',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '18',
-            minutos: '0',
-            posicion: 'w-18',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'jueves',
-            hora: '18',
-            minutos: '0',
-            posicion: 'j-18',
-            calendario: 'entrenamiento',
-            curso_id: '4',
-            profesor_id: '12',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'lunes',
-            hora: '12',
-            minutos: '0',
-            posicion: 'l-12',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'martes',
-            hora: '12',
-            minutos: '0',
-            posicion: 'm-12',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '12',
-            minutos: '0',
-            posicion: 'w-12',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'jueves',
-            hora: '12',
-            minutos: '0',
-            posicion: 'j-12',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'viernes',
-            hora: '12',
-            minutos: '0',
-            posicion: 'v-12',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'lunes',
-            hora: '19',
-            minutos: '0',
-            posicion: 'l-19',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'martes',
-            hora: '19',
-            minutos: '0',
-            posicion: 'm-19',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '19',
-            minutos: '0',
-            posicion: 'w-19',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'jueves',
-            hora: '19',
-            minutos: '0',
-            posicion: 'j-19',
-            calendario: 'entrenamiento',
-            curso_id: '6',
-            profesor_id: '14',
-            duracion: 60
-            )
-
-Horario.create(
-            dia: 'miercoles',
-            hora: '6',
-            minutos: '0',
-            posicion: 'w-6',
-            calendario: 'entrenamiento',
-            curso_id: '8',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'viernes',
-            hora: '6',
-            minutos: '0',
-            posicion: 'v-6',
-            calendario: 'entrenamiento',
-            curso_id: '8',
-            profesor_id: '14',
-            duracion: 60
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '6',
-            minutos: '0',
-            posicion: 'w-6',
-            calendario: 's_gimnasio',
-            curso_id: '7',
-            profesor_id: '1',
-            duracion: 30
-            )
-Horario.create(
-            dia: 'lunes',
-            hora: '7',
-            minutos: '0',
-            posicion: 'l-7',
-            calendario: 's_gimnasio',
-            curso_id: '7',
-            profesor_id: '1',
-            duracion: 30
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '8',
-            minutos: '0',
-            posicion: 'w-8',
-            calendario: 's_gimnasio',
-            curso_id: '7',
-            profesor_id: '1',
-            duracion: 30
-            )
-Horario.create(
-            dia: 'lunes',
-            hora: '18',
-            minutos: '0',
-            posicion: 'l-18',
-            calendario: 's_gimnasio',
-            curso_id: '7',
-            profesor_id: '1',
-            duracion: 30
-            )
-Horario.create(
-            dia: 'miercoles',
-            hora: '18',
-            minutos: '0',
-            posicion: 'w-18',
-            calendario: 's_gimnasio',
-            curso_id: '7',
-            profesor_id: '1',
-            duracion: 30
-            )
+# Horario.create(
+#             dia: 'martes',
+#             hora: '17',
+#             minutos: '0',
+#             posicion: 'm-17',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '17',
+#             minutos: '0',
+#             posicion: 'w-17',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'jueves',
+#             hora: '17',
+#             minutos: '0',
+#             posicion: 'j-17',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'martes',
+#             hora: '18',
+#             minutos: '0',
+#             posicion: 'm-18',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '18',
+#             minutos: '0',
+#             posicion: 'w-18',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'jueves',
+#             hora: '18',
+#             minutos: '0',
+#             posicion: 'j-18',
+#             calendario: 'entrenamiento',
+#             curso_id: '4',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'lunes',
+#             hora: '12',
+#             minutos: '0',
+#             posicion: 'l-12',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'martes',
+#             hora: '12',
+#             minutos: '0',
+#             posicion: 'm-12',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '12',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '12',
+#             minutos: '0',
+#             posicion: 'w-12',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'jueves',
+#             hora: '12',
+#             minutos: '0',
+#             posicion: 'j-12',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'viernes',
+#             hora: '12',
+#             minutos: '0',
+#             posicion: 'v-12',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'lunes',
+#             hora: '19',
+#             minutos: '0',
+#             posicion: 'l-19',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'martes',
+#             hora: '19',
+#             minutos: '0',
+#             posicion: 'm-19',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '19',
+#             minutos: '0',
+#             posicion: 'w-19',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'jueves',
+#             hora: '19',
+#             minutos: '0',
+#             posicion: 'j-19',
+#             calendario: 'entrenamiento',
+#             curso_id: '6',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+#
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '6',
+#             minutos: '0',
+#             posicion: 'w-6',
+#             calendario: 'entrenamiento',
+#             curso_id: '8',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'viernes',
+#             hora: '6',
+#             minutos: '0',
+#             posicion: 'v-6',
+#             calendario: 'entrenamiento',
+#             curso_id: '8',
+#             profesor_id: '14',
+#             duracion: 60
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '6',
+#             minutos: '0',
+#             posicion: 'w-6',
+#             calendario: 's_gimnasio',
+#             curso_id: '7',
+#             profesor_id: '1',
+#             duracion: 30
+#             )
+# Horario.create(
+#             dia: 'lunes',
+#             hora: '7',
+#             minutos: '0',
+#             posicion: 'l-7',
+#             calendario: 's_gimnasio',
+#             curso_id: '7',
+#             profesor_id: '1',
+#             duracion: 30
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '8',
+#             minutos: '0',
+#             posicion: 'w-8',
+#             calendario: 's_gimnasio',
+#             curso_id: '7',
+#             profesor_id: '1',
+#             duracion: 30
+#             )
+# Horario.create(
+#             dia: 'lunes',
+#             hora: '18',
+#             minutos: '0',
+#             posicion: 'l-18',
+#             calendario: 's_gimnasio',
+#             curso_id: '7',
+#             profesor_id: '1',
+#             duracion: 30
+#             )
+# Horario.create(
+#             dia: 'miercoles',
+#             hora: '18',
+#             minutos: '0',
+#             posicion: 'w-18',
+#             calendario: 's_gimnasio',
+#             curso_id: '7',
+#             profesor_id: '1',
+#             duracion: 30
+#             )
 
 
 puts "horarios seeded"
