@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-# ruby '2.3.1'
+ruby '2.3.1'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -17,11 +17,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'repack'
 gem 'devise'
 gem 'materialize-sass'
-# gem 'delayed_job'
-# gem 'delayed_job_active_record'
-# gem 'whenever', :require => false
+gem 'delayed_job'
+gem 'delayed_job_active_record'
+gem 'whenever', :require => false
 gem "paperclip", "~> 5.0.0"
-# gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'faker'
 
 
