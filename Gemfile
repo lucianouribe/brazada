@@ -9,7 +9,7 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
@@ -21,7 +21,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
 gem "paperclip", "~> 5.0.0"
-gem 'rmagick', '~> 2.15', '>= 2.15.4'
+# gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'faker'
 
 
