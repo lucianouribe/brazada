@@ -72,3 +72,5 @@ Rails.application.configure do
     openssl_verify_mode: 'none'
   }
 end
+
+Rails.configuration.webpack.dev_server.https = true
