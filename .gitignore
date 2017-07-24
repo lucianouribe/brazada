@@ -20,4 +20,4 @@
 npm-debug.log
 .ENV
 
-/app/assets/stylesheetsA/*.scss
+/app/assets/stylesheetsA
