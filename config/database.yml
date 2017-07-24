@@ -81,7 +81,7 @@ production:
   adapter: postgresql
   # url: <%= ENV['DATABASE_URL'] %>
   encoding: utf8
-  database: brazada_db
+  database: bra_db
   pool: 5
-  username: brazada_db_usr
+  username: bra_db
   password: <%= ENV['DATABASE_PASS'] %>
