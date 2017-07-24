@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
+</style>
+<image style="display:none;overflow:visible;enable-background:new    ;" width="512" height="512" id="XMLID_3_" xlink:href="../../../../design/icon references/horarios.png"  transform="matrix(0.4219 0 0 0.3936 43 49.5)">
+</image>
+<path id="XMLID_1_" class="st0" d="M158.3,221.8H62c-6.6,0-12-5.4-12-12V90.2c0-6.6,5.4-12,12-12h176c6.6,0,12,5.4,12,12v60.5"/>
+<circle id="XMLID_2_" class="st0" cx="201.8" cy="182.2" r="51.8"/>
+<path id="XMLID_5_" class="st1" d="M50,112.7V90.2c0-6.6,5.4-12,12-12h176c6.6,0,12,5.4,12,12v22L50,112.7z"/>
+<line id="XMLID_6_" class="st2" x1="62" y1="137.3" x2="165" y2="137.3"/>
+<line id="XMLID_8_" class="st0" x1="62" y1="164.7" x2="144.3" y2="164.7"/>
+<line id="XMLID_10_" class="st0" x1="62" y1="190.3" x2="142.3" y2="190.3"/>
+<line id="XMLID_11_" class="st0" x1="85" y1="137.3" x2="85" y2="211.3"/>
+<line id="XMLID_12_" class="st0" x1="117.3" y1="137.3" x2="117.3" y2="211.3"/>
+<line id="XMLID_13_" class="st0" x1="150" y1="137.3" x2="150" y2="153.3"/>
+<circle id="XMLID_19_" class="st1" cx="201.8" cy="182.2" r="4"/>
+<line id="XMLID_15_" class="st0" x1="202.5" y1="181.9" x2="226.6" y2="157.9"/>
+<line id="XMLID_20_" class="st0" x1="178.3" y1="182.2" x2="201.8" y2="182.2"/>
+<line id="XMLID_4_" class="st0" x1="248.7" y1="182.1" x2="233.7" y2="182.2"/>
+<line id="XMLID_22_" class="st0" x1="169.8" y1="182.3" x2="154.8" y2="182.4"/>
+<line id="XMLID_21_" class="st0" x1="201.2" y1="136" x2="201.4" y2="151"/>
+<line id="XMLID_16_" class="st0" x1="202.1" y1="214.8" x2="202.3" y2="229.8"/>
+<line id="XMLID_27_" class="st0" x1="235.2" y1="215.8" x2="224.6" y2="205.2"/>
+<line id="XMLID_26_" class="st0" x1="179.9" y1="159.5" x2="169.3" y2="148.9"/>
+<line id="XMLID_25_" class="st0" x1="235" y1="149.7" x2="224.3" y2="160.3"/>
+<line id="XMLID_24_" class="st0" x1="179.2" y1="205.4" x2="168.6" y2="216"/>
+</svg>
