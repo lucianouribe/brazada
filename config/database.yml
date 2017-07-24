@@ -83,5 +83,5 @@ production:
   encoding: utf8
   database: brazada_db
   pool: 5
-  username: brazada_db
+  username: brazada_db_usr
   password: <%= ENV['DATABASE_PASS'] %>
