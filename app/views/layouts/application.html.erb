@@ -11,7 +11,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <% raise "Not production" unless Rails.env.production? %>
     <% raise Rails.application.configuration.configuration.webpack.inspect %>
     <% if Rails.env.development? %>
       <script src="http://localhost:3808/webpack-dev-server.js"></script>
