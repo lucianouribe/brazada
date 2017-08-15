@@ -25,7 +25,7 @@ class Nosotros extends React.Component {
     let nosotros = this.props.misvis.filter( misvi => { if(misvi.titulo === 'reglamento') return misvi;})
     return (
       <div className='nosotros-container'>
-        <h1 className="main-titulo">Normativas Generales</h1>
+        <h1 className="main-titulo">Reglamento</h1>
         <div className="nosotros-texto">{Object.keys(nosotros).map( key => <p><div dangerouslySetInnerHTML={createMarkup(nosotros[key].articulo)} /></p>)}</div>
         <div className="btn btn-opt" onClick={this.toggleDisplay}>Atrás</div>
       </div>

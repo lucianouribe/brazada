@@ -25,7 +25,9 @@
   // background-color: gold;
   align-items: center;
 }
-
+.nav-bar-main::-webkit-scrollbar {
+  display: none;
+}
 
 // main buttons (item)
 .btn-nav-main {
@@ -67,7 +69,7 @@
 .btn-prev, .btn-next {
   // flex: 1 1 10%;
   // display: none;
-  cursor: pointer;
+  // cursor: pointer;
   width: 3rem;
   height: 3rem;
   background-size: 100%;

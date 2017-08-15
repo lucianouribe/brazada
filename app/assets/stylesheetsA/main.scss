@@ -59,6 +59,10 @@ div .main-info {
   // display: flex;
   // flex-direction: column;
 }
+.main-info::-webkit-scrollbar {
+  display: none;
+}
+
 .main-info p {
   font-size: 1.6rem;
   font-weight: 200;

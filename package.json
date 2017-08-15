@@ -16,7 +16,14 @@
     "redux-thunk": "^2.1.0",
     "react-router": "^2.4.1",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react-dom": "^15.1.0"
+
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "yarn": "^0.27.5",
+    "webpack-dev-server": "^1.9.0",
     "stats-webpack-plugin": "^0.2.1",
     "webpack": "^1.9.11",
     "babel-core": "^6.9.1",
@@ -25,12 +32,6 @@
     "image-webpack-loader": "3.0.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
-    "webpack-dev-middleware": "1.8.2",
-    "webpack-dev-server": "^1.9.0"
-  },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "yarn": "^0.27.5"
+    "webpack-dev-middleware": "1.8.2"
   }
 }
