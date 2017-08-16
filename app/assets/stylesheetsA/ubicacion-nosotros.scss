@@ -67,7 +67,7 @@
   flex-direction: column;
   justify-content: center;
   height: 80vh;
-  padding: 2rem;
+  padding: 2rem 3rem;
 }
 
 .nosotros-container h1 {
@@ -79,12 +79,15 @@
   border-bottom: 2px solid #16959e;
   max-height: 70%;
   overflow-y: scroll;
-  margin: 1rem 3rem 3rem 3rem;
+  margin: 1rem 0 3rem 0;
   text-align: justify;
+}
+.nosotros-texto p {
+  font-size: 1.2rem;
 }
 .nosotros-container .btn-opt {
   align-self: flex-end;
-  width: 18rem;
+  width: 16rem;
 }
 //===================
 //CELULARES Y TABLETS
@@ -104,8 +107,24 @@
   .ubicacion-datos i {
     padding: 1rem 3rem;
   }
+  .nosotros-container {
+    height: 90vh;
+  }
+  .nosotros-container .btn-opt {
+    width: 14rem;
+  }
 }
-
+@media all and (max-width: 559px) {
+  .nosotros-container {
+    height: 80vh;
+  }
+  .nosotros-texto {
+    margin: 1rem 0;
+  }
+  .nosotros-texto p {
+    font-size: 1.4rem;
+  }
+}
 @media all and (min-width: 600px) and (max-width: 992px) {
   .ubicacion-escrita {
     display: flex;
