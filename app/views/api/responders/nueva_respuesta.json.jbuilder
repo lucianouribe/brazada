@@ -1,3 +1,3 @@
 require 'pry'
-binding.pry
+# binding.pry
 json.(@responder, :id, :nombre, :correo, :mensaje)

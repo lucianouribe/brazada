@@ -88,6 +88,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: calc(100vh - 8rem - 65px);
   padding: 2rem;
 }
 
@@ -98,7 +99,7 @@
   padding: 2rem 0;
   border-top: 2px solid #16959e;
   border-bottom: 2px solid #16959e;
-  max-height: 70vh;
+  max-height: 70%;
   overflow-y: scroll;
   margin: 1rem 3rem 3rem 3rem;
   text-align: justify;

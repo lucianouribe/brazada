@@ -22,7 +22,7 @@ class Responder extends React.Component {
     $.ajax({
       url: '/api/responder',
       type: 'POST',
-      dataType: 'HTML',
+      dataType: 'JSON',
       data: responder
     }).done( responder => {
       // console.log('answer done')
