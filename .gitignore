@@ -21,3 +21,5 @@ npm-debug.log
 .ENV
 
 /app/assets/stylesheetsA
+/config/secrets.yml
+/config/database.yml
