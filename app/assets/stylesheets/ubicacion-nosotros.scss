@@ -89,6 +89,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: calc(100vh - 8rem - 65px);
+  height: -o-calc(100vh - 8rem - 65px);
+  height: -webkit-calc(100vh - 8rem - 65px);
+  height: -moz-calc(100vh - 8rem - 65px);
   padding: 2rem;
 }
 
