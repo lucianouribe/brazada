@@ -45,6 +45,7 @@ nav ul a:hover {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  background-color: #0B74A6;
 }
 .side-but {
   height: calc((100vh - 8rem) / 10) !important;
@@ -77,22 +78,6 @@ nav .row .col {
   padding: 0 !important;
 }
 
-.color-01 {
-  background-color: rgba(50, 100, 132, 1);
-}
-.color-02 {
-  background-color: rgba(11, 116, 166, 1);
-}
-.color-03 {
-  background-color: rgba(15, 95, 156, 1);
-}
-.color-04 {
-  background-color: rgba(30, 85, 128, 1);
-}
-.color-05 {
-  background-color: rgba(8, 76, 140, 1);
-}
-
 #sidenav-overlay {
   z-index: -10;
 }
@@ -101,6 +86,9 @@ nav .row .col {
   background-color: #fcbf00;
 }
 
+.iphone .side-nav {
+  height: 100vh;
+}
 
 // materialize medium
 @media all and (min-width: 600px) and (max-width: 992px) {

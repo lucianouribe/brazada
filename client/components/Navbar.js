@@ -128,11 +128,11 @@ class Navbar extends Component {
   theDoubt(){
     if(this.props.user.role === "admin" || this.props.user.role === "visitor"){
       return(
-        <li className="side-but col s12 m12 color-02"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>logout</a></li>
+        <li className="side-but col s12 m12"><a style={{ cursor: 'pointer' }} onClick={this.logout}><i className="logout icon"></i>logout</a></li>
       )
     } else {
       return (
-        <li className="side-but col s12 m12 color-02"><Link to='/signin'><i className="login icon"></i>login</Link></li>
+        <li className="side-but col s12 m12"><Link to='/signin'><i className="login icon"></i>login</Link></li>
       )
     }
   }
@@ -141,12 +141,12 @@ class Navbar extends Component {
     let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
     return(
       <div className='row'>
-        {Object.keys(navItem).map(key => <li key={key} className="side-but col s12 m12 color-02" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
-        <li className="side-but col s12 m12 color-02"><Link to='/nosotros'><i className="nosotros icon"></i>nosotros</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
-        <li className="side-but col s12 m12 color-02"><Link to='/ubicacion'><i className="ubicacion icon"></i>ubicación</Link></li>
+        {Object.keys(navItem).map(key => <li key={key} className="side-but col s12 m12" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
+        <li className="side-but col s12 m12"><Link to='/nosotros'><i className="nosotros icon"></i>nosotros</Link></li>
+        <li className="side-but col s12 m12"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
+        <li className="side-but col s12 m12"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>
+        <li className="side-but col s12 m12"><Link to='/tarifas'><i className="tarifas icon"></i>tarifas</Link></li>
+        <li className="side-but col s12 m12"><Link to='/ubicacion'><i className="ubicacion icon"></i>ubicación</Link></li>
         {this.theDoubt()}
       </div>
     )
