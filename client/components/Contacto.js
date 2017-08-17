@@ -52,7 +52,8 @@ class Contacto extends React.Component {
           <input placeholder="nombre completo" ref="nombre" required={true} />
           <input type='email' placeholder="correo electrónico" ref="correo" required={true} />
           <textarea ref="mensaje" placeholder="mensaje" ></textarea>
-          <button type="submit" className='btn btn-main'>Enviar</button>
+          <br/>
+          <button type="submit" className='btn btn-opt'>Enviar</button>
         </form>
       </div>
     )

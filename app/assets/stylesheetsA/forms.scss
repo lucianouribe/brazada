@@ -1,11 +1,12 @@
 input {
   margin-bottom: 3rem !important;
-  border-bottom: 3px solid #16959e !important;
+  border-bottom: 2px solid #00afdb !important;
   padding-left: 1rem !important;
   font-size: 1.3rem !important;
   font-weight: 200 !important;
   color: #161616 !important;
 }
+
 
 [type=email], [type=password] {
   height: 4rem;
@@ -32,11 +33,9 @@ label [type=range] {
   background-color: red !important;
 }
 textarea {
-  height: 20vh;
-  width: 100%;
   margin: 2rem 0 4rem 0;
-  padding: 2rem 1rem;
-  border: 3px solid #16959e !important;
+  padding: 1rem;
+  border: 2px solid #00afdb !important;
   border-radius: 8px;
   font-size: 1.3rem !important;
   font-weight: 200 !important;
@@ -77,11 +76,21 @@ textarea:focus {
 
 @media all and (min-width: 600px) and (max-width: 992px) {
   textarea {
-    height: 35vh;
+    height: 34vh;
   }
 }
 @media all and (max-width: 559px) {
   textarea {
-    height: 40vh;
+    height: 35vh;
+  }
+}
+@media all and (max-width: 360px) {
+  textarea {
+    height: 20vh !important;
+    margin: 1rem 0 2rem 0 !important;
+    font-size: 1.8rem !important;
+  }
+  input {
+    font-size: 1.8rem !important;
   }
 }

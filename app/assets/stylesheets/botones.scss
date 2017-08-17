@@ -5,6 +5,7 @@
   letter-spacing: 2px;
   font-weight: 200;
   border-radius: 10px;
+  line-height: 0;
 }
 
 .btn-main {
@@ -51,13 +52,11 @@
   font-size: 1.8rem;
   color: #18214c;
   letter-spacing: 2px;
-  // line-height: 110%;
   font-weight: 300;
   text-align: center;
   background-color: #fff;
   border: 1px solid #18214c;
   border-radius: 2.5rem;
-  // padding: .4rem 2rem;
 }
 .btn-opt:hover {
   background-color: #18214c;
