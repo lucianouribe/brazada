@@ -20,7 +20,7 @@ class Ubicacion extends React.Component {
               <p>Calle 18sur #24-44, San Lucas. Poblado. Medellín.</p>
               <p>Antiguo Pablo Restrepo</p>
               <p>(+4) 317 1731</p>
-              <p><Link to='/contacto'><i className="icon-contacto icon"></i></Link>correo: brazada12@gmail.com</p>
+              <p>brazada12@gmail.com <Link to='/contacto'><i className="icon-contacto icon"></i></Link></p>
             </div>
             <div className='ubicacion-buses'>
               <h5>Buses</h5>

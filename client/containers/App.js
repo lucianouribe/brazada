@@ -28,8 +28,9 @@ class App extends React.Component {
 
 
   render(){
+    let navigatingConsole = navigator.platform.toLowerCase();
     return (
-      <div id="the-app">
+      <div id="the-app" className={navigatingConsole}>
         <Navbar />
         <Flash />
         { this.props.children }

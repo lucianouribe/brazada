@@ -55,9 +55,8 @@ class Main extends React.Component {
       titulo = 'hidrogimnasia'
     }
 
-
     return (
-      <div className='main-container'>
+      <div className="main-container">
         <h1 className='main-titulo'>{ortografica(titulo)}</h1>
         <MainNav infoCursos={infoCursos} infoGatherer={this.infoGatherer}/>
         <MainContent infoToContent={infoToContent} infoGatherer={this.infoGatherer} order={this.state.order}/>

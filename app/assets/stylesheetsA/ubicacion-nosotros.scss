@@ -33,7 +33,7 @@
 // texto
 .ubicacion-escrita {
   flex: 1 1 30%;
-  margin: 3rem;
+  margin: 0 3rem;
 }
 .ubicacion-escrita h5 {
   color: #16959e;
@@ -89,9 +89,24 @@
   align-self: flex-end;
   width: 16rem;
 }
+
 //===================
 //CELULARES Y TABLETS
 //===================
+
+
+@media all and (max-width: 559px) {
+  .nosotros-container {
+    height: 80vh;
+  }
+  .nosotros-texto {
+    margin: 1rem 0;
+  }
+  .nosotros-texto p {
+    font-size: 1.4rem;
+  }
+
+}
 
 @media all and (max-width: 992px) {
   .ubicacion-info {
@@ -114,17 +129,7 @@
     width: 14rem;
   }
 }
-@media all and (max-width: 559px) {
-  .nosotros-container {
-    height: 80vh;
-  }
-  .nosotros-texto {
-    margin: 1rem 0;
-  }
-  .nosotros-texto p {
-    font-size: 1.4rem;
-  }
-}
+
 @media all and (min-width: 600px) and (max-width: 992px) {
   .ubicacion-escrita {
     display: flex;
@@ -136,5 +141,46 @@
   }
   .ubicacion-datos {
     padding-top: 0;
+  }
+}
+//iphones general
+.iphone .ubicacion-titulo {
+  // border: 1px solid blue;
+  min-height: 6rem;
+  margin-bottom: 3rem;
+}
+.iphone .ubicacion-iframe {
+  margin-top: 52vh;
+  min-height: 50vh;
+  // border: 1px solid red;
+}
+.iphone h5 {
+  font-size: 2.2rem;
+}
+// iphone en modo landscape
+@media only screen and (max-width: 992px) and (orientation:landscape){
+  .iphone .ubicacion-datos {
+    border-bottom: none;
+  }
+}
+
+//ipads general
+.ipad .ubicacion-titulo {
+  // border: 1px solid blue;
+  min-height: 6rem;
+  // margin-bottom: 3rem;
+}
+.ipad .ubicacion-iframe {
+  // margin-top: 52vh;
+  min-height: 50vh;
+  // border: 1px solid red;
+}
+// ipads excepciones
+@media only screen and (max-width: 992px) and (orientation:portrait){
+  .ipad .ubicacion-iframe {
+    margin-top: 55vh;
+  }
+  .ipad .ubicacion-datos {
+    border-bottom: none;
   }
 }
