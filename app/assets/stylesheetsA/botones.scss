@@ -8,13 +8,12 @@
 }
 
 .btn-main {
-  background-color: #16959e;
-  color: #fdfffd;
+  background-color: #00afdb !important;
+  color: #fdfffd !important;
 }
 
 .btn-sec {
-  background-color: #fdfffd;
-  color: #18214c;
+
 }
 
 .btn:hover {
@@ -48,7 +47,7 @@
   color: #16959e;
 }
 .btn-opt {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #18214c;
   letter-spacing: 2px;
   font-weight: 300;
@@ -56,6 +55,9 @@
   background-color: #fff;
   border: 1px solid #18214c;
   border-radius: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-opt:hover {
   background-color: #18214c;
@@ -63,4 +65,9 @@
 }
 .iphone .btn-opt {
 
+}
+@media all and (max-width: 992px) {
+  .btn-main, .btn-sec {
+    font-size: 1.4rem;
+  }
 }

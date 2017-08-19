@@ -49,6 +49,7 @@
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
   margin: 0 3rem;
+  font-weight: 200;
 }
 .ubicacion-escrita h5 {
   color: #00afdb;
@@ -106,6 +107,7 @@
 }
 .nosotros-texto p {
   font-size: 1.2rem;
+  font-weight: 200;
 }
 .nosotros-container .btn-opt {
   -ms-flex-item-align: end;
@@ -118,7 +120,7 @@
 //===================
 
 //iphone 3 y 4
-@media all and (max-width: 360px) {
+@media all and (max-width: 380px) {
   .iphone p {
     font-size: 1.8rem !important;
   }

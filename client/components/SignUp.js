@@ -76,11 +76,11 @@ class SignUp extends React.Component {
           <input placeholder="first_name" ref="first_name" required={true} />
           <input placeholder="last_name" ref="last_name" required={true} />
           <input type='email' placeholder="email" ref="email" required={true} />
-          <div className='btn btn-sec' onClick={this.roleDefinition}>codigo acceso</div>
+          <div className='btn btn-sec btn-opt' onClick={this.roleDefinition}>codigo acceso</div>
           {this.showPassInput()}
           <input type='password' placeholder="password" ref="password" required={true} />
           <input type='password' placeholder="password_confirmation" ref="password_confirmation" required={true} />
-          <button className='btn btn-main'>Registrarse</button>
+          <button className='btn btn-main btn-opt'>Registrarse</button>
         </form>
       </div>
     );
