@@ -43,7 +43,7 @@ class SignIn extends React.Component {
         <form className="container" onSubmit={this.handleSubmit}>
           <input type="email" required={true} ref="email" placeholder="email" />
           <input type="password" required={true} ref="password" placeholder="password" />
-          <span className='left btn btn-main btn-opt'>Ingresar</span>
+          <button className='left btn btn-main btn-opt'>Ingresar</button>
           <span className="right"><Link className="btn btn-sec btn-opt" to='/signup'>Registrarse</Link></span>
         </form>
       </div>

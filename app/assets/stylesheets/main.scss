@@ -75,8 +75,6 @@ div .main-info {
 }
 
 .main-info p {
-  font-size: 1.6rem;
-  font-weight: 200;
   margin: 0.5rem 0;
 }
 
@@ -220,11 +218,8 @@ div .main-buttons {
 @media all and (max-width: 992px) {
   // main info tarifa
   .main-info p {
-    font-size: 1.8rem;
+    // font-size: 1.8rem;
     letter-spacing: 1px;
-  }
-  .tarifa-info p {
-    font-size: 1.5rem;
   }
   // iframe instalaciones
   .main-container .iframe {

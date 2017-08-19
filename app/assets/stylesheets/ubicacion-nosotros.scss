@@ -49,7 +49,6 @@
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
   margin: 0 3rem;
-  font-weight: 200;
 }
 .ubicacion-escrita h5 {
   color: #00afdb;
@@ -105,10 +104,7 @@
   margin: 1rem 0 3rem 0;
   text-align: justify;
 }
-.nosotros-texto p {
-  font-size: 1.2rem;
-  font-weight: 200;
-}
+
 .nosotros-container .btn-opt {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -121,25 +117,17 @@
 
 //iphone 3 y 4
 @media all and (max-width: 380px) {
-  .iphone p {
-    font-size: 1.8rem !important;
-  }
   .nosotros-container {
     height: 75vh !important;
   }
 }
+
 @media all and (max-width: 559px) {
   .nosotros-container {
     height: 80vh;
   }
   .nosotros-texto {
     margin: 1rem 0 2rem 0;
-  }
-  .nosotros-texto p {
-    font-size: 1.4rem;
-  }
-  .iphone .nosotros-container p {
-    font-size: 1.5rem;
   }
 }
 
@@ -190,6 +178,7 @@
     padding-top: 0;
   }
 }
+
 //iphones general
 .iphone .ubicacion-titulo {
   min-height: 6rem;
@@ -198,9 +187,6 @@
 .iphone .ubicacion-iframe {
   margin-top: 52vh;
   min-height: 50vh;
-}
-.iphone h5 {
-  font-size: 2.2rem;
 }
 .iphone .nosotros-container {
   height: 78vh;

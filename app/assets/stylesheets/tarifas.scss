@@ -11,15 +11,10 @@
           justify-content: space-between;
   border-bottom: 1px solid #00afdb;
 }
-.tarifa-info h4 {
+.tarifa-info h5 {
   color: #00afdb;
   font-weight: 300;
-  font-size: 1.6rem;
-  // letter-spacing: 1px;
   line-height: 130%;
-}
-.tarifa-info p {
-  font-size: 1rem;
 }
 .tarifa-info-encabezado {
   -webkit-box-flex: 2;
@@ -55,9 +50,6 @@
   }
   .tarifa-info-nombres p:last-child, .tarifa-info-valores p:last-child {
     border-bottom: none;
-  }
-  .tarifa-info h4 {
-    font-size: 2rem;
   }
 }
 @media all and (max-width: 380px) {

@@ -20,10 +20,10 @@ html {
   // equivalencia 1rem
   font-size: 14px;
 }
-// materialize medium
-@media all and (min-width: 600px) and (max-width: 992px) {
+// iphone 3 & 4
+@media only screen and (max-width: 380px){
   html {
-    font-size: 12px;
+    font-size: 8px;
   }
 }
 // materialize small
@@ -32,12 +32,13 @@ html {
     font-size: 10px;
   }
 }
-
-@media only screen and (max-width: 380px){
+// materialize medium
+@media all and (min-width: 600px) and (max-width: 992px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
+
 
 @media only screen and (max-width: 600px) and (orientation:landscape){
   #the-app {
@@ -53,6 +54,50 @@ html {
      transform: rotate(0deg);
   }
 }
-hr {
-  border-bottom: 4px solid #16959e;
+
+
+// FONTS
+p {
+  font-size: 16px;
+  font-weight: 200;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 200;
+}
+h5 {
+  font-size: 18px;
+  font-weight: 200;
+}
+h6 {
+  font-size: 16px;
+  font-weight: 200;
+}
+@media all and (max-width: 380px) {
+  p {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+}
+@media all and (min-width: 381px) and (max-width:  600px) {
+  p {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
 }
