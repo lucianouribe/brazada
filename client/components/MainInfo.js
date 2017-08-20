@@ -56,7 +56,7 @@ class MainInfo extends React.Component {
             {Object.keys(tarifas).map(key =>
               <span key={key} className="tarifa-info">
                 <span className="tarifa-info-encabezado">
-                  <h4>{tarifas[key].plan}</h4>
+                  <h5>{tarifas[key].plan}</h5>
                   <p>{tarifas[key].descripcion}</p>
                 </span>
                 <span className="tarifa-info-nombres">{tarifas[key].nombre.split(", ").map((item, index) => <p key={index}>{item}</p> )}</span>

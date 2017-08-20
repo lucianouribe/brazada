@@ -1,6 +1,6 @@
 // MAIN INFO (DESCRIPTION)
 
-// informacion
+// informacion general
 div .main-info {
   -webkit-box-flex: 4;
       -ms-flex: 4 4 calc(40% - 2rem);
@@ -9,59 +9,25 @@ div .main-info {
 
 .main-info {
   height: 50vh;
-  // background-color: green;
-  border-top: 2px solid #16959e;
-  border-bottom: 2px solid #16959e;
+  border-top: 2px solid #00afdb;
+  border-bottom: 2px solid #00afdb;
   // padding: 1rem 0;
   margin: 0 2rem;
   overflow-y: scroll;
   // display: flex;
   // flex-direction: column;
 }
+
+.main-info::-webkit-scrollbar {
+  display: none;
+}
+
 .main-info p {
-  // font-size: 1.6rem;
-  // font-weight: 200;
   margin: 0.5rem 0;
 }
 
-// main info tarifas
-.tarifa-container {
-  padding: 2rem;
-}
-.main-info .tarifa-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 2px solid #16959e;
-}
-.tarifa-info h4 {
-  color: #16959e;
-  font-weight: 300;
-  // font-size: 1.6rem;
-}
-.tarifa-info p {
-  // font-size: 1rem;
-}
-.tarifa-info-encabezado {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 2 40%;
-          flex: 2 2 40%;
-  padding-right: 10px;
-}
-.tarifa-info-nombres, .tarifa-info-valores {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-}
-.tarifa-info-valores {
-  margin-left: 1rem;
-}
-.main-tarifa {
-  height: 60vh !important;
-}
+// main-info tarifas
+// (look in tarifas.scss)
 
 // main info profesors
 .main-info .profes-info {
@@ -72,8 +38,8 @@ div .main-info {
       -ms-flex-pack: start;
           justify-content: flex-start;
   border-bottom: 2px solid #16959e;
-  font-size: 1rem;
 }
+
 .main-info .profes-info:last-child {
   border-bottom: none;
 }
@@ -85,6 +51,7 @@ div .main-info {
   // margin-right: 4rem;
 }
 
+
 // main info horarios
 .main-info .horarios-info {
   display: -webkit-box;
@@ -93,7 +60,7 @@ div .main-info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 2px solid #16959e;
+  border-bottom: 1px dashed rgba(0,0,0,0.3);
   // padding: 0 1rem;
   // padding-bottom: 5rem;
 }
@@ -106,6 +73,7 @@ div .main-info {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 .main-info .lunes {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -142,11 +110,22 @@ div .main-info {
           order: 7;
 }
 
+@media all and (max-width: 992px) {
+  .main-info {
+    border-top: 1px solid #00afdb;
+    border-bottom: 1px solid #00afdb;
+    margin: 4rem 0 1rem 0;
+    height: 16rem;
+  }
+  .main-info p {
+    letter-spacing: 1px;
+  }
+}
+
 // materialize medium
 @media all and (min-width: 600px) and (max-width: 992px) {
   .main-info {
-    height: 22vh;
-    margin: 2rem;
+    // height: 16rem;
   }
 }
 
@@ -154,8 +133,7 @@ div .main-info {
 @media only screen and (max-width: 600px) {
   // main info
   .main-info {
-    height: 25vh;
-    margin: 2rem;
+    // height: 20rem;
   }
 }
 

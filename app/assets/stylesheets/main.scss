@@ -12,6 +12,7 @@
   margin: 0 !important;
   width: 100%;
 }
+
 // MAIN TITULO
 .main-titulo {
   // margin: 0 !important;
@@ -24,9 +25,7 @@
       align-self: center;
 }
 
-
 // IFRAME INSTALACIONES
-
 .main-container .iframe {
   width: 60%;
   height: 48vh;
@@ -41,10 +40,8 @@
   height: calc(100% - 2rem);
 }
 
-
 // MAIN CONTENT
 .main-content {
-  // background-color: gold;
   // padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,108 +51,6 @@
 }
 
 // MAIN INFO (DESCRIPTION)
-div .main-info {
-  -webkit-box-flex: 4;
-      -ms-flex: 4 4 calc(40% - 2rem);
-          flex: 4 4 calc(40% - 2rem);
-}
-.main-info {
-  height: 50vh;
-  // background-color: green;
-  border-top: 2px solid #00afdb;
-  border-bottom: 2px solid #00afdb;
-  // padding: 1rem 0;
-  margin: 0 2rem;
-  overflow-y: scroll;
-  // display: flex;
-  // flex-direction: column;
-}
-.main-info::-webkit-scrollbar {
-  display: none;
-}
-
-.main-info p {
-  margin: 0.5rem 0;
-}
-
-
-// main info profesors
-.main-info .profes-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  border-bottom: 2px solid #16959e;
-}
-.main-info .profes-info:last-child {
-  border-bottom: none;
-}
-.profes-info p:first-child {
-  margin-left: 3rem;
-  margin-right: 5px;
-}
-.profes-info p:last-child {
-  // margin-right: 4rem;
-}
-
-// main info horarios
-.main-info .horarios-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border-bottom: 2px solid #16959e;
-  // padding: 0 1rem;
-  // padding-bottom: 5rem;
-}
-.main-info .horarios-subinfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.main-info .lunes {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-.main-info .martes {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-.main-info .miercoles {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-}
-.main-info .jueves {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-}
-.main-info .viernes {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-}
-.main-info .sabado {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
-}
-.main-info .domingo {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
-}
 
 // MAIN PIC
 div .main-picture {
@@ -172,8 +67,7 @@ div .main-picture {
   // background-image: url(asset_path("nino.jpg"));
 }
 
-
-// main buttons
+// MAIN BUTTONS
 div .main-buttons {
   -webkit-box-flex: 2.5;
       -ms-flex: 2.5 2.5 calc(25% - 2rem);
@@ -212,15 +106,26 @@ div .main-buttons {
 //===========================
 // CELLPHONES AND TABLETS!!!
 //===========================
-@media all and (min-width: 540px) and (max-width: 892px) {
 
-
-}
 @media all and (max-width: 992px) {
-  // main info tarifa
-  .main-info p {
-    // font-size: 1.8rem;
-    letter-spacing: 1px;
+  //distribution
+  div .main-info {
+    -webkit-box-flex: 1 !important;
+        -ms-flex: 1 1 100% !important;
+            flex: 1 1 100% !important;
+  }
+  div .main-picture {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+  div .main-buttons {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+  .main-titulo {
+    margin: 0.5rem 0;
   }
   // iframe instalaciones
   .main-container .iframe {
@@ -235,22 +140,7 @@ div .main-buttons {
     height: 24rem;
     margin: 0;
   }
-  //distribution
-  div .main-info {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-  div .main-picture {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-  }
-  div .main-buttons {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 50%;
-            flex: 1 1 50%;
-  }
+
   // main buttons (item)
   .btn-nav-main {
     font-size: 2rem;

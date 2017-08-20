@@ -1,7 +1,7 @@
 
 // main nav container
 .main-nav {
-  margin: 2rem auto 0 auto;
+  margin: 1.5rem auto 0 auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,12 +15,10 @@
 
 // main visible bar (items)
 .nav-bar-main {
-  // flex: 8 8 80%;
+  min-height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  // justify-content: center;
-
   overflow-x: scroll;
   overflow-y: hidden;
   cursor: grabbing;
@@ -109,7 +107,22 @@
   margin-top: 0;
 }
 .palanca input[type="range"] {
+  -webkit-appearance: none;
   margin: 0.6rem auto 3rem auto !important;
+  background-color: #00afdb !important;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 4px;
+  -webkit-appearance: none;
+  color: #fcbf00;
+}
+input[type='range']::-webkit-slider-thumb {
+  width: 1.5rem;
+  -webkit-appearance: none;
+  height: 1.5rem;
+  cursor: ew-resize;
+  background: #00afdb;
+  // box-shadow: -8px 0 0 8px #43e5f7;
 }
 
 @media all and (max-width: 600px) {
