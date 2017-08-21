@@ -96,7 +96,7 @@ class Horarios extends React.Component {
               <select className="browser-default" ref="minutos">
                 <option value="00">minutos</option>
                 <option>00</option>
-                <option>15</option>
+                <option>10</option>
                 <option>30</option>
                 <option>45</option>
               </select>

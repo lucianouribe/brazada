@@ -16,7 +16,29 @@
   background-color: #fff;
 }
 .horarios-container .gricecito {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,175,219,0.1);
+}
+tbody td {
+  border-left: 1px solid rgba(0,175,219,0.1);
+  border-right: 1px solid rgba(0,175,219,0.1);
+}
+tbody td:first-child {
+  border-left: none;
+  border-right: none;
+}
+tbody td:first-child strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  // align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  // text-align: center;
+}
+tbody td:last-child {
+  border-left: none;
+  border-right: none;
 }
 
 // EL ENCABEZADO
@@ -42,7 +64,7 @@
   margin: 1rem;
 }
 .horario-header-titulo strong {
-  color: #16959e;
+  color: #00afdb;
   font-weight: 200;
 }
 // calendar picker
@@ -65,7 +87,7 @@
           flex: 5 5 80%;
 }
 .horario-options .calendar-submit {
-  background-color: #16959e;
+  background-color: #00afdb;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   -webkit-box-shadow: -3px 0 3px rgba(0,0,0,0.3);
@@ -109,7 +131,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 120px;
           flex: 1 1 120px;
-  background-color: #16959e;
+  background-color: #00afdb;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   display: -webkit-box;
@@ -192,7 +214,7 @@ td {
 .horario-container {
   width: 100%;
   background-color: #fff;
-  border: 1px solid #16959e;
+  border: 1px solid #00afdb;
   -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -215,7 +237,7 @@ td {
       -ms-flex: 1 1 30%;
           flex: 1 1 30%;
   height: 100%;
-  background-color: #16959e;
+  background-color: #00afdb;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,14 +273,14 @@ td {
   display: none;
 }
 
-// minutos
+// minutos (posicionamiento en la celda)
 .min0 {
   position: relative;
   top: 0 !important;
 }
-.min15 {
+.min10 {
   position: relative;
-  top: calc(4.5rem / 4);
+  top: calc(4.5rem / 6);
 }
 .min30 {
   position: relative;
@@ -269,24 +291,17 @@ td {
   top: calc((4.5rem / 4) * 3);
 }
 
-// duracion
+// duracion de la clase
 .duracion10 {
-  // height: calc(4.5rem / 2);
-  // height: 4.5rem;
   height: 50%;
 }
 .duracion30 {
-  // height: calc(4.5rem / 2);
-  // height: 4.5rem;
   height: 50%;
 }
 .duracion45 {
-  // height: calc((4.5rem / 4) * 3);
-  // height: 4.5rem;
   height: 75%;
 }
 .duracion60 {
-  // height: 4.5rem;
   height: 100%;
 }
 
@@ -306,7 +321,10 @@ td {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border-bottom: 2px solid #16959e;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px dashed #00afdb;
 }
 .horario-cel span:first-child {
   -webkit-box-flex: 1;
@@ -314,12 +332,12 @@ td {
           flex: 1 1 20%;
 }
 .horario-cel span {
-  -webkit-box-flex: 4;
-      -ms-flex: 4 4 40%;
-          flex: 4 4 40%;
+  -webkit-box-flex: 5;
+      -ms-flex: 5 5 50%;
+          flex: 5 5 50%;
 }
 .horario-block h3 {
-  color: #16959e;
+  color: #00afdb;
 }
 
 @media all and (max-width: 601px) {
@@ -340,11 +358,21 @@ td {
             align-items: stretch;
   }
   .main-horarios {
-    height: 55vh !important;
+    // height: 55vh !important;
   }
 }
 
 @media all and (max-width: 992px) {
+  .main-horarios {
+    width: 100%;
+  }
+  .horarios-container {
+    padding-top: 0;
+    height: calc(100vh - 4.5rem);
+  }
+  .horario-header-titulo h2 {
+    margin: 3rem 0 1rem 0;
+  }
   a.button-collapse {
       height: 0 !important;
       line-height: 0 !important;
