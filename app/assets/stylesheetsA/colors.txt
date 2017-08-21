@@ -3,6 +3,7 @@ Basicos
 ====================================
 
 Anaranjado:         #fcbf00;
+Azulito:            #00afdb;
 Blanco:             #fff;
 Blancuzco (texto):  #fdfffd;
 Negro:              #000;

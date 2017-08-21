@@ -101,11 +101,14 @@ div .main-buttons {
     height: 55vh;
   }
   // altura en modo tablet/cel
+  .main-buttons div {
+    margin: 0.5rem 0;
+  }
   .main-buttons {
-    height: 25rem;
+    height: 21rem;
   }
   .main-picture {
-    height: 24rem;
+    height: 22rem;
     margin: 0;
   }
 

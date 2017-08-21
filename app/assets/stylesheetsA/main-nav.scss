@@ -36,8 +36,6 @@
   line-height: 110%;
   font-weight: 300;
   text-align: center;
-  // background-color: #fff;
-  // border: 1px solid #18214c;
   border-radius: 2rem;
   padding: .4rem 1.8rem;
   margin: 0 1rem;
@@ -78,7 +76,7 @@
   margin: 5px;
   z-index: 4;
 }
-
+// el pasador
 .palanca {
   flex: 1 1 100%;
   width: 80%;
@@ -90,12 +88,11 @@
 .palanca input[type="range"] {
   -webkit-appearance: none;
   margin: 0.6rem auto 3rem auto !important;
-  background-color: #00afdb !important;
 }
 input[type='range']::-webkit-slider-runnable-track {
   height: 4px;
   -webkit-appearance: none;
-  color: #fcbf00;
+  color: red;
 }
 input[type='range']::-webkit-slider-thumb {
   width: 1.5rem;
@@ -103,7 +100,6 @@ input[type='range']::-webkit-slider-thumb {
   height: 1.5rem;
   cursor: ew-resize;
   background: #00afdb;
-  // box-shadow: -8px 0 0 8px #43e5f7;
 }
 
 @media all and (max-width: 600px) {

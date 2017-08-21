@@ -43,9 +43,12 @@ html {
 
 @media only screen and (max-width: 600px) and (orientation:landscape){
   #the-app {
-    height: 100vw;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    // height: 100vw;
+    // -webkit-transform: rotate(90deg);
+    // -moz-transform: rotate(90deg);
+    // -o-transform: rotate(90deg);
+    // -ms-transform: rotate(90deg);
+    // transform: rotate(90deg);
   }
 }
 
