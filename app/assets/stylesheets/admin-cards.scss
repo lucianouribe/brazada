@@ -37,7 +37,7 @@
 // cards
 
 .card {
-  border: 2px solid #16959e;
+  border: 2px solid #18214c;
   border-radius: 1rem;
   background-color: #fff;
   // background-color: rgba(0,0,0,0.3);
@@ -56,13 +56,16 @@
 }
 
 .card-action i {
-  color: #16959e;
+  color: #00afdb;
   cursor: pointer;
   margin-right: 2rem;
 }
 
 .card-action i:hover {
   color: #fcbf00;
+}
+.card-title {
+  color: #00afdb;
 }
 .matched {
   font-weight: 400 !important;
