@@ -151,7 +151,7 @@ class MainHorarioCel extends React.Component {
             {this.horarioNavBar()}
           </div>
           <div className="horario-header-titulo">
-            <h2>Calendario: <strong>{ortografica(this.state.calendar)}</strong></h2>
+            <h2>Horario: <strong>{ortografica(this.state.calendar)}</strong></h2>
           </div>
           <div className='main-info main-horarios'>
             {this.shouldGoCell(lunes)}
@@ -162,11 +162,8 @@ class MainHorarioCel extends React.Component {
             {this.shouldGoCell(sabado)}
             {this.shouldGoCell(domingo)}
           </div>
-
       </div>
     );
-
-
   }
 
 }

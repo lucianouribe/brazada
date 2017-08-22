@@ -7,36 +7,39 @@ hr {
 
 .portada {
   background-color: #18214c;
-  text-align: center;
   background-image: url(asset_path("fondo_menu_01.png"));
   background-repeat: no-repeat;
   background-position: 30% 70%;
   background-size: cover;
   height: 90vh;
   padding-top: 8vh;
-}
-
-.portada h6 {
-  font-size: 1.6rem;
-  color: #fdfffd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #main-phrase {
-  width: 100%;
+  width: 90%;
   color: #fdfffd;
+  font-size: 28px;
   font-weight: 100;
   line-height: 220%;
+  letter-spacing: 1px;
 }
-
 .logo {
   margin: 3rem auto;
 }
-
+.portada h6 {
+  font-size: 22px;
+  color: #18214c;
+}
 .btn-portada {
   margin-top: 2rem;
-  padding: 1.6rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
-
 footer {
   // background-color: #fcbf00;
   background-image: url(asset_path("footer.svg"));
@@ -46,20 +49,29 @@ footer {
   width: 100%;
   height: 20vh;
   margin-top: -20vh;
-  padding: 3rem 3rem 0 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // padding-top: 10vh;
+  padding-top: 11vh;
 }
-
+footer span {
+  height: 7vh;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 0.5rem;
+  display: flex;
+  padding-top: 1vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
 .foot-text {
   font-size: 1.3rem;
+  align-self: flex-end;
   margin: 1rem auto;
-  font-weight: 100;
-}
-.foot-stuff {
-  margin-top: 3rem;
+  font-weight: 400;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #18214c;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 // Cometarios y experiencias
@@ -67,7 +79,7 @@ footer {
 .experiencias {
   // height: 350px;
   background-color: #fdfffd;
-  padding: 6rem;
+  padding: 1rem 6rem;
 }
 
 .experiencias blockquote {
@@ -78,15 +90,14 @@ footer {
   padding-left: none !important;
   border-left: none !important;
   border-bottom: 4px solid #00afdb;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
 }
 
 // Portada Tercera Parte
 
 .portada-tres {
-  height: 350px;
   background-color: #fdfffd;
-  padding: 4rem;
+  padding: 1rem 4rem;
 }
 .programas {
   padding: 0 3rem !important;
@@ -106,10 +117,15 @@ footer {
 
 // Portada Cuarta Parte
 .portada-cuatro {
-  text-align: center;
+  min-height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 4rem 0;
 }
-
+.portada-cuatro .btn-portada {
+  margin-top: 0;
+}
 // Portada Quinta Parte
 .portada-cinco {
   height: 450px;
@@ -153,11 +169,56 @@ footer {
 // CellPhone Styling
 // =================================
 
-
+@media all and (max-width: 992px) {
+  .portada {
+    height: 80vh;
+  }
+  #main-phrase {
+    line-height: 140% !important;
+    letter-spacing: 0;
+  }
+  .portada h6 {
+    line-height: 140% !important;
+  }
+  footer {
+    align-content: center;
+    padding-top: 3vh;
+  }
+  footer span {
+    border-radius: 0.5rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .foot-text {
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: right;
+    letter-spacing: 0;
+    padding: 0.5rem;
+    margin-bottom: 0;
+  }
+  .programas {
+    padding: 0 2rem !important;
+    margin-top: 1rem !important;
+    border-bottom: 1px dashed rgba(0,0,0,0.1);
+    // border-bottom: 1px dashed rgba(0,175,219,0.1);
+  }
+  .portada-tres {
+    margin-bottom: 0 !important;
+  }
+  .portada-tres .programas {
+    margin: 0;
+    border-bottom: none;
+  }
+}
 // materialize medium
 @media all and (min-width: 600px) and (max-width: 992px) {
-  .portada {
-    height: 95vh;
+
+  #main-phrase {
+    font-size: 26px;
+    line-height: 120%;
   }
   .btn-portada {
     padding: 1.5rem !important;
@@ -169,7 +230,7 @@ footer {
   footer {
     height: 15vh;
     margin-top: -15vh;
-    padding-top: 7.5vh;
+    // padding-top: 7.5vh;
   }
   .foot-text {
     font-weight: 200;
@@ -190,27 +251,32 @@ footer {
 // materialize small
 @media only screen and (max-width: 600px) {
   .portada {
-    height: 100vh;
+    padding-top: 6vh;
   }
   #main-phrase {
-    font-size: 1.8rem;
+    font-size: 24px;
     line-height: 120%;
   }
   .btn-portada {
-    margin-top: 6rem !important;
+    // margin-top: 2rem !important;
     padding: 1rem !important;
     width: 60% !important;
   }
+  .logo {
+    background-size: 20vh !important;
+    height: 20vh !important;
+    margin: 2rem  auto;
+  }
+  .portada h6 {
+    font-size: 18px;
+  }
   footer {
-    height: 10vh;
-    margin-top: -10vh;
-    padding-top: 5vh;
+    height: 12vh;
+    margin-top: -12vh;
   }
   .foot-text {
-    font-weight: 400;
-  }
-  .foot-stuff {
-    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.4rem;
   }
   //comentarios y experiencias
   .experiencias {
@@ -218,13 +284,12 @@ footer {
     padding: 3rem;
   }
   .experiencias blockquote {
-    padding-bottom: 0 !important;
+    padding-bottom: 2rem !important;
     border-bottom: 2px solid #00afdb;
   }
   //portada tres
 
   .portada-tres {
-    height: 350px;
     background-color: #fdfffd;
     padding: 0 4rem;
   }
@@ -242,23 +307,59 @@ footer {
 
 //iphone 3, 4 y 5
 @media only screen and (max-width: 350px) {
+  #main-phrase {
+    font-size: 18px;
+  }
+  .logo {
+    margin: 1rem auto;
+  }
+  .portada h6 {
+    font-size: 16px;
+  }
   .btn-portada {
     height: 4rem !important;
     border-radius: 2rem !important;
     border: 1px solid #18214c !important;
-    margin-top: 1rem !important;
+    margin-top: 2rem !important;
     padding: 0.2rem !important;
     font-size: 1.4rem !important;
+  }
+  footer {
+    padding-top: 4vh;
   }
   .experiencias {
     padding: 1rem;
     height: none !important;
   }
   .foot-text {
-    margin-bottom: 3rem;
+    // margin-bottom: 3rem;
   }
   .portada-cinco, .portada-seis, .portada-siete {
     height: 250px;
   }
 
+}
+// tested good so
+@media screen and (max-height: 380px) {
+  .portada {
+    height: 75vh;
+  }
+  #main-phrase {
+  }
+  .logo {
+    background-size: 20vh !important;
+    width: 60% !important;
+    height: 18vh !important;
+  }
+  .portada h6 {
+    font-size: 15px;
+  }
+  .btn-portada {
+    margin-top: 1rem !important;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 2048px) and (orientation: portrait) {
+  .foot-text {
+    font-size: 18px;
+  }
 }

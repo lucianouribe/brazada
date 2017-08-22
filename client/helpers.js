@@ -35,6 +35,12 @@ export function ortografica(word){
     case 's_espera':
       return 'salón espera'
       break;
+    case 'mision':
+      return 'misión'
+      break;
+    case 'vision':
+      return 'visión'
+      break;
     default:
       return word
   }

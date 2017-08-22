@@ -9,12 +9,14 @@ class Home extends React.Component {
           <h4 id="main-phrase" className="center-align">Cuerpo sano, mente sana y sentirse como en casa</h4>
           <div className="logo"></div>
           <h6 className="center-align">Institución de educación para el trabajo y desarrollo humano</h6>
-          <Link className="btn btn-portada" to='/contacto'>contáctanos</Link>
+          <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
         <footer className="footer row">
-          <a className="redSocial redSocial1 foot-stuff" href="https://www.facebook.com/Brazada-Centro-Deportivo/" target="blank"></a>
-          <a className="redSocial redSocial2 foot-stuff" href="https://www.instagram.com/lucianouribe/" target="blank"></a>
-          <p className="foot-text foot-stuff">Calle 18 sur Nº 24 - 44 El Poblado, San Lucas. Tel: 317 14 59, 317 10 91</p>
+          <span>
+            <a className="redSocial redSocial1" href="https://www.facebook.com/Brazada-Centro-Deportivo/" target="blank"></a>
+            <a className="redSocial redSocial2" href="https://www.instagram.com/lucianouribe/" target="blank"></a>
+            <p className="foot-text">Calle 18 sur Nº 24 - 44 El Poblado, San Lucas. Tel: 317 14 59, 317 10 91</p>
+          </span>
         </footer>
         <div className="experiencias">
           <blockquote>
@@ -40,12 +42,12 @@ class Home extends React.Component {
           </div>
         </div>
         <div className='portada-cuatro'>
-          <Link className="btn btn-portada" to='/contacto'>contáctanos</Link>
+          <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
         <div className='portada-cinco'></div>
         <div className="experiencias">
           <blockquote>
-            <b>“La mejor decision que he tomado en mi vida.
+            <b>“La mejor decisión que he tomado en mi vida.
             Es la academia perfecta para que mi hija aprenda a nadar”</b>
             <em>- Manuela Uribe</em>
           </blockquote>

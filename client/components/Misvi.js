@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editMisvi } from '../actions/misvis';
-import { createMarkup } from '../helpers';
+import { createMarkup, ortografica } from '../helpers';
 
 
 class Misvi extends React.Component {
@@ -56,7 +56,7 @@ class Misvi extends React.Component {
       <div className="col s12 m10 l10 offset-m1 offset-l1">
         <div className="card">
           <div className="card-content">
-            <h6 className="card-title">{ misvi.titulo }</h6>
+            <h6 className="card-title">{ ortografica(misvi.titulo) }</h6>
             <p><div dangerouslySetInnerHTML={createMarkup(misvi.articulo)} /></p>
           </div>
           <div className="card-action">

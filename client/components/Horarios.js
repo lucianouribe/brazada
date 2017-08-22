@@ -138,7 +138,7 @@ class Horarios extends React.Component {
         <form className="horario-options">
           <div className="selecter">
             <select className="browser-default" ref="cualCalendario">
-              <option>escoge calendario</option>
+              <option>escoge horario</option>
               <option value='s_gimnasio'>gimnasio</option>
               <option value='s_tono'>salón tono</option>
               <option value='s_mente'>salón mente y cuerpo</option>
@@ -152,7 +152,7 @@ class Horarios extends React.Component {
           <div onClick={this.calendarSetter} className="calendar-submit"><span>Go</span></div>
         </form>
         <div className="horario-header-titulo">
-          <h2>Calendario: <strong>{ortografica(this.state.calendar)}</strong></h2>
+          <h2>Horario: <strong>{ortografica(this.state.calendar)}</strong></h2>
         </div>
       </div>
     )

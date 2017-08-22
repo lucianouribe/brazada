@@ -79,7 +79,10 @@
   align-self: flex-end;
   min-height: 3rem;
 }
-
+// responder mensaje
+.contacto textarea {
+  height: 35vh;
+}
 //iphone 3 y 4
 @media all and (max-width: 380px) {
   .contacto-container {

@@ -40,8 +40,8 @@ class Responder extends React.Component {
         <h2 className="center titulo">Responder a: {this.props.whoTo.nombre}</h2>
         <form className="container contacto" ref="respuestaForm" onSubmit={this.handleSubmit}>
           <textarea ref="mensaje" placeholder="mensaje" ></textarea>
-          <button type="submit" className='btn btn-main'>Enviar</button>
-          <div className='btn btn-main' onClick={this.props.toggleMailer}>back</div>
+          <button type="submit" className='btn btn-opt btn-resp'>Enviar</button>
+          <div className='btn btn-opt' onClick={this.props.toggleMailer}>back</div>
         </form>
       </div>
     )
