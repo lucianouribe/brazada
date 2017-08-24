@@ -173,6 +173,9 @@ footer span {
   .portada {
     height: 90vh;
   }
+  .iphone .portada {
+    height: 80vh;
+  }
   #main-phrase {
     line-height: 140% !important;
     letter-spacing: 0;
@@ -252,7 +255,6 @@ footer span {
 @media only screen and (max-width: 600px) {
   .portada {
     padding-top: 6vh;
-    height: 84vh;
   }
   #main-phrase {
     font-size: 24px;
