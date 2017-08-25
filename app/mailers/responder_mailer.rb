@@ -4,7 +4,6 @@ class ResponderMailer < ApplicationMailer
 
   def nueva_respuesta(responder)
     @responder = responder
-    # binding.pry
     mail(to: @responder.correo, subject: @responder.nombre )
   end
 
