@@ -8,7 +8,7 @@ class Home extends React.Component {
         <div className="portada">
           <h4 id="main-phrase" className="center-align">Cuerpo sano, mente sana y sentirse como en casa</h4>
           <div className="logo"></div>
-          <h6 className="center-align">Institución de educación para el trabajo y desarrollo humano</h6>
+          <h6 className="center-align"></h6>
           <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
         <footer className="footer row">
@@ -20,8 +20,10 @@ class Home extends React.Component {
         </footer>
         <div className="experiencias">
           <blockquote>
+            <b>Institución de educación para el trabajo y desarrollo humano BRAZADA</b>
+            <br/>
             <b>Certificados por la secretaría de educación de Medellín </b>
-            <em>- resolución No: 23456</em>
+            <em>- resolución No: 201750001707 de 2017</em>
           </blockquote>
         </div>
         <div className='portada-tres row'>

@@ -83,7 +83,6 @@ class MainHorarioCel extends React.Component {
     let horarios = this.props.horarios;
     let horariosXDia = horarios.filter( object => { if(object.calendario === this.state.calendar && object.dia === cualDia) return object; })
 
-
     if(horariosXDia.length){
       return (
         <div className='horario-block'>
@@ -103,9 +102,9 @@ class MainHorarioCel extends React.Component {
     let s_mente = 's_mente';
     let s_espera = 's_espera';
     let hidro = 'hidro';
-    let hidroEsp = 'hidro especial';
+    let hidroEsp = 'especial';
     let entrenamiento = 'entrenamiento';
-    let clases = 'clases natacion';
+    let clases = 'natacion';
     let descargar = 'descargar horarios';
     return(
       <div>
