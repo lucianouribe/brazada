@@ -97,10 +97,10 @@ class MainHorarioPc extends React.Component {
               <option value='s_tono'>salón tono</option>
               <option value='s_mente'>salón mente y cuerpo</option>
               <option value='s_espera'>salón espera</option>
-              <option>hidro</option>
-              <option>hidro_especial</option>
-              <option>entrenamiento natación</option>
-              <option>clases natación</option>
+              <option value='hidro'>hidro</option>
+              <option value='especial'>hidro especial</option>
+              <option value='entrenamiento'>entrenamiento natación</option>
+              <option value='natacion'>clases natación</option>
               <option>descargar horarios</option>
             </select>
           </div>
