@@ -50,7 +50,7 @@ class Horario extends React.Component {
 
     let displayTimeErrase;
     if(this.state.open) {
-      displayTimeErrase =  (timeFixer(horario.hora) + " " + timeFixer(horario.minutos))
+      displayTimeErrase =  (timeFixer(horario.hora) + ":" + timeFixer(horario.minutos))
     } else {
       displayTimeErrase = (<i className="material-icons" onClick={() => this.props.dispatch(deleteHorario(horario.id))}>delete</i>)
     }

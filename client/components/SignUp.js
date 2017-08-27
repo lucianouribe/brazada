@@ -23,7 +23,7 @@ class SignUp extends React.Component {
     e.preventDefault();
     let { first_name, last_name, email, password, password_confirmation } = this.refs;
     let role = 'visitor'
-    if(this.refs.code.value === 'loteria'){
+    if(this.refs.code.value === 'academia'){
       role = 'admin'
     }else {
       role = 'visitor'
@@ -46,7 +46,7 @@ class SignUp extends React.Component {
       // console.log('till here it works');
       // console.log(user);
       this.props.dispatch(refreshLogin(user));
-      this.props.history.push('/dashboard');
+      this.props.history.push('/admin');
     }).fail( err => {
       // console.log('something failed in the sign up');
       // console.log(user);
