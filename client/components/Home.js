@@ -8,7 +8,6 @@ class Home extends React.Component {
         <div className="portada">
           <h4 id="main-phrase" className="center-align">Cuerpo sano, mente sana y sentirse como en casa</h4>
           <div className="logo"></div>
-          <h6 className="center-align"></h6>
           <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
         <footer className="footer row">

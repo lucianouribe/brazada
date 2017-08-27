@@ -144,10 +144,10 @@ class Horarios extends React.Component {
               <option value='s_tono'>salón tono</option>
               <option value='s_mente'>salón mente y cuerpo</option>
               <option value='s_espera'>salón espera</option>
+              <option value='natacion'>clases natación</option>
+              <option value='entrenamiento'>entrenamiento natación</option>
               <option value='hidro'>hidro</option>
               <option value='especial'>hidro_especial</option>
-              <option value='entrenamiento'>entrenamiento natación</option>
-              <option value='natacion'>clases natación</option>
             </select>
           </div>
           <div onClick={this.calendarSetter} className="calendar-submit"><span>Go</span></div>

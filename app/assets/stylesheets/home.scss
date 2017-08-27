@@ -256,6 +256,7 @@ footer span {
   .btn-portada {
     padding: 1.5rem !important;
     width: 45% !important;
+    border: 2px solid #18214c;
   }
   .logo {
     margin: 4rem auto;
@@ -291,14 +292,14 @@ footer span {
     line-height: 120%;
   }
   .btn-portada {
-    // margin-top: 2rem !important;
     padding: 1rem !important;
     width: 60% !important;
+    border: 1px solid #18214c !important;
   }
   .logo {
     background-size: 20vh !important;
     height: 20vh !important;
-    margin: 2rem  auto;
+    margin: 4rem  auto;
   }
   .portada h6 {
     font-size: 18px;
@@ -344,7 +345,7 @@ footer span {
     font-size: 18px;
   }
   .logo {
-    margin: 1rem auto;
+    margin: 3rem auto;
   }
   .portada h6 {
     font-size: 16px;
@@ -353,7 +354,7 @@ footer span {
     height: 4rem !important;
     border-radius: 2rem !important;
     border: 1px solid #18214c !important;
-    margin-top: 2rem !important;
+    margin-top: 4rem !important;
     padding: 0.2rem !important;
     font-size: 1.4rem !important;
   }
@@ -377,12 +378,16 @@ footer span {
   .portada {
     height: 75vh;
   }
+  .iphone .portada {
+    height: 75vh;
+  }
   #main-phrase {
   }
   .logo {
     background-size: 20vh !important;
     width: 60% !important;
     height: 18vh !important;
+    margin: 3rem auto !important;
   }
   .portada h6 {
     font-size: 15px;

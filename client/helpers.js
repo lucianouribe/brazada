@@ -21,7 +21,7 @@ export function ortografica(word){
       return 'natación libre'
       break;
     case 'entrenamiento':
-      return 'entrenamiento natación'
+      return 'natación entrenamiento'
       break;
     case 's_gimnasio':
       return 'gimnasio'
@@ -34,6 +34,12 @@ export function ortografica(word){
       break;
     case 's_espera':
       return 'salón espera'
+      break;
+    case 'hidro':
+      return 'hidroaeróbicos'
+      break;
+    case 'especial':
+      return 'hidro especial'
       break;
     case 'mision':
       return 'misión'

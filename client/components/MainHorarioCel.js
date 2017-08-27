@@ -115,10 +115,10 @@ class MainHorarioCel extends React.Component {
             <div className="btn-nav-main" onClick={() => this.calendarSetter(s_tono)}><span>salón tono</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(s_mente)}><span>salón mente</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(s_espera)}><span>salón espera</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(clases)}><span>clases natación</span></div>
+            <div className="btn-nav-main" onClick={() => this.calendarSetter(entrenamiento)}><span>entrenamiento natación</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(hidro)}><span>hidro</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(hidroEsp)}><span>hidro especial</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(entrenamiento)}><span>entrenamiento natación</span></div>
-            <div className="btn-nav-main" onClick={() => this.calendarSetter(clases)}><span>clases natación</span></div>
             <div className="btn-nav-main" onClick={() => this.calendarSetter(descargar)}><span>descargar horarios</span></div>
           </div>
           <div className='btn-next'></div>
