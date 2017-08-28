@@ -23,7 +23,9 @@ hr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  // border-bottom: 4px solid #00afdb;
 }
+
 
 #main-phrase {
   width: 90%;
@@ -56,9 +58,9 @@ hr {
 }
 footer {
   // background-color: #fcbf00;
-  background-image: url(asset_path("footer.svg"));
+  // background-image: url(asset_path("footer.svg"));
   // background-repeat: no-repeat;
-  background-size: cover;
+  // background-size: cover;
   // background-position: center;
   width: 100%;
   height: 20vh;
@@ -67,7 +69,8 @@ footer {
 }
 footer span {
   height: 7vh;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.3);
+  // border: 1px solid #18214c;
   border-radius: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,7 +154,7 @@ footer span {
 }
 // Portada Quinta Parte
 .portada-cinco {
-  height: 450px;
+  height: 70vh;
   background-image: url(asset_path("felices.jpg"));
   background-repeat: no-repeat;
   background-position: center;
@@ -178,7 +181,7 @@ footer span {
 }
 // Portada Sexta Parte
 .portada-seis {
-  height: 450px;
+  height: 70vh;
   background-image: url(asset_path("noche.png"));
   background-repeat: no-repeat;
   background-position: center;
@@ -187,7 +190,7 @@ footer span {
 }
 // Portada Septima Parte
 .portada-siete {
-  height: 450px;
+  height: 70vh;
   background-image: url(asset_path("yoga.jpg"));
   background-repeat: no-repeat;
   background-position: center;
@@ -361,6 +364,9 @@ footer span {
   footer {
     padding-top: 4vh;
   }
+  footer span {
+    // height: 9vh;
+  }
   .experiencias {
     padding: 1rem;
     height: none !important;
@@ -394,6 +400,12 @@ footer span {
   }
   .btn-portada {
     margin-top: 1rem !important;
+  }
+  .foot-text {
+    // margin-top: 5px;
+  }
+  footer span {
+    height: 9vh !important;
   }
 }
 @media screen and (min-width: 760px) and (max-width: 2048px) and (orientation: portrait) {

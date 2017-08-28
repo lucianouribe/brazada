@@ -35,9 +35,9 @@ export function ortografica(word){
     case 's_espera':
       return 'salón espera'
       break;
-    case 'hidro':
-      return 'hidroaeróbicos'
-      break;
+    // case 'hidro':
+    //   return 'hidroaeróbicos'
+    //   break;
     case 'especial':
       return 'hidro especial'
       break;

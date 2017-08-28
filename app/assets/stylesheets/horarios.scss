@@ -384,3 +384,8 @@ td {
       line-height: 0 !important;
   }
 }
+@media screen and (max-height: 380) {
+  .horario-header-titulo h2 {
+    margin: 3rem 0 2rem 0;
+  }
+}
