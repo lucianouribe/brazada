@@ -7,7 +7,7 @@ hr {
 
 .portada {
   background-color: #18214c;
-  background-image: url(asset_path("fondo_menu_01.png"));
+  background-image: url(asset_path("fondo_menu_04.png"));
   background-repeat: no-repeat;
   background-position: 30% 70%;
   background-size: cover;
@@ -23,6 +23,7 @@ hr {
 #main-phrase {
   width: 90%;
   color: #fdfffd;
+  // color: #18214c;
   font-size: 28px;
   font-weight: 100;
   line-height: 220%;

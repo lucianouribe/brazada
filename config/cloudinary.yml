@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lucianouribe
+  api_key: '368213672239727'
+  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: lucianouribe
+  api_key: '368213672239727'
+  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: lucianouribe
+  api_key: '368213672239727'
+  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  enhance_image_tag: true
+  static_image_support: false
