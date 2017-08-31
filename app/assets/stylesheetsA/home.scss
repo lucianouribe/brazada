@@ -7,7 +7,8 @@ hr {
 
 .portada {
   background-color: #18214c;
-  background-image: url(asset_path("fondo_menu_04.png"));
+  // background-color: #fff;
+  background-image: url(asset_path("fondo_menu_01.png"));
   background-repeat: no-repeat;
   background-position: 30% 70%;
   background-size: cover;
@@ -44,11 +45,6 @@ hr {
   align-self: center;
 }
 footer {
-  // background-color: #fcbf00;
-  // background-image: url(asset_path("footer.svg"));
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
   width: 100%;
   height: 20vh;
   margin-top: -20vh;
@@ -56,7 +52,8 @@ footer {
 }
 footer span {
   height: 7vh;
-  background-color: rgba(255,255,255,0.3);
+  // background-color: rgba(255,255,255,0.6);
+  background-color: rgba(0,175,219,0.6);
   // border: 1px solid #18214c;
   border-radius: 0.5rem;
   display: flex;
@@ -176,6 +173,7 @@ footer span {
 @media all and (max-width: 992px) {
   .portada {
     height: 90vh;
+    background-position: 0%;
   }
   .iphone .portada {
     height: 80vh;
@@ -230,7 +228,7 @@ footer span {
   .btn-portada {
     padding: 1.5rem !important;
     width: 45% !important;
-    border: 2px solid #18214c;
+    // border: 2px solid #18214c;
   }
   .logo {
     margin: 4rem auto;
@@ -262,17 +260,26 @@ footer span {
     padding-top: 6vh;
   }
   #main-phrase {
-    font-size: 24px;
+    width: 100%;
+    margin-top: 5vh;
+    font-size: 26px;
     line-height: 120%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background-color: rgba(0,175,219,0.6);
+    padding: 2rem;
   }
   .btn-portada {
     padding: 1rem !important;
     width: 60% !important;
-    border: 1px solid #18214c !important;
+    // border: 1px solid #18214c !important;
+  }
+  .portada .btn {
+    border: none !important;
   }
   .logo {
-    background-size: 20vh !important;
-    height: 20vh !important;
+    background-size: 14vh !important;
+    height: 14vh !important;
     margin: 4rem  auto;
   }
   .portada h6 {
@@ -327,7 +334,7 @@ footer span {
   .btn-portada {
     height: 4rem !important;
     border-radius: 2rem !important;
-    border: 1px solid #18214c !important;
+    // border: 1px solid #18214c !important;
     margin-top: 4rem !important;
     padding: 0.2rem !important;
     font-size: 1.4rem !important;
@@ -359,11 +366,12 @@ footer span {
     height: 75vh;
   }
   #main-phrase {
+    margin-top: 4vh;
   }
   .logo {
-    background-size: 20vh !important;
+    background-size: 16vh !important;
     width: 60% !important;
-    height: 18vh !important;
+    height: 14vh !important;
     margin: 3rem auto !important;
   }
   .portada h6 {
