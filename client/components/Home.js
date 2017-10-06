@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
       <div>
         <div className="portada">
-          <h4 id="main-phrase" className="center-align">Cuerpo y mente sanos, sintiéndose como en casa</h4>
+          <h4 id="main-phrase" className="center-align">Hola Cuerpo y mente sanos, sintiéndose como en casa</h4>
           <div className="logo"></div>
           <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
