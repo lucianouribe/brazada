@@ -41,11 +41,12 @@ class Profesor extends React.Component {
     let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
 
     let cursoType = elCurso[0].articulo.split(", ").map((tipo_de_curso, i) => {
-      let checked = false;
-      if(tipo_de_curso === profesor.especialidad) checked={true}
-      return (
-        <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
-      );
+      let checked = true;
+      // if(tipo_de_curso === profesor.especialidad) checked={true}
+      if(tipo_de_curso === profesor.especialidad)
+        return (
+          <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
+        );
     });
 
     return(

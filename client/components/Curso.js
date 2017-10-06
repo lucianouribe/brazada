@@ -42,23 +42,25 @@ class Curso extends React.Component {
     let elSalon = this.props.misvis.filter( misvi => { if(misvi.titulo === 'salones') return misvi })
     // se separan los items del array. Se hace map de cada item
     let cualSalon = elSalon[0].articulo.split(", ").map((donde, i) => {
-      let checked = false;
+      let checked = true;
       //si el item coincide con el lugar del curso se marca checked true
-      if(donde === curso.lugar) checked={true}
-      return (
-        <option type="text" key={i} selected={checked} value={donde}>{ortografica(donde)}</option>
-      );
+      // if(donde === curso.lugar) checked={true}
+      if(donde === curso.lugar)
+        return (
+          <option type="text" key={i} selected={checked} value={donde}>{ortografica(donde)}</option>
+        );
     });
 
 
     let elCurso = this.props.misvis.filter( misvi => { if(misvi.titulo === 'tipos_curso') return misvi })
 
     let cursoType = elCurso[0].articulo.split(", ").map((tipo_de_curso, i) => {
-      let checked = false;
-      if(tipo_de_curso === curso.tipo_curso) checked={true}
-      return (
-        <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
-      );
+      let checked = true;
+      // if(tipo_de_curso === curso.tipo_curso) checked={true}
+      if(tipo_de_curso === curso.tipo_curso)
+        return (
+          <option type="text" key={i} selected={checked} value={tipo_de_curso}>{ortografica(tipo_de_curso)}</option>
+        );
     });
 
 
