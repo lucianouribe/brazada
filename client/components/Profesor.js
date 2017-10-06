@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editProfesor, deleteProfesor } from '../actions/profesors';
-import { ortografica } from '../helpers';
+import { ortografica, capitalizer } from '../helpers';
 
 
 class Profesor extends React.Component {
@@ -26,8 +26,8 @@ class Profesor extends React.Component {
     e.preventDefault();
     console.log('Profesor handle submit');
 
-    let nombre = this.refs.nombre.value;
-    let apellido = this.refs.apellido.value;
+    let nombre = this.refs.nombre.value.toLowerCase();
+    let apellido = this.refs.apellido.value.toLowerCase();
     let especialidad = this.refs.especialidad.value;
     let cual_curso = this.refs.cual_curso.value;
 
@@ -89,7 +89,7 @@ class Profesor extends React.Component {
       <div className="col s12 m4 l4">
         <div className="card">
           <div className="card-content">
-            <span className="card-title">{ profesor.nombre } {profesor.apellido}</span>
+            <span className="card-title">{ capitalizer(profesor.nombre) } { capitalizer(profesor.apellido) }</span>
             <p>Especialidad: {profesor.especialidad}</p>
             <p>Cual: {profesor.cual_curso}</p>
           </div>

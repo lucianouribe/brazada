@@ -5,7 +5,7 @@ class Api::CursosController < ApplicationController
 
   # GET /api/cursos.json
   def index
-    @api_cursos = Curso.all
+    @api_cursos = Curso.order_by_nombre.all
   end
 
   # GET /api/cursos/1.json

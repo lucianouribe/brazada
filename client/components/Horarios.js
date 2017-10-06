@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Horario from './Horario';
 import { fetchHorarios, addHorario } from '../actions/horarios';
-import { aemer, ortografica } from '../helpers';
+import { aemer, ortografica, capitalizer } from '../helpers';
 
 
 class Horarios extends React.Component {
@@ -82,13 +82,13 @@ class Horarios extends React.Component {
             <div className='selecter'>
               <select className="browser-default" ref="cursos">
                 <option value="bebes">Curso</option>
-                {Object.keys(cursos).map(key => <option key={key} value={cursos[key].id}>{cursos[key].nombre}</option>)}
+                {Object.keys(cursos).map(key => <option key={key} value={cursos[key].id}>{capitalizer(cursos[key].nombre)}</option>)}
               </select>
             </div>
             <div className='selecter'>
               <select className="browser-default" ref="profesor">
                 <option value="pepita">Profesor</option>
-                {Object.keys(profesors).map(key => <option key={key} value={profesors[key].id}>{profesors[key].nombre} {profesors[key].apellido}</option>)}
+                {Object.keys(profesors).map(key => <option key={key} value={profesors[key].id}>{capitalizer(profesors[key].nombre)} {capitalizer(profesors[key].apellido)}</option>)}
               </select>
             </div>
             <p className="esta-hora">{this.state.hour}:</p>

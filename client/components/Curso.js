@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { editCurso, deleteCurso } from '../actions/cursos';
-import { ortografica, createMarkup } from '../helpers';
+import { ortografica, createMarkup, capitalizer } from '../helpers';
 
 
 class Curso extends React.Component {
@@ -26,7 +26,7 @@ class Curso extends React.Component {
     e.preventDefault();
     console.log('Curso Edit handle submit');
 
-    let nombre = this.refs.nombre.value;
+    let nombre = this.refs.nombre.value.toLowerCase();
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
@@ -108,7 +108,7 @@ class Curso extends React.Component {
       <div className="col s12 m4 l4">
         <div className="card">
           <div className="card-content">
-            <span className="card-title">{ ortografica(curso.nombre) }</span>
+            <span className="card-title">{ capitalizer(ortografica(curso.nombre)) }</span>
             <p>lugar: {ortografica(curso.lugar)}</p>
             <p>tipo curso: {ortografica(curso.tipo_curso)}</p>
             <p><div dangerouslySetInnerHTML={createMarkup(curso.descripcion)}/></p>

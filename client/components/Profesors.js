@@ -57,8 +57,8 @@ class Profesors extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     console.log('handle sumbit')
-    let nombre = this.refs.nombre.value;
-    let apellido = this.refs.apellido.value;
+    let nombre = this.refs.nombre.value.toLowerCase();
+    let apellido = this.refs.apellido.value.toLowerCase();
     let especialidad = this.refs.especialidad.value;
     let cual_curso = this.refs.cual_curso.value;
 

@@ -58,7 +58,7 @@ class Cursos extends React.Component {
   handleSubmit(e){
     e.preventDefault();
     console.log('handle sumbit')
-    let nombre = this.refs.nombre.value;
+    let nombre = this.refs.nombre.value.toLowerCase();
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
@@ -67,9 +67,6 @@ class Cursos extends React.Component {
     this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, avatar))
     this.toggleDisplay();
   }
-
-
-
 
 
   addForm(){

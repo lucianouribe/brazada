@@ -44,6 +44,7 @@ hr {
   justify-content: center;
   align-self: center;
 }
+// Footer
 footer {
   width: 100%;
   height: 20vh;
@@ -57,7 +58,7 @@ footer span {
   // border: 1px solid #18214c;
   border-radius: 0.5rem;
   display: flex;
-  padding-top: 1vh;
+  align-items: center;
   padding-left: 5%;
   padding-right: 5%;
   margin-left: 6%;
@@ -65,8 +66,8 @@ footer span {
 }
 .foot-text {
   font-size: 1.3rem;
-  align-self: flex-end;
-  margin: 1rem auto;
+  // align-self: flex-end;
+  margin: 0;
   font-weight: 400;
   text-align: right;
   letter-spacing: 1px;

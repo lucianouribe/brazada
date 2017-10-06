@@ -90,6 +90,9 @@ export function sortNumber(a,b) {
   return a - b;
 }
 
+export function capitalizer(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 export function destildador(texto) {
   texto = texto.allReplace({'á': 'a', 'é': 'e', 'í':'i', 'ó':'o', 'ú':'u'})
