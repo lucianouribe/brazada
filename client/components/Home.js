@@ -6,14 +6,14 @@ class Home extends React.Component {
     return (
       <div>
         <div className="portada">
-          <h4 id="main-phrase" className="center-align">Cuerpo sano, mente sana y sentirse como en casa</h4>
+          <h4 id="main-phrase" className="center-align">Cuerpo y mente sanos, sintiéndose como en casa</h4>
           <div className="logo"></div>
           <Link className="btn btn-portada" to='/contacto'><span>contáctanos</span></Link>
         </div>
         <footer className="footer row">
           <span>
-            <a className="redSocial redSocial1" href="https://www.facebook.com/Brazada-Centro-Deportivo/" target="blank"></a>
-            <a className="redSocial redSocial2" href="https://www.instagram.com/lucianouribe/" target="blank"></a>
+            <a className="redSocial redSocial1" href="https://www.facebook.com/search/top/?q=brazada%20-%20centro%20deportivo/" target="blank"></a>
+            <a className="redSocial redSocial2"></a>
             <p className="foot-text">Calle 18 sur Nº 24 - 44 El Poblado, San Lucas. Tel: 317 14 59, 317 10 91</p>
           </span>
         </footer>

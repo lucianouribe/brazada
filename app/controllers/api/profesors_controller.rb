@@ -3,7 +3,7 @@ class Api::ProfesorsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
 
   def index
-    @api_profesors = Profesor.all
+    @api_profesors = Profesor.order_by_nombre.all
   end
 
   def show

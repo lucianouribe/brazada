@@ -15,4 +15,8 @@ class Curso < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   # validates_attachment :avatar, :presence => true,
   # :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] }
+
+  def self.order_by_nombre
+    Curso.order("nombre ASC")
+  end
 end
