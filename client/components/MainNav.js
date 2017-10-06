@@ -129,7 +129,7 @@ class MainNav extends React.Component {
       <div className="palanca">
         <form action="#">
           <p className="range-field">
-            <input className="nav-bar-controller" type="range" id="spacing" min="0" max={quantity}  />
+            <input className="nav-bar-controller hide" type="range" id="spacing" min="0" max={quantity}  />
           </p>
         </form>
       </div>

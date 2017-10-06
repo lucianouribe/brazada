@@ -71,11 +71,23 @@ class MainInfo extends React.Component {
         return(Object.keys(losProfes).map(key => <span key={key} className="profes-info"> <p>{losProfes[key].nombre}</p><p>{losProfes[key].apellido}</p></span>))
         break;
       case 'horarios':
-        return(
-          <div className="horarios-subinfo">
-            {Object.keys(losHorarios).map(key => <span key={key} className={`horarios-info ${losHorarios[key].dia}`}> <p>{losHorarios[key].dia}</p> <p>{timeFixer(losHorarios[key].hora)}:{timeFixer(losHorarios[key].minutos)}</p> </span>)}
-          </div>
-        )
+        if(losHorarios.length > 0) {
+          return(
+            <div className="horarios-subinfo">
+              {Object.keys(losHorarios).map(key => <span key={key} className={`horarios-info ${losHorarios[key].dia}`}> <p>{losHorarios[key].dia}</p> <p>{timeFixer(losHorarios[key].hora)}:{timeFixer(losHorarios[key].minutos)}</p> </span>)}
+            </div>
+          )
+        } else {
+          return(
+            <div className="horarios-subinfo">
+              <span className="horarios-info">
+                <p>Curso con cita previa.</p>
+                <p>Reserve su cita. Tel: 3171091</p>
+              </span>
+            </div>
+          )
+        }
+
         break;
       default:
         return (Object.keys(curso).map(key => <p key={key}>{curso[key].descripcion}</p>))

@@ -1,7 +1,7 @@
 
 // main nav container
 .main-nav {
-  margin: 1.5rem auto 0 auto;
+  margin: 1.5rem auto 3rem auto;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +34,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 .nav-bar-main::-webkit-scrollbar {
   display: none;
@@ -70,13 +73,13 @@
   background-image: url(asset_path("left.svg"));
 }
 .btn-prev:hover {
-  background-image: url(asset_path("left_o.svg"));
+  // background-image: url(asset_path("left_o.svg"));
 }
 .btn-next {
   background-image: url(asset_path("right.svg"));
 }
 .btn-next:hover {
-  background-image: url(asset_path("right_o.svg"));
+  // background-image: url(asset_path("right_o.svg"));
 }
 
 .btn-prev, .btn-next {
@@ -103,6 +106,9 @@
 }
 .palanca p {
   margin-top: 0;
+}
+.palanca .hide {
+  height: 2rem;
 }
 .palanca input[type="range"] {
   -webkit-appearance: none;
