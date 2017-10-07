@@ -125,7 +125,7 @@ class MainHorarioCel extends React.Component {
         </div>
         <div className="palanca">
           <form action="#">
-            <p className="range-field">
+            <p className="range-field hide">
               <input className="nav-bar-controller" type="range" id="spacing" min="0" max="350"  />
             </p>
           </form>

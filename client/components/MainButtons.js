@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class MainButtons extends React.Component {
 
@@ -23,9 +24,16 @@ class MainButtons extends React.Component {
     let tarifas = 'tarifas';
     let profesors = 'profesors';
     let instalaciones = 'instalaciones';
+    let selected;
+    if(this.props.clicked === null) {
+      $('.btn-opt').removeClass('btn-clicked');
+      selected = 'btn-clicked';
+    } else {
+      selected = ''
+    }
     return (
       <div className="main-buttons">
-        <div className='btn-opt' onClick={() => this.props.infoGatherer(null)}>información</div>
+        <div className={`btn-opt ${selected}`} onClick={() => this.props.infoGatherer(null)}>información</div>
         <div className='btn-opt' onClick={() => this.props.infoGatherer(horarios)}>horarios</div>
         <div className='btn-opt' onClick={() => this.props.infoGatherer(tarifas)}>tarifas</div>
         <div className='btn-opt'onClick={() => this.props.infoGatherer(profesors)}>profesores</div>
@@ -35,4 +43,10 @@ class MainButtons extends React.Component {
   }
 }
 
-export default MainButtons;
+const mapStateToProps = (state) => {
+  return {
+    submenus: state.submenus
+  }
+}
+
+export default connect(mapStateToProps)(MainButtons);

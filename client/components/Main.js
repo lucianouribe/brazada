@@ -59,7 +59,7 @@ class Main extends React.Component {
       <div className="main-container">
         <h1 className='main-titulo'>{ortografica(titulo)}</h1>
         <MainNav infoCursos={infoCursos} infoGatherer={this.infoGatherer}/>
-        <MainContent infoToContent={infoToContent} infoGatherer={this.infoGatherer} order={this.state.order}/>
+        <MainContent infoToContent={infoToContent} infoGatherer={this.infoGatherer} order={this.state.order} clicked={this.state.order}/>
       </div>
     )
   }

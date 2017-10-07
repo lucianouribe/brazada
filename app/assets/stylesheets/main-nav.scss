@@ -131,6 +131,9 @@ input[type='range']::-webkit-slider-thumb {
   .palanca input[type="range"] {
     margin: 0.4rem auto 1.5rem auto !important;
   }
+  .main-nav {
+    margin: 1.5rem auto 0 auto;
+  }
 }
 @media all and (min-width: 351px) and (max-width: 600px) {
   .nav-bar-main {

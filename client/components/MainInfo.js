@@ -48,7 +48,7 @@ class MainInfo extends React.Component {
     let largo;
     switch (this.props.order) {
       case null:
-        return (Object.keys(curso).map(key => <p key={key}><div dangerouslySetInnerHTML={createMarkup(curso[key].descripcion)}/></p>))
+        return (Object.keys(curso).map(key => <div className='curso-info' key={key} dangerouslySetInnerHTML={createMarkup(curso[key].descripcion)}/>))
         break;
       case 'tarifas':
         return(
@@ -68,7 +68,16 @@ class MainInfo extends React.Component {
         )
         break;
       case 'profesors':
-        return(Object.keys(losProfes).map(key => <span key={key} className="profes-info"> <p>{losProfes[key].nombre}</p><p>{losProfes[key].apellido}</p></span>))
+        if(losProfes.length > 0) {
+          return(Object.keys(losProfes).map(key => <span key={key} className="profes-info"> <p>{losProfes[key].nombre}</p><p>{losProfes[key].apellido}</p></span>))
+        } else {
+          return(
+            <span className="profes-info">
+              <p>Este es un espacio libre para ti. Puedes entrenar por tu cuenta.</p>
+            </span>
+          )
+        }
+
         break;
       case 'horarios':
         if(losHorarios.length > 0) {
@@ -82,7 +91,7 @@ class MainInfo extends React.Component {
             <div className="horarios-subinfo">
               <span className="horarios-info">
                 <p>Curso con cita previa.</p>
-                <p>Reserve su cita. Tel: 3171091</p>
+                <p>Reserve su cita. Tel: <b>317 10 91</b></p>
               </span>
             </div>
           )

@@ -22,8 +22,10 @@ div .main-info {
   display: none;
 }
 
-.main-info p {
+.main-info .curso-info {
   margin: 0.5rem 0;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 // main-info tarifas
@@ -146,5 +148,8 @@ div .main-info {
 @media only screen and (max-width: 350px) {
   .main-info {
     margin: 3rem 0 1rem 0 !important;
+  }
+  .main-info .curso-info {
+    font-size: 14px;
   }
 }

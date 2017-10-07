@@ -29,7 +29,7 @@ class MainContent extends React.Component {
         <div className="main-content">
           <MainInfo descripcion={this.props.infoToContent} order={this.props.order} />
           <MainPic />
-          <MainButtons infoGatherer={this.props.infoGatherer} />
+          <MainButtons infoGatherer={this.props.infoGatherer} clicked={this.props.clicked}/>
         </div>
       )
     }

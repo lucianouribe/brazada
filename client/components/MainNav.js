@@ -10,7 +10,6 @@ class MainNav extends React.Component {
     super(props);
 
     this.menuItems = this.menuItems.bind(this);
-    this.amount = this.amount.bind(this);
     this.goToSubActions = this.goToSubActions.bind(this);
   }
 
@@ -102,17 +101,15 @@ class MainNav extends React.Component {
     let info = this.props.infoCursos
     if(info.length){
       return info.map( inf => {
-        return(<div className="btn-nav-main" key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
+        if(inf.nombre === this.props.submenus) {
+          return(<div className="btn-nav-main btn-clicked" key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
+        } else {
+          return(<div className="btn-nav-main" key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
+        }
       })
-
-
     } else {
       return(<h4>No hay informacion</h4>);
     }
-  }
-  amount(){
-    this.props.infoCursos.length
-    console.log(quantity)
   }
 
   render(){
@@ -140,7 +137,8 @@ class MainNav extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-
+    menus: state.menus,
+    submenus: state.submenus
   }
 }
 
