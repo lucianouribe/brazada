@@ -18,7 +18,7 @@ gem 'materialize-sass'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
-gem "paperclip", "~> 5.0.0"
+gem 'cloudinary', '~> 1.1.7'
 gem 'faker'
 gem 'therubyracer'
 gem 'sass-rails', '~> 5.0'

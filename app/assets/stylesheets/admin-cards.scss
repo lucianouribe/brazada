@@ -43,8 +43,12 @@
   // background-color: rgba(0,0,0,0.3);
 }
 .card-content {
-  height: 15rem;
+  height: 24rem;
   overflow-y: scroll;
+}
+.card-content .danger {
+  font-size: 1.3rem;
+  font-weight: 200;
 }
 
 .card-action {
@@ -72,7 +76,51 @@
   color: #16959e;
 }
 
-// especificos
+// curso card especificos image
+.curso-image {
+  width: 120px;
+  height: 80px;
+  border-radius: 5px;
+  // border: 1px solid #ccc;
+}
+.image-preview {
+  margin-left: 1rem;
+}
+.card-subinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.card-subinfo strong {
+  color: #00afdb;
+  font-weight: 300;
+}
+
+.file-attach {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  font-size: 1rem !important;
+}
+
+.file-attach-stuff input {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 3 30%;
+          flex: 3 3 30%;
+}
+.file-attach-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.file-attach-add p {
+  -webkit-box-flex: 7;
+      -ms-flex: 7 7 70%;
+          flex: 7 7 70%;
+}
 
 //cursos
 .admin-title {
@@ -82,19 +130,19 @@
 }
 
 .form-edit {
-  height: 65vh;
+  height: 70vh;
 }
 .form-edit form {
-  height: calc(65vh - 2rem) !important;
+  height: calc(70vh - 2rem) !important;
 }
 .form-edit .card-content {
-  height: calc(65vh - 5rem) !important;
+  height: calc(70vh - 5rem) !important;
 }
 .form-edit textarea {
   padding: 0.6rem !important;
   height: 20vh !important;
   border: 1px solid rgba(0,0,0,0.2) !important;
-  margin: 1rem 0 !important;
+  margin: 0.5rem 0 !important;
 }
 .form-edit-misvi {
   height: 65vh;
@@ -122,17 +170,17 @@
 }
 .form-card textarea {
   padding: 0.6rem !important;
-  height: 15vh !important;
+  height: 18vh !important;
   border: 1px solid rgba(0,0,0,0.2) !important;
   margin: 1rem 0 !important;
 }
 // formas
 
 .form-card {
-  height: 60vh;
+  height: 70vh;
 }
 .form-card .card-content {
-  height: calc(60vh - 5rem);
+  height: calc(70vh - 5rem);
 }
 
 

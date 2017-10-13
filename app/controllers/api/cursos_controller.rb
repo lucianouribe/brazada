@@ -23,7 +23,9 @@ class Api::CursosController < ApplicationController
 
   # POST /api/cursos.json
   def create
-    @api_curso = Curso.new(api_curso_params)
+    Curso.upload_image(params)
+    new_params = { nombre: params[:nombre], tipo_curso: params[:tipo_curso], lugar: params[:lugar], descripcion: params[:descripcion], url_direccion: params[:url_direccion]}
+    @api_curso = Curso.new(new_params)
     # binding.pry
     if @api_curso.save
       render :show, status: :created
@@ -34,8 +36,13 @@ class Api::CursosController < ApplicationController
 
   # PATCH/PUT /api/cursos/1.json
   def update
+    if params[:avatar] != 'undefined'
+      Curso.upload_image(params)
+    end
+    new_params = { nombre: params[:nombre], tipo_curso: params[:tipo_curso], lugar: params[:lugar], descripcion: params[:descripcion], url_direccion: params[:url_direccion]}
+    # binding.pry
     respond_to do |format|
-      if @api_curso.update(api_curso_params)
+      if @api_curso.update(new_params)
         # binding.pry
         format.json { render :show, status: :ok }
       else
@@ -46,6 +53,8 @@ class Api::CursosController < ApplicationController
 
   # DELETE /api/cursos/1.json
   def destroy
+    info_from_pic = @api_curso
+    Curso.delete_me(info_from_pic)
     @api_curso.destroy
     respond_to do |format|
       format.json { head :no_content }
@@ -53,19 +62,11 @@ class Api::CursosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_api_curso
       @api_curso = Curso.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def api_curso_params
-      # params.require(:nombre)
-      # params.require(:lugar)
-      # params.require(:descripcion)
-      # params.require(:tipo_curso)
-      # params.require(:avatar)
-      # binding.pry
-      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion, :avatar)
+      params.require(:curso).permit(:nombre, :tipo_curso, :lugar, :descripcion, :url_direccion, :avatar)
     end
 end

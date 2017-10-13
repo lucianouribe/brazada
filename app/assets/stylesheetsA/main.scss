@@ -54,8 +54,14 @@ div .main-picture {
   background-repeat: no-repeat;
   background-position: center;
   // background-image: url(asset_path("nino.jpg"));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.main-picture img {
+  height: 100%;
+}
 // MAIN BUTTONS
 div .main-buttons {
   flex: 2.5 2.5 calc(25% - 2rem);

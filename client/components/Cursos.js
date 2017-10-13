@@ -10,7 +10,9 @@ class Cursos extends React.Component {
     super(props);
 
     this.state = {
-      showForm: false
+      showForm: false,
+      files: [],
+      preview: false
     }
 
     this.toggleDisplay = this.toggleDisplay.bind(this);
@@ -19,6 +21,9 @@ class Cursos extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.showSearcher = this.showSearcher.bind(this);
+
+    this.selectFiles = this.selectFiles.bind(this);
+    this.imageRender = this.imageRender.bind(this);
   }
 
   componentDidMount() {
@@ -44,7 +49,11 @@ class Cursos extends React.Component {
   }
 
   toggleDisplay(){
-    this.setState({showForm: !this.state.showForm})
+    this.setState({
+      showForm: !this.state.showForm,
+      preview: false,
+      files: []
+    })
   }
 
   displayChanger(){
@@ -55,6 +64,31 @@ class Cursos extends React.Component {
     }
   }
 
+  selectFiles(){
+    let file = this.refs.avatar.files[0];
+    let reader = new FileReader();
+    let url = reader.readAsDataURL(file);
+
+    reader.onloadend = (e) => {
+      this.setState({
+          files: [reader.result],
+          preview: true
+      })
+    }
+
+  }
+
+  imageRender(){
+    var preview = this.state.files.map( (f, x) => {
+      return(
+        <div key={x}>
+          <img className="curso-image" src={f} />
+        </div>
+      )
+    });
+    return(<div>{preview}</div>)
+  }
+
   handleSubmit(e){
     e.preventDefault();
     console.log('handle sumbit')
@@ -62,13 +96,18 @@ class Cursos extends React.Component {
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
+    let filename = nombre;
+    filename = filename.replace(' ', '%20');
+    let url_direccion = `http://res.cloudinary.com/brazada/image/upload/${filename}.jpg`;
     let avatar = this.refs.avatar.files[0];
-
-    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, avatar))
+    this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, url_direccion, avatar))
     this.toggleDisplay();
   }
-
-
+                //
+                // <p className="hide">
+                //   <strong>Picture:</strong>
+                //   <input type="file" ref="avatar"/>
+                // </p>
   addForm(){
     let elSalon = this.props.misvis.filter( misvi => { if(misvi.titulo === 'salones') return misvi })
 
@@ -95,10 +134,20 @@ class Cursos extends React.Component {
                 <strong>Nombre:</strong>
                 <input type="text" ref='nombre' required/>
               </p>
+              <span className="file-attach-add">
               <p>
                 <strong>Descripcion:</strong>
                 <textarea type="text" ref="descripcion" required></textarea>
               </p>
+              <span>
+                <div className={this.state.preview ? "image-preview" : "hide"}>
+                  <h6>Preview:</h6>
+                  {this.imageRender()}
+                </div>
+                <input className="file-attach" type="file" ref="avatar" placeholder="add picture" onChange={this.selectFiles}/>
+                <input type="hidden" value={this.state.files} />
+              </span>
+              </span>
               <p>
                 <strong>Tipo Curso:</strong>
                 <select className="browser-default" ref="tipo_curso">
@@ -110,10 +159,6 @@ class Cursos extends React.Component {
                 <select className="browser-default" ref="lugar">
                   {cualSalon}
                 </select>
-              </p>
-              <p className="hide">
-                <strong>Picture:</strong>
-                <input type="file" ref="avatar"/>
               </p>
             </div>
             <div className="card-action">

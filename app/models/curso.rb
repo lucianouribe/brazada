@@ -4,17 +4,22 @@ class Curso < ApplicationRecord
   validates_presence_of :nombre, :tipo_curso
   validates_inclusion_of :tipo_curso, in: %w(natacion gimnasio hidro mente)
 
-  # has_many horarios, dependent: :destroy
-  # has_many profesors, through: :horarios
-  # has_many tarifas
+  def self.upload_image(image_info)
+    # binding.pry
+    Cloudinary::Uploader.upload(image_info[:avatar], :public_id => image_info[:nombre], :width => 600, :crop => :limit)
+  end
 
-  has_attached_file :avatar,
-    styles: { medium: "300x300>", thumb: "100x100>" },
-    default_url: "/images/:style/missing.png"
-
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
-  # validates_attachment :avatar, :presence => true,
-  # :content_type => { :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] }
+  def self.delete_me(info)
+    testing = info.nombre.downcase
+    # testing = testing.gsub(' ', '%20')
+    # retesting = info.role
+    # retesting = retesting.gsub('%20', ' ')
+    puts 'delete_me'
+    puts testing
+    # fijarse si testing deberia ser el nombre del archivo o el archivo mismo!
+    # puts retesting
+    Cloudinary::Uploader.destroy(testing)
+  end
 
   def self.order_by_nombre
     Curso.order("nombre ASC")

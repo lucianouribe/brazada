@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: lucianouribe
-  api_key: '368213672239727'
-  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  cloud_name: brazada
+  api_key: '739593615393383'
+  api_secret: 73fkye5lFZ2RA92_0wRREwkVmoY
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: lucianouribe
-  api_key: '368213672239727'
-  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  cloud_name: brazada
+  api_key: '739593615393383'
+  api_secret: 73fkye5lFZ2RA92_0wRREwkVmoY
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: lucianouribe
-  api_key: '368213672239727'
-  api_secret: JU0eMHDIMmWM8A3rbpo6ZIyvlGs
+  cloud_name: brazada
+  api_key: '739593615393383'
+  api_secret: 73fkye5lFZ2RA92_0wRREwkVmoY
   enhance_image_tag: true
   static_image_support: false

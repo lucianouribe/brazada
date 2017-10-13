@@ -28,7 +28,7 @@ class MainContent extends React.Component {
       return (
         <div className="main-content">
           <MainInfo descripcion={this.props.infoToContent} order={this.props.order} />
-          <MainPic />
+          <MainPic laFoto={this.props.infoToContent[0]}/>
           <MainButtons infoGatherer={this.props.infoGatherer} clicked={this.props.clicked}/>
         </div>
       )

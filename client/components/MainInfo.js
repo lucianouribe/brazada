@@ -45,7 +45,6 @@ class MainInfo extends React.Component {
       })
     }
 
-    let largo;
     switch (this.props.order) {
       case null:
         return (Object.keys(curso).map(key => <div className='curso-info' key={key} dangerouslySetInnerHTML={createMarkup(curso[key].descripcion)}/>))
