@@ -106,6 +106,28 @@ input[type='range']::-webkit-slider-thumb {
   cursor: ew-resize;
   background: #00afdb;
 }
+.nav-bar-main .libre {
+  order: 1;
+}
+.nav-bar-main .bebes {
+  order: 2;
+}
+.nav-bar-main .ninos {
+  order: 3;
+}
+.nav-bar-main .jovenes {
+  order: 4;
+}
+.nav-bar-main .adultos {
+  order: 5;
+}
+.nav-bar-main .senior {
+  order: 6;
+}
+.nav-bar-main .pre-semillero {
+  order: 7;
+}
+
 
 @media all and (max-width: 600px) {
   .palanca input[type="range"] {

@@ -86,7 +86,7 @@ class Navbar extends Component {
     let navItem = this.props.cursos.filter((clase, index, self) => self.findIndex((c) => {return c.tipo_curso === clase.tipo_curso }) === index);
     return(
       <div>
-        {Object.keys(navItem).map(key => <li key={key} className="nav-icon center" onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
+        {Object.keys(navItem).map(key => <li key={key} className={`nav-icon center ${navItem[key].tipo_curso}`} onClick={() => this.goToActions(navItem[key].tipo_curso)}><Link to='/main'><i className={`icon-${navItem[key].tipo_curso} icon`}></i>{ortografica(navItem[key].tipo_curso)}</Link></li>)}
         <li className="nav-icon center"><Link to='/nosotros'><i className="nosotros icon"></i>nosotros</Link></li>
         <li className="nav-icon center"><Link to='/contacto'><i className="icon-contacto icon"></i>contacto</Link></li>
         <li className="nav-icon center"><Link to='/horarios'><i className="horarios icon"></i>horarios</Link></li>

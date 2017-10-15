@@ -116,9 +116,7 @@ class Curso extends React.Component {
                 <strong>Nombre:</strong>
                 <input type="text" required ref='nombre' defaultValue={curso.nombre} />
               </p>
-              <p>
-                <textarea type="text" ref="descripcion" required defaultValue={curso.descripcion} ></textarea>
-              </p>
+              <textarea type="text" ref="descripcion" required defaultValue={curso.descripcion} ></textarea>
               <span className="file-attach-stuff">
                 <img className="curso-image" src={image} />
                 <input className="file-attach" type='file' ref='avatar' onChange={this.selectFiles} />
@@ -127,14 +125,14 @@ class Curso extends React.Component {
               <p>
                 <strong>Lugar:</strong>
                 <select className="browser-default" ref="lugar" required>
-                  <option disabled selected>select</option>
+                  <option disabled>select</option>
                   {cualSalon}
                 </select>
               </p>
               <p>
                 <strong>Tipo Curso:</strong>
                 <select className="browser-default" ref="tipo_curso" required>
-                  <option disabled selected>select</option>
+                  <option disabled>select</option>
                   {cursoType}
                 </select>
               </p>

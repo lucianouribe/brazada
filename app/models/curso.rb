@@ -6,7 +6,7 @@ class Curso < ApplicationRecord
 
   def self.upload_image(image_info)
     # binding.pry
-    Cloudinary::Uploader.upload(image_info[:avatar], :public_id => image_info[:nombre], :width => 600, :crop => :limit)
+    Cloudinary::Uploader.upload(image_info[:avatar], :public_id => image_info[:nombre], :width => 600, :crop => :limit, :invalidate => true)
   end
 
   def self.delete_me(info)

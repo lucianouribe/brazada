@@ -32,6 +32,18 @@ nav ul .nav-icon:hover {
 .drag-target {
   height: 0 !important;
 }
+nav .natacion {
+  order: 1;
+}
+nav .gimnasio {
+  order: 1;
+}
+nav .hidro {
+  order: 1;
+}
+nav .mente {
+  order: 1;
+}
 // excepcion rara
 @media all and (min-width: 992px) and (max-width: 1100px) {
   .nav-icon {

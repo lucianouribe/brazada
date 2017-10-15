@@ -126,6 +126,42 @@ input[type='range']::-webkit-slider-thumb {
   cursor: ew-resize;
   background: #00afdb;
 }
+.nav-bar-main .libre {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+.nav-bar-main .bebes {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.nav-bar-main .ninos {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+.nav-bar-main .jovenes {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+.nav-bar-main .adultos {
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+}
+.nav-bar-main .senior {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+.nav-bar-main .pre-semillero {
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
+}
+
 
 @media all and (max-width: 600px) {
   .palanca input[type="range"] {

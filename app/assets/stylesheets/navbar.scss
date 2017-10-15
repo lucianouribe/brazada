@@ -32,6 +32,26 @@ nav ul .nav-icon:hover {
 .drag-target {
   height: 0 !important;
 }
+nav .natacion {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+nav .gimnasio {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+nav .hidro {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+nav .mente {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
 // excepcion rara
 @media all and (min-width: 992px) and (max-width: 1100px) {
   .nav-icon {

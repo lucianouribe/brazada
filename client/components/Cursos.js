@@ -103,11 +103,7 @@ class Cursos extends React.Component {
     this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, url_direccion, avatar))
     this.toggleDisplay();
   }
-                //
-                // <p className="hide">
-                //   <strong>Picture:</strong>
-                //   <input type="file" ref="avatar"/>
-                // </p>
+
   addForm(){
     let elSalon = this.props.misvis.filter( misvi => { if(misvi.titulo === 'salones') return misvi })
 

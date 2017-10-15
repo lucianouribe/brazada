@@ -102,9 +102,9 @@ class MainNav extends React.Component {
     if(info.length){
       return info.map( inf => {
         if(inf.nombre === this.props.submenus) {
-          return(<div className="btn-nav-main btn-clicked" key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
+          return(<div className={`btn-nav-main btn-clicked ${inf.nombre}`} key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
         } else {
-          return(<div className="btn-nav-main" key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
+          return(<div className={`btn-nav-main ${inf.nombre}`} key={inf.id} onClick={() => this.goToSubActions(inf.nombre)}><span>{ortografica(inf.nombre)}</span></div>);
         }
       })
     } else {

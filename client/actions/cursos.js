@@ -57,10 +57,10 @@ export const fetchCursos = (wordToMatch) => {
 }
 
 export const editCurso = (id, nombre, lugar, descripcion, tipo_curso, url_direccion, avatar) => {
-  console.log(`this is edit curso con id: ${id}`)
-  console.log(nombre)
-  console.log(url_direccion)
-  console.log(avatar)
+  // console.log(`this is edit curso con id: ${id}`)
+  // console.log(nombre)
+  // console.log(url_direccion)
+  // console.log(avatar)
   let formData = new FormData();
   formData.append('nombre', nombre);
   formData.append('lugar', lugar);
