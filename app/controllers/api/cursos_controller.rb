@@ -53,7 +53,7 @@ class Api::CursosController < ApplicationController
 
   # DELETE /api/cursos/1.json
   def destroy
-    info_from_pic = @api_curso
+    info_from_pic = @api_curso[:url_direccion]
     Curso.delete_me(info_from_pic)
     @api_curso.destroy
     respond_to do |format|

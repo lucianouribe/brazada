@@ -11,15 +11,9 @@ class Curso < ApplicationRecord
   end
 
   def self.delete_me(info)
-    testing = info.nombre.downcase
-    # testing = testing.gsub(' ', '%20')
-    # retesting = info.role
-    # retesting = retesting.gsub('%20', ' ')
-    puts 'delete_me'
-    puts testing
-    # fijarse si testing deberia ser el nombre del archivo o el archivo mismo!
-    # puts retesting
-    Cloudinary::Uploader.destroy(testing)
+    first = info.split(/(http:\/\/res.cloudinary.com\/brazada\/image\/upload\/|.jpg)/)
+    delete_this_name = first[2]
+    Cloudinary::Uploader.destroy(delete_this_name)
   end
 
   def self.order_by_nombre
