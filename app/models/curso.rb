@@ -5,8 +5,9 @@ class Curso < ApplicationRecord
   validates_inclusion_of :tipo_curso, in: %w(natacion gimnasio hidro mente)
 
   def self.upload_image(image_info)
-    # binding.pry
-    Cloudinary::Uploader.upload(image_info[:avatar], :public_id => image_info[:nombre], :width => 600, :crop => :limit, :invalidate => true)
+    el_nombre = image_info[:url_direccion].split(/(http:\/\/res.cloudinary.com\/brazada\/image\/upload\/|.jpg)/)
+    nombre = el_nombre[2]
+    Cloudinary::Uploader.upload(image_info[:avatar], :public_id => nombre, :width => 600, :crop => :limit, :invalidate => true)
   end
 
   def self.delete_me(info)

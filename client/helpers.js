@@ -23,6 +23,9 @@ export function ortografica(word){
     case 'entrenamiento':
       return 'natación entrenamiento'
       break;
+    case 'gimnacio':
+      return 'gimnasio'
+      break;
     case 's_gimnasio':
       return 'gimnasio'
       break;

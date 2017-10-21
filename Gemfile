@@ -19,6 +19,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
 gem 'cloudinary', '~> 1.1.7'
+gem 'paperclip'
 gem 'faker'
 gem 'therubyracer'
 gem 'sass-rails', '~> 5.0'

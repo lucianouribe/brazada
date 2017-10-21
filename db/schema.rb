@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20171010140443) do
     t.string   "tipo_curso",          null: false
     t.string   "lugar"
     t.text     "descripcion"
+    t.float    "duracion"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
     t.string   "avatar_file_name"
@@ -75,11 +76,7 @@ ActiveRecord::Schema.define(version: 20171010140443) do
 
   create_table "horarios", force: :cascade do |t|
     t.string   "dia",         null: false
-    t.integer  "hora",        null: false
-    t.integer  "minutos",     null: false
-    t.string   "posicion",    null: false
-    t.string   "calendario",  null: false
-    t.integer  "duracion",    null: false
+    t.time     "hora",        null: false
     t.integer  "curso_id"
     t.integer  "profesor_id"
     t.datetime "created_at",  null: false
@@ -99,7 +96,6 @@ ActiveRecord::Schema.define(version: 20171010140443) do
     t.string   "nombre",       null: false
     t.string   "apellido",     null: false
     t.string   "especialidad"
-    t.string   "cual_curso",   null: false
     t.integer  "no_clases"
     t.integer  "salario"
     t.datetime "created_at",   null: false
@@ -117,7 +113,7 @@ ActiveRecord::Schema.define(version: 20171010140443) do
   create_table "tarifas", force: :cascade do |t|
     t.string   "plan",        null: false
     t.string   "nombre",      null: false
-    t.string   "valor",       null: false
+    t.integer  "valor",       null: false
     t.string   "descripcion"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

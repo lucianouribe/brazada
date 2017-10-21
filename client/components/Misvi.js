@@ -57,7 +57,7 @@ class Misvi extends React.Component {
         <div className="card">
           <div className="card-content">
             <h6 className="card-title">{ ortografica(misvi.titulo) }</h6>
-            <p><div dangerouslySetInnerHTML={createMarkup(misvi.articulo)} /></p>
+            <div dangerouslySetInnerHTML={createMarkup(misvi.articulo)} />
           </div>
           <div className="card-action">
             <span onClick={this.toggleEdit}><i className="material-icons">mode_edit</i></span>
