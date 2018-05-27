@@ -2,7 +2,7 @@ require 'pry'
 class Api::CursosController < ApplicationController
   before_action :set_api_curso, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index]
-
+  protect_from_forgery with: :null_session
   # GET /api/cursos.json
   def index
     @api_cursos = Curso.order_by_nombre.all

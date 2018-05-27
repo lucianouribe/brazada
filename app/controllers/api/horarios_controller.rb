@@ -63,12 +63,12 @@ class Api::HorariosController < ApplicationController
   end
 
   # DELETE /api/horarios/1.json
-  def destroy
-    @api_horario.destroy
-    respond_to do |format|
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @api_horario.destroy
+  #   respond_to do |format|
+  #     format.json { head :no_content }
+  #   end
+  # end
 
 
   def destroy

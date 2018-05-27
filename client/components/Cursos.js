@@ -96,7 +96,7 @@ class Cursos extends React.Component {
     let lugar = this.refs.lugar.value;
     let descripcion = this.refs.descripcion.value;
     let tipoCurso = this.refs.tipo_curso.value;
-    let filename = Math.random().toString(36).replace(/[^a-z]+/g, '');
+    let filename = Math.random().toString(36).replace(/0\./i, '');
     let url_direccion = `http://res.cloudinary.com/brazada/image/upload/${filename}.jpg`;
     let avatar = this.refs.avatar.files[0];
     this.props.dispatch(addCurso(nombre, lugar, descripcion, tipoCurso, url_direccion, avatar))

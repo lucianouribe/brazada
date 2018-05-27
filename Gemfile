@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+# ruby '2.3.1'
 
 # git_source(:github) do |repo_name|
 #   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -18,7 +18,7 @@ gem 'materialize-sass'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'whenever', :require => false
-gem 'cloudinary', '~> 1.1.7'
+gem 'cloudinary'
 gem 'paperclip'
 gem 'faker'
 gem 'therubyracer'

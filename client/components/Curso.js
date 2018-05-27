@@ -61,7 +61,7 @@ class Curso extends React.Component {
     let url_direccion;
     let avatar;
     if(this.state.files) {
-      let filename = Math.random().toString(36).replace(/[^a-z]+/g, '');
+      let filename = Math.random().toString(36).replace(/0\./i, '');
       url_direccion = `http://res.cloudinary.com/brazada/image/upload/${filename}.jpg`;
       avatar = this.refs.avatar.files[0]
     }

@@ -181,8 +181,7 @@ Curso.create(nombre: 'circuito',
             url_direccion: "hola")
 Curso.create(nombre: 'resortes',
             tipo_curso: 'gimnasio',
-            descripcion: """(fortalecimiento???,
-              url_direccion: "hola")Músculos y huesos se benefician con la práctica de resortes. Además de sus bondades fisioterapéuticas, estos ejercicios tonifican y definen los músculos. Según la orientación del trabajo, se puede optar por aumentar o no la masa muscular.""",
+            descripcion: """Músculos y huesos se benefician con la práctica de resortes. Además de sus bondades fisioterapéuticas, estos ejercicios tonifican y definen los músculos. Según la orientación del trabajo, se puede optar por aumentar o no la masa muscular.""",
             lugar: 's_tono',
             url_direccion: "hola")
 Curso.create(nombre: 'core',
