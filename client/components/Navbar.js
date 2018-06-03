@@ -32,9 +32,6 @@ class Navbar extends Component {
 
   componentDidMount() {
     $('.button-collapse').sideNav();
-    $('.button-collapse').on('click', function(){
-      $('.nav-wrapper').toggleClass('clicked');
-    });
     $('.side-but').on('click', function() {
      $('.button-collapse').sideNav('hide');
     });
